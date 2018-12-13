@@ -77,17 +77,40 @@
   box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
   margin: auto;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .badge-status, .city-status {
   height: 3vh;
-  width: 88vw;
-  border-radius: 12px;
+  width: 90vw;
   margin: auto;
-  color: #DAA520  ;
+  background-color:   #fff2f4;
+  color: #FF385C;
   font-size: 14px;
   font-weight: lighter;
+}
+
+.badge-status {
+  position: fixed;
+  top: 37.5vh;
+  border-radius: 12px 12px 0 0;
+}
+
+.city-status {
+  position: fixed;
+   bottom: 27.5vh;
+     border-radius: 0 0 12px 12px ;
+}
+
+.meal-status {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85vw;
+  height: 27vh;
+  flex-direction: column;
 }
 
 .dashboard-meal-summary {
