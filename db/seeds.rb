@@ -190,3 +190,13 @@ meals.each do |meal|
 end
 
 puts "Created #{Meal.count} New meals"
+meal = Meal.first
+User.where(location: "New York City").limit(5).each do |user|
+  Attendee.create!(user: user, meal: meal, status: "Confirmed")
+  meal.capacity -= 1
+  meal.save!
+end
+
+puts "--------------------------------------------------"
+puts "Created #{Attendee.count} Attendee"
+p Attendee.first.meal
