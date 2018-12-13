@@ -1,0 +1,15 @@
+<div class="container">
+  <h1><%= current_user.first_name %>, update your Interests!</h1>
+<% @interests.each do |i| %>
+  <%=  form_for(i) do |f| %>
+  <div class="toggle-container">
+      <%= i.interest.name  %>
+  <label class="switch pull-right">
+    <%= f.check_box :active %>
+    <span class="slider round"></span>
+  </label>
+</div>
+  <%= f.submit %>
+  <% end %>
+<% end %>
+</div>
