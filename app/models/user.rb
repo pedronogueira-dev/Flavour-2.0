@@ -11,8 +11,8 @@ class User < ApplicationRecord
 
   has_many :availabilities, dependent: :destroy
 
-  has_many :atteendees, dependent: :destroy
-  has_many :meals, through: :atteendees
+  has_many :attendees, dependent: :destroy
+  has_many :meals, through: :attendees
 
   has_many :user_interests, dependent: :destroy
   has_many :interests, through: :user_interests
