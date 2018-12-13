@@ -9,7 +9,7 @@ namespace :database do
   desc "Reset Database -> db:drop, db:create, db:migrate, db:seed"
   task reset: :environment do
     sh 'rails db:drop'
-    Rake::Task['database:setup']
+    Rake::Task['database:setup'].invoke
   end
 end
 
