@@ -10,10 +10,68 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_13_123625) do
+ActiveRecord::Schema.define(version: 2018_12_13_125831) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "ateendees", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "meal_id"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["meal_id"], name: "index_ateendees_on_meal_id"
+    t.index ["user_id"], name: "index_ateendees_on_user_id"
+  end
+
+  create_table "availabilities", force: :cascade do |t|
+    t.bigint "user_id"
+    t.date "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_availabilities_on_user_id"
+  end
+
+  create_table "interests", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "meals", force: :cascade do |t|
+    t.bigint "restaurant_id"
+    t.integer "capacity"
+    t.date "reservation_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["restaurant_id"], name: "index_meals_on_restaurant_id"
+  end
+
+  create_table "restaurants", force: :cascade do |t|
+    t.string "zomato_restaurant_id"
+    t.string "name"
+    t.string "address"
+    t.float "rating"
+    t.integer "avg_price"
+    t.string "currency"
+    t.string "location"
+    t.float "longitude"
+    t.float "latitude"
+    t.string "website"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_interests", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "interest_id"
+    t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["interest_id"], name: "index_user_interests_on_interest_id"
+    t.index ["user_id"], name: "index_user_interests_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +85,10 @@ ActiveRecord::Schema.define(version: 2018_12_13_123625) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "ateendees", "meals"
+  add_foreign_key "ateendees", "users"
+  add_foreign_key "availabilities", "users"
+  add_foreign_key "meals", "restaurants"
+  add_foreign_key "user_interests", "interests"
+  add_foreign_key "user_interests", "users"
 end
