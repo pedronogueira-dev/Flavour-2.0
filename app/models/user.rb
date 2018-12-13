@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  after_create :create_user_interests
 
   LOCATIONS = ["Greater Lisbon", "Porto", "New York City", "Chicago", "Dallas", "Yorkshire", "London", "Liverpool", "Dublin", "Toronto", "Vancouver", "Ottawa"]
   GENDERS = %w[Female Male]
@@ -21,4 +22,11 @@ class User < ApplicationRecord
   validates :gender, presence: true, inclusion: { in: GENDERS }
   validates :location, presence: true, inclusion: { in: LOCATIONS }
   validates :age, numericality: { greater_than_or_equal_to: 18 }
+
+  private
+  def create_user_interests
+    Interest.all.each do |interest|
+      UserInterest.create!(user: self, interest: interest)
+    end
+  end
 end
