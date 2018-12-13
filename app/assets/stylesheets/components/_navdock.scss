@@ -1,0 +1,53 @@
+.tabs {
+  position: fixed;
+  bottom: 0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  box-shadow: inset 0px 11px 8px -10px #CCC;
+}
+.tabs a {
+  color: grey;
+}
+.tabs a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.8;
+}
+.tabs h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 0;
+}
+.tabs p {
+  opacity: 0.5;
+  margin-bottom: 0;
+}
+.tab {
+  flex: 0 1 20%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.tab.active {
+  background: white;
+  color: #FF385C;
+  box-shadow: inset 0px 11px 8px -10px #FF385C;
+  font-weight: bold;
+  font-size: 14px;
+  height: 10vh;
+}
+
+.tab.active p {
+  color: #FF385C;
+  font-size: 16px;
+}
+
+.dock-text {
+  font-size: 14px;
+  font-weight: lighter;
+  color: grey;
+}
