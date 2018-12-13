@@ -1,0 +1,9 @@
+<h1>Interests#index</h1>
+<p>Find me in app/views/interests/index.html.erb</p>
+<ul>
+<% @interests.each do |i| %>
+<li>
+<%= i.interest.name %> <%= link_to "edit", interests_edit_path(i.interest_id) %>
+</li>
+<% end  %>
+</ul>
