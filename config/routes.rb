@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'meals/upcoming_meals'
+  get 'meals/past_meals'
+  get 'meals/show'
+  get 'availabilities/index'
+  get 'interests/index'
+  get 'interests/edit'
   get 'users/dashboard'
   get 'users/edit_profile'
   devise_for :users
