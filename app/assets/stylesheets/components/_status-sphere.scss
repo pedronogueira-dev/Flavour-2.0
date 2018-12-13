@@ -1,0 +1,83 @@
+.status-sphere-border {
+  margin: 2vh;
+  height: 35vh;
+  width: 70vw;
+  border-radius: 50%;
+  border: solid 2px #FF385C;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.status-sphere {
+  margin-top: 0.2vh;
+  height: 34vh;
+  width: 68vw;
+  border-radius: 50%;
+  border: solid 2px #74E8E8;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  resize: vertical;
+  overflow: auto;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+.sphere-photo {
+  background-size: cover !important;
+  margin-top: 0.1vh;
+  height: 33vh;
+  width: 66vw;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sphere-intro {
+  margin-top: 20px;
+  width: 36vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sphere-status {
+  margin-top: 40px;
+  margin-bottom: 4px;
+  color: white;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sphere-city {
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sphere-city h3 {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.sphere-photobox {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.sphere-meal-count {
+  margin-top: 40px;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  font-weight: lighter;
+}
+

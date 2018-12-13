@@ -1,0 +1,227 @@
+h5 {
+  margin-top: 8px;
+}
+
+.pending {
+  border: solid 2px #74E8E8;
+  background-color: #74E8E8;
+}
+
+
+.accepted {
+  border: solid 2px #FF385C;
+  background-color: #FF385C
+}
+
+.no-events {
+  border: solid 2px white;
+  background-color: white;
+  color: #74E8E8;
+}
+
+.past-event {
+  border: solid 2px #d1d1d1;
+  background-color: #d1d1d1
+}
+
+
+.card-sm {
+  border-radius: 12px;
+  width: 90vw;
+  height: 25vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  resize: vertical;
+  overflow: auto;
+  -webkit-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+  -moz-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+  box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+}
+
+.card-lg {
+  border-radius: 12px;
+  width: 90vw;
+  height: 75vh;
+  margin: auto;
+  -webkit-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+  -moz-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+  box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+}
+
+.white-card {
+  width: 85vw;
+  height: 45vh;
+  border-radius: 12px;
+  border: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  resize: vertical;
+  overflow: auto;
+  position: relative;
+  background-color: white;
+  margin-top: 10px;
+  padding: 4px;
+}
+
+.date, .interest, .confirmed {
+  text-align: center;
+  color: white;
+  border-radius: 12px;
+  width: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: inline-block
+}
+
+
+.date p, .interest p, .confirmed p {
+ margin-top: 4px;
+ margin-bottom: 4px;
+ font-style: italic;
+ font-size: 18px;
+}
+
+.interest p, .confirmed p {
+  padding-right: 10px;
+}
+
+.left-bottom {
+  position: absolute;
+  bottom: -4px;
+  left: -2px;
+  z-index: 1;
+}
+.countdown h5 {
+  margin-bottom: 4px;
+  font-style: italic;
+  color: #FF385C;
+}
+
+.backdrop-button {
+  background-size: cover !important;
+  width: 85vw;
+  height: 20vh;
+  border-radius: 12px;
+  border: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  resize: vertical;
+  overflow: auto;
+  position: relative;
+}
+
+.backdrop-profile {
+  background-size: cover !important;
+  width: 85vw;
+  height: 25vh;
+  border-radius: 12px;
+  border: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  resize: vertical;
+  overflow: auto;
+  position: relative;
+  margin-top: 10px;
+}
+
+.accept-title h5 {
+  margin-bottom: 4px;
+  font-style: italic;
+  color: grey;
+}
+
+.top-center {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 25%;
+  top: 0px;
+  z-index: 1;
+}
+
+.meal {
+  height: 20vh;
+  width: 80vw;
+  border-radius: 12px;
+}
+
+.map {
+  background-image: url('https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/w_1164,c_limit/GoogleMapTA.jpg');
+  height: 100%;
+  width: 80vw;
+  resize: vertical;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+}
+.small-header {
+  font-weight: lighter;
+  color: grey;
+  margin-bottom: 0px;
+}
+
+.large-header {
+  font-size: 28px;
+  font-weight: bold;
+  color: #FF385C;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+ul {
+  margin-bottom: 4px;
+}
+
+.meal-details {
+  padding: 4px;
+}
+
+.stars {
+  font-size: 10px;
+  color: #DAA520;
+  margin-bottom: 0px;
+}
+
+.review-rating {
+  margin-left: 4px;
+  font-size: 10px;
+  color: grey;
+  margin-bottom: 0px;
+}
+
+.heart, .check {
+  font-size: 18px;
+  margin: auto;
+  display: inline-block;
+}
+
+.bottom-center {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 25%;
+  bottom: 0px;
+  z-index: 1;
+}
+
