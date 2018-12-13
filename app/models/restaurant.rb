@@ -5,5 +5,4 @@ class Restaurant < ApplicationRecord
   validates :name, presence: true, blank: false
   validates :address, presence: true, blank: false
   validates :location, presence: true, inclusion: { in: User::LOCATION }
-
 end
