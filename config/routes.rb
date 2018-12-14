@@ -8,9 +8,10 @@ Rails.application.routes.draw do
   delete 'availability/:id', to: 'availabilities#destroy', as: 'availability_delete'
   get 'interests/index', to: 'interests#index', as: 'interests'
   get 'interests/edit', to: 'interests#edit', as: 'interests_edit'
-  get 'users/dashboard', to: 'users#dashboard', as: 'dashboard'
+  get 'dashboard', to: 'users#dashboard', as: 'dashboard'
 
-  get 'users/edit_profile', to: 'users#edit_profile', as: 'edit_profile'
+  get 'edit_profile', to: 'users#edit_profile', as: 'edit_profile'
+  patch 'dashboard', to: 'users#update', as: :update_profile
   patch 'interests/edit', to: 'interests#update'
 
 

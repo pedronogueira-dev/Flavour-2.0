@@ -2,7 +2,10 @@
   <h1>Calendar</h1>
 
   <%= simple_form_for @availability do |f| %>
-  <%= f.input :date, as: :string, input_html: {class: "datepicker"} %>
+  <%= f.input :date,
+      as: :string,
+      required: true,
+      input_html: {id: "availability_date"} %>
   <%= f.button :submit, "Add Availability" %>
   <% end %>
 

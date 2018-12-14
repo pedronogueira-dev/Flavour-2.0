@@ -5,9 +5,10 @@ class AvailabilitiesController < ApplicationController
   end
 
   def create
+    @availabilities = current_user.availabilities
     @availability = Availability.new(date_params)
     @availability.user = current_user
-    if @availability.save!
+    if @availability.save
       redirect_to availabilities_path
     else
       render :index
