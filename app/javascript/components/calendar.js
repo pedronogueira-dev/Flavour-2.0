@@ -43,16 +43,30 @@ const reserveAvailability = (date) => {
 }
 
 const addDayListener = (day) => {
-  day.addEventListener('click', (event) => {
-    let target = event.currentTarget;
-    if (target.children.length == 0) {
-      // console.log(">>>DELETE AVAILABILITY");
-      // requestDelete(new Date(target.innerText));
-    // }else{
-      console.log(">>>CREATE AVAILABILITY");
-      reserveAvailability(new Date(target.innerText));
+
+  if (day.children.length == 0 ){
+    // let date = new Date(day.innerText);
+    // date.setHours(0,0,0,0);
+    // let min_date = new Date();
+    // min_date.setDate(min_date.getDate() + 7);
+    // min_date.setHours(0,0,0,0);
+    // let max_date = new Date();
+    // max_date.setDate(min_date.getDate() + 7);
+    // max_date.setHours(0,0,0,0);
+
+    // if(date >= min_date && date <= max_date){
+      if(scheduling_day(day)){
+        // debugger;
+        day.classList.add("selectable-day");
+        day.addEventListener('click', (event) => {
+
+        console.log(">>>CREATE AVAILABILITY");
+        reserveAvailability(date);
+      });
     }
-  });
+  }else{
+     day.classList.add("applied-day");
+  }
 };
 
 const calendarListener = () => {
@@ -61,6 +75,19 @@ const calendarListener = () => {
       addDayListener(day);
     })
   }
+};
+
+const scheduling_day = (day) =>{
+  let date = new Date(day.innerText);
+  date.setHours(0,0,0,0);
+  let min_date = new Date();
+  min_date.setDate(min_date.getDate() + 7);
+  min_date.setHours(0,0,0,0);
+  let max_date = new Date();
+  max_date.setDate(min_date.getDate() + 7);
+  max_date.setHours(0,0,0,0);
+
+  return date >= min_date && date <= max_date
 };
 
 export { calendarListener };
