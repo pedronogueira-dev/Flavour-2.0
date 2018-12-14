@@ -1,2 +1,20 @@
-<h1>Availabilities#index</h1>
-<p>Find me in app/views/availabilities/index.html.erb</p>
+<div class="wrapper">
+  <h1>Calendar</h1>
+  <%= month_calendar events: @availabilities, attribute: :date do |date, availabilities| %>
+  <%= date %>
+
+  <% availabilities.each do |availability| %>
+  <div data-availability-id="<%= availability.id %>">
+        <%= link_to availability_delete_path(date: availability.date.to_s), method: :delete, remote: true do %>
+      <div class="day-applied">
+        <i class="fab fa-angellist"></i>
+      </div>
+    <% end %>
+  </div>
+
+  <% end %>
+  <% end %>
+  <%= link_to "Back to Dashboard", dashboard_path, class:"btn btn-default"  %>
+</div>
+
+

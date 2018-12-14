@@ -1,0 +1,24 @@
+$turquoise: #74E8E8;
+$inactive: #E5E5E5;
+$pink: #FF385C;
+
+.interest-container {
+  border-radius: 15px;
+  border: 1px solid $pink;
+  box-shadow: 5px 5px lightgrey;
+  background-color: white;
+}
+
+.name {
+  color: $turquoise;
+  text-shadow: 1px 1px black;
+}
+
+.interest-name {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px;
+  text-shadow: 1px 1px $turquoise;
+  color: $pink;
+}
+
