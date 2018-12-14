@@ -8,7 +8,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow:hidden;
 }
 
 /* Logo */
@@ -75,4 +74,10 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.dropdown-menu {
+
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
