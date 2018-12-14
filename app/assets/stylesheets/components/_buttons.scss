@@ -20,19 +20,10 @@
 .active-meals-button {
   width: 90vw;
   height: 4vh;
-  background-color: #74E8E8;
-  border-width: 0.5px;
-  border-style: solid;
-  border-top-color: #74E8E8;
-  border-left-color: #74E8E8;
-  border-right-color: #74E8E8;
-  border-bottom-color: #74E8E8;
+border: none;
   margin-left: auto;
   margin-right: auto;
   border-radius: 0 0 12px 12px;
-  -webkit-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
-  -moz-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
-  box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
   display: flex;
     overflow: hidden;
   justify-content: center;

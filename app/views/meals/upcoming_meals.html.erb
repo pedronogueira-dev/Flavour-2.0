@@ -1,70 +1,13 @@
-<h1>Meals#upcoming_meals</h1>
-<p>Find me in app/views/meals/upcoming_meals.html.erb</p>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 no-mp meal-card">
-      <div class="active-meals-status">
-        <p> pending </p>
-      </div>
-      <div class="active-meals-card">
-        <div class="active-meals-city-photo">
-          <p> lisbon </p>
-        </div>
-        <div class="active-meals-date">
-          <h5> friday </h5>
-          <h4> 27 </h4>
-          <h6> nov </h6>
-        </div>
-        <div class="active-meals-resturant-photo">
-          <p> the amaizing resturant </p>
-        </div>
-      </div>
-      <div class="active-meals-button">
-        <h4> click for details </h4>
-      </div>
-    </div>
-    <div class="col-xs-12 no-mp meal-card">
-      <div class="active-meals-status">
-        <p> pending </p>
-      </div>
-      <div class="active-meals-card">
-        <div class="active-meals-city-photo">
-          <p> lisbon </p>
-        </div>
-        <div class="active-meals-date">
-          <h5> friday </h5>
-          <h4> 27 </h4>
-          <h6> nov </h6>
-        </div>
-        <div class="active-meals-resturant-photo">
-          <p> the amaizing resturant </p>
-        </div>
-      </div>
-      <div class="active-meals-button">
-        <h4> click for details </h4>
-      </div>
-    </div>
-    <div class="col-xs-12 no-mp meal-card">
-      <div class="active-meals-status">
-        <p> pending </p>
-      </div>
-      <div class="active-meals-card">
-        <div class="active-meals-city-photo">
-          <p> lisbon </p>
-        </div>
-        <div class="active-meals-date">
-          <h5> friday </h5>
-          <h4> 27 </h4>
-          <h6> nov </h6>
-        </div>
-        <div class="active-meals-resturant-photo">
-          <p> the amaizing resturant </p>
-        </div>
-      </div>
-      <div class="active-meals-button">
-        <h4> click for details </h4>
-      </div>
-    </div>
+    <% @meals.each do |meal| %>
+      <%= link_to meal_path(meal) do %>
+        <% if @attending.meal == meal %>
+          <%= render partial: "confirmed_meal", locals: {meal: meal, status: @attending.status} %>
+        <% else %>
+          <%= render partial: "not_confirmed_meal", locals: {meal: meal} %>
+        <% end %>
+      <% end %>
+    <% end %>
   </div>
-</div>
 </div>
