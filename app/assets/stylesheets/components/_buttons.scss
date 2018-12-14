@@ -1,18 +1,50 @@
 .meals-button {
-border-radius: 12px;
-background-color: #FF385C;
-color: white;
-border: none;
+  border-radius: 12px;
+  background-color: #FF385C;
+  color: white;
+  border: none;
 }
 
 .meals-button:hover {
-border-radius: 12px;
-background-color: #e8304f;
-color: white;
-border: none;
+  border-radius: 12px;
+  background-color: #e8304f;
+  color: white;
+  border: none;
 }
 
 .meals-button h3 {
   margin-top: 12px;
   margin-bottom: 12px;
+}
+
+.active-meals-button {
+  width: 90vw;
+  height: 4vh;
+  background-color: #74E8E8;
+  border-width: 0.5px;
+  border-style: solid;
+  border-top-color: #74E8E8;
+  border-left-color: #74E8E8;
+  border-right-color: #74E8E8;
+  border-bottom-color: #74E8E8;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0 0 12px 12px;
+  -webkit-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+  -moz-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+  box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+  display: flex;
+    overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.active-meals-button h4 {
+  margin: 0 0 0 0;
+  padding: 0px 0px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+
 }

@@ -1,5 +1,6 @@
-$inactive: #74E8E8;
-$active: #E5E5E5;
+$turquoise: #74E8E8;
+$inactive: #E5E5E5;
+$pink: #FF385C;
 /* The switch - the box around the slider */
 /* The switch - the box around the slider */
 .switch {
@@ -24,7 +25,7 @@ $active: #E5E5E5;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $active;
+  background-color: $inactive;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -42,11 +43,11 @@ $active: #E5E5E5;
 }
 
 input:checked + .slider {
-  background-color: $inactive;
+  background-color: $turquoise;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px $inactive;
+  box-shadow: 0 0 1px $turquoise;
 }
 
 input:checked + .slider:before {
@@ -58,10 +59,12 @@ input:checked + .slider:before {
 /* Rounded sliders */
 .slider.round {
   border-radius: 34px;
-}
+  }
 
 .slider.round:before {
   border-radius: 50%;
+  border: 2px solid $pink;
+
 }
 
 .toggle-container {
@@ -71,14 +74,13 @@ input:checked + .slider:before {
   margin: 10px;
 }
 
-.vote-yes {
-  color: $active;
-  font-weight: bold;
+
+.toggle-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  margin: 10px;
 }
 
 
-.vote-no {
-  color: $inactive;
-  font-weight: bold;
-}
 

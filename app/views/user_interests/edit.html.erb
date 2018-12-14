@@ -1,15 +1,19 @@
 <div class="container">
-  <h1><%= current_user.first_name %>, update your Interests!</h1>
-<% @interests.each do |i| %>
-  <%=  form_for(i) do |f| %>
-  <div class="toggle-container">
-      <%= i.interest.name  %>
-  <label class="switch pull-right">
-    <%= f.check_box :active %>
-    <span class="slider round"></span>
-  </label>
-</div>
-  <%= f.submit %>
+  <h1><strong class = "name"><%= current_user.first_name %></strong>, update your Interests!</h1>
+<div class="row">
+  <% @interests.each do |i| %>
+   <%=  form_for(i, url: user_interest_path(i), method: :patch) do |f| %>
+      <div class="col-xs-6 interest-container">
+        <div class="interest-name">
+           <p><%= i.interest.name %></p>
+        </div>
+           <label class="switch pull-right">
+              <%= f.check_box :active, class: "submit-interests" %>
+              <span class="slider round"></span>
+          </label>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+  </div>
 </div>
+

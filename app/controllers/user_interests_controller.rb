@@ -4,16 +4,22 @@ class UserInterestsController < ApplicationController
   end
 
   def edit
-    @interests = current_user.user_interests
+    @interests = current_user.user_interests.sort
   end
 
   def update
     @interest = current_user.user_interests.find(params[:id])
-    @interest.update(user_interests_params)
-    if @interest.save!
-      redirect_to interests_edit_path
+    if @interest.update(user_interests_params)
+      respond_to do |format|
+        format.html { redirect_to interests_edit_path }
+        format.js # <-- will render `app/views/user_interest/update.js.erb`
+      end
     else
-      redirect_to interests_edit_path
+      respond_to do |format|
+        format.html { render :new }
+        format.js  # <-- idem
+      end
+
     end
   end
 
