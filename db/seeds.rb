@@ -197,7 +197,7 @@ puts "Created #{User.count} New Users"
 
 puts "----------------Seeding meals--------------------"
 
-Users.all.each do |user|
+User.all.each do |user|
   Availability.create!(date: "2018-12-4")
   Availability.create!(date: "2018-12-20")
   Availability.create!(date: "2018-12-24")
