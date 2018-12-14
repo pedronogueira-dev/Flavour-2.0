@@ -1,5 +1,10 @@
 console.log("heeey")
 let element = document.querySelector("[data-availability-id='<%= @availability.id %>']");
 // document.querySelector("[data-availability-id='<%= @availability.id %>']")
-  element.remove();
+element.parentElement.classList.add("selectable-day");
+element.parentElement.classList.remove("applied-day");
+element.remove();
+// document.querySelector("[data-availability-id='<%= @availability.id %>']")
+
+// document.querySelector("[data-availability-id='<%= @availability.id %>']")
 
