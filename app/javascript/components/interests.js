@@ -11,10 +11,13 @@ const addEventListenersToInterests = function() {
     // get each form by class name
     const submitButtons = document.getElementsByClassName("submit-interests");
     var i;
+    console.log("buttns ", submitButtons)
     // iterate over the forms when a evenlistener is triggered submit each form
     for(i=0; i<submitButtons.length; i++) {
-      const form = submitButtons[i].parentNode.parentNode.parentNode
+      const form = submitButtons[i].closest("form")
+      console.log("form", submitButtons[i].closest("form"))
       submitButtons[i].addEventListener("click", (event) => {
+
         form.submit();
       });
     }

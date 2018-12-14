@@ -74,14 +74,13 @@ input:checked + .slider:before {
   margin: 10px;
 }
 
-.interest-name {
-  color: $pink;
-  font-size: 25px;
+
+.toggle-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  margin: 10px;
 }
 
-.name {
-  color: $turquoise;
-  text-shadow: 1px 1px black;
-}
 
 

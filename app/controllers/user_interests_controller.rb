@@ -9,11 +9,10 @@ class UserInterestsController < ApplicationController
 
   def update
     @interest = current_user.user_interests.find(params[:id])
-
     if @interest.update(user_interests_params)
       respond_to do |format|
         format.html { redirect_to interests_edit_path }
-        format.js  # <-- will render `app/views/user_interest/update.js.erb`
+        format.js # <-- will render `app/views/user_interest/update.js.erb`
       end
     else
       respond_to do |format|
