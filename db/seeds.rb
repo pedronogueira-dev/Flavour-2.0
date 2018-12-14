@@ -76,7 +76,7 @@ puts "----------------Seeding Interests--------------------"
 
 interests = Interest.create!([{ name: "Entertainment" }, { name: "Fitness" },
   { name: "Humor" }, { name: "Video Games" }, { name: "Books" }, { name: "Politics" },
-  { name: "Sports" }, { name: "Travel" }, { name: "Games & Puzzles" }])
+  { name: "Sports" }, { name: "Travel" }, { name: "Games" }, { name: "Hiking" }])
 
 puts "Created #{Interest.count} New interests"
 
