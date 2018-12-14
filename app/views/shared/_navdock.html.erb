@@ -1,18 +1,18 @@
 <div class="tabs">
-  <a class="tab active" href="#">
+  <%= link_to dashboard_path, class:"tab active" do %>
     <i class="fas fa-home"></i>
     <p class="dock-text">Home</p>
-  </a>
+  <% end %>
   <%= link_to availabilities_path, class:"tab" do %>
     <i class="fas fa-calendar-alt"></i>
     <p class="dock-text">Availability</p>
   <% end %>
-  <a class="tab" href="#">
+  <%= link_to upcoming_meals_path, class:"tab" do %>
     <div class="book-circle">
       <i class="fas fa-rocket"></i>
       <p class="dock-text">Book Today</p>
     </div>
-  </a>
+  <% end %>
   <a class="tab" href="#">
     <i class="fas fa-users"></i>
     <p class="dock-text">Past Meals</p>
