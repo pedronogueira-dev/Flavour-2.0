@@ -4,23 +4,17 @@
   <%= date %>
 
   <% availabilities.each do |availability| %>
-  <div class="day-applied">
-    <i class="fab fa-angellist"></i>
+  <div data-availability-id="<%= availability.id %>">
+        <%= link_to availability_delete_path(date: availability.date.to_s), method: :delete, remote: true do %>
+      <div class="day-applied">
+        <i class="fab fa-angellist"></i>
+      </div>
+    <% end %>
   </div>
+
   <% end %>
   <% end %>
-
-
-  <%= simple_form_for @availability do |f| %>
-  <%= f.input :date,
-  as: :string,
-  required: true,
-  input_html: {id: "availability_date"} %>
-  <%= f.button :submit, "Add Availability" %>
-  <% end %>
-
   <%= link_to "Back to Dashboard", dashboard_path, class:"btn btn-default"  %>
-
 </div>
 
 

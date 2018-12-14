@@ -7,6 +7,7 @@ class AvailabilitiesController < ApplicationController
   def create
     @availabilities = current_user.availabilities
     @availability = Availability.new(date_params)
+    #@availability = Availability.new(params[:date])
     @availability.user = current_user
     if @availability.save
       redirect_to availabilities_path
@@ -16,9 +17,15 @@ class AvailabilitiesController < ApplicationController
   end
 
   def destroy
-    @availability = Availability.find(params[:id])
-    @availability.destroy!
-    redirect_to availabilities_path
+    # @availability = Availability.find(params[:id])
+    @availability = current_user.availabilities.find_by(date: params[:date])
+    @availability.destroy
+
+    respond_to do |format|
+      format.html { redirect_to ponies_url }
+      format.json { head :no_content }
+      format.js
+    end
   end
 
   private
