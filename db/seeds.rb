@@ -82,6 +82,22 @@ puts "Created #{Interest.count} New interests"
 puts "----------------Seeding Users--------------------"
 
 users = [{
+  first_name: "Jami",
+  email: "jami@flavour.com",
+  password: "123456",
+  age: 26,
+  photo: "https://avatars1.githubusercontent.com/u/42552935?v=4",
+  gender: "Female",
+  location: "New York City"
+},{
+  first_name: "Chad",
+  email: "chad@flavour.com",
+  password: "123456",
+  age: 21,
+  photo: "https://avatars2.githubusercontent.com/u/25643328?v=4",
+  gender: "Male",
+  location: "New York City"
+},{
   first_name: "Bradly",
   email: "bigB@flavour.com",
   password: "123456",
@@ -116,6 +132,14 @@ users = [{
   photo: "https://images.unsplash.com/photo-1495078065017-564723e7e3e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80",
   gender: "Female",
   location: "New York City"
+},{
+  first_name: "Pedro",
+  email: "pd@flavour.com",
+  password: "123456",
+  age: 27,
+  photo: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/vshknq7igz6riezeeo4n.jpg",
+  gender: "Male",
+  location: "Greater Lisbon"
 },
 {
   first_name: "Larry",
@@ -176,12 +200,12 @@ puts "----------------Seeding meals--------------------"
 meals = [{
   restaurant: Restaurant.where(location: "New York City").sample,
   capacity: 8,
-  reservation_date: "2019-1-20"
+  reservation_date: "2018-12-4"
 },
 {
   restaurant: Restaurant.where(location: "Greater Lisbon").sample,
   capacity: 8,
-  reservation_date: "2019-1-27"
+  reservation_date: "2019-12-27"
 }]
 
 meals.each do |meal|
