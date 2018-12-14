@@ -1,24 +1,26 @@
 <div class="wrapper">
   <h1>Calendar</h1>
+  <%= month_calendar events: @availabilities, attribute: :date do |date, availabilities| %>
+  <%= date %>
+
+  <% availabilities.each do |availability| %>
+  <div class="day-applied">
+    <i class="fab fa-angellist"></i>
+  </div>
+  <% end %>
+  <% end %>
+
 
   <%= simple_form_for @availability do |f| %>
   <%= f.input :date,
-      as: :string,
-      required: true,
-      input_html: {id: "availability_date"} %>
+  as: :string,
+  required: true,
+  input_html: {id: "availability_date"} %>
   <%= f.button :submit, "Add Availability" %>
   <% end %>
 
-  <ul>
-    <% @availabilities.each do |availability|%>
-    <li>
-      <%= link_to availability_delete_path(availability), method: :delete, data: {confirm: "Do you wish to remove the current availability?"} do %>
-      <div><p><%=  availability.date%></p></div>
-      <% end %>
-    </li>
-    <% end %>
-  </ul>
-
-  <%= link_to "Back to Dashboard", dashboard_path %>
+  <%= link_to "Back to Dashboard", dashboard_path, class:"btn btn-default"  %>
 
 </div>
+
+
