@@ -6,13 +6,13 @@ Rails.application.routes.draw do
   get 'availabilities', to: 'availabilities#index', as: 'availabilities'
   post 'availabilities', to: 'availabilities#create'
   delete 'availability/:id', to: 'availabilities#destroy', as: 'availability_delete'
-  get 'interests/index', to: 'interests#index', as: 'interests'
-  get 'interests/edit', to: 'interests#edit', as: 'interests_edit'
+  get 'interests/index', to: 'user_interests#index', as: 'interests'
+  get 'interests/edit', to: 'user_interests#edit', as: 'interests_edit'
   get 'dashboard', to: 'users#dashboard', as: 'dashboard'
 
   get 'edit_profile', to: 'users#edit_profile', as: 'edit_profile'
   patch 'dashboard', to: 'users#update', as: :update_profile
-  patch 'interests/edit', to: 'interests#update'
+  patch 'interests/edit', to: 'user_interests#update'
 
 
   devise_for :users
