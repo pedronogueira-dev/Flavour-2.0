@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   get 'meals/upcoming_meals', to: 'meals#upcoming_meals', as: 'upcoming_meals'
   get 'meals/past_meals', to: 'meals#past_meals', as: 'past_meals'
-  get 'meals/show', to: 'meals#show', as: 'meal'
-
+  get 'meals/:id', to: 'meals#show', as: 'meal'
   get 'availabilities', to: 'availabilities#index', as: 'availabilities'
   post 'availabilities', to: 'availabilities#create'
   delete 'availability', to: 'availabilities#destroy', as: 'availability_delete'
@@ -13,7 +12,6 @@ Rails.application.routes.draw do
   get 'edit_profile', to: 'users#edit_profile', as: 'edit_profile'
   patch 'dashboard', to: 'users#update', as: :update_profile
   patch 'interests/edit', to: 'user_interests#update'
-
 
   devise_for :users
   root to: 'pages#home'

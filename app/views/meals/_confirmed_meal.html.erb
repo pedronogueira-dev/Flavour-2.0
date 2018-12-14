@@ -1,0 +1,21 @@
+ <div class="col-xs-12 no-mp meal-card">
+  <div class="active-meals-status confirmed">
+    <p> <%= status %></p>
+  </div>
+  <div class="active-meals-card confirmed">
+    <div class="active-meals-city-photo">
+      <p> <%= meal.restaurant.location %> </p>
+    </div>
+    <div class="active-meals-date">
+      <h5>  <%= meal.reservation_date.strftime("%A") %></h5>
+      <h4> <%= meal.reservation_date.day %> </h4>
+      <h6> <%= meal.reservation_date.strftime("%B") %></h6>
+    </div>
+    <div class="active-meals-resturant-photo">
+      <p> <%= meal.restaurant.name  %></p>
+    </div>
+  </div>
+  <div class="active-meals-button confirmed">
+    <h4> click for details </h4>
+  </div>
+</div>
