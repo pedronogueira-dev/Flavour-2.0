@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'availabilities', to: 'availabilities#index', as: 'availabilities'
   post 'availabilities', to: 'availabilities#create'
-  delete 'availability/:id', to: 'availabilities#destroy', as: 'availability_delete'
+  delete 'availability', to: 'availabilities#destroy', as: 'availability_delete'
   get 'interests/index', to: 'user_interests#index', as: 'interests'
   get 'interests/edit', to: 'user_interests#edit', as: 'interests_edit'
   get 'dashboard', to: 'users#dashboard', as: 'dashboard'
