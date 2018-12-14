@@ -1,9 +1,23 @@
 console.log("heeey")
 let element = document.querySelector("[data-availability-id='<%= @availability.id %>']");
 // document.querySelector("[data-availability-id='<%= @availability.id %>']")
-element.parentElement.classList.add("selectable-day");
-element.parentElement.classList.remove("applied-day");
+
+ element.parentElement.classList.remove("applied-day");
+if(appliableDay(new Date(element.parentElement.innerText))){
+  element.parentElement.classList.add("selectable-day");
+}
 element.remove();
 
 
 // add event listener to the element
+function appliableDay(date){
+
+  let min_date = new Date();
+  min_date.setDate(min_date.getDate() + 7);
+  min_date.setHours(0,0,0,0);
+  let max_date = new Date();
+  max_date.setDate(min_date.getDate() + 14);
+  max_date.setHours(0,0,0,0);
+
+  return date >= min_date && date <= max_date
+}
