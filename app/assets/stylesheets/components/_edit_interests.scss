@@ -4,9 +4,11 @@ $pink: #FF385C;
 
 .interest-container {
   border-radius: 15px;
-  border: 1px solid $pink;
+  border: 1px solid rgba(255,56,92, 0.3);
   box-shadow: 5px 5px lightgrey;
   background-color: white;
+  height:15vh;
+  overflow-y: scroll;
 }
 
 .name {
@@ -17,8 +19,9 @@ $pink: #FF385C;
 .interest-name {
   font-weight: bold;
   font-size: 20px;
-  padding: 5px;
+  margin: 3px;
   text-shadow: 1px 1px $turquoise;
   color: $pink;
 }
+
 

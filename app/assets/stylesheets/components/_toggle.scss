@@ -63,7 +63,7 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-  border: 2px solid $pink;
+  border: 2px solid rgba(255,56,92, 0.4);
 
 }
 
