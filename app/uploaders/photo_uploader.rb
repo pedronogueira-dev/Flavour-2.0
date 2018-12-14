@@ -37,12 +37,19 @@ class PhotoUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
+
+
+
   process eager: true  # Force version generation at upload time.
 
   process convert: 'jpg'
 
   version :thumnail do
     resize_to_fit 256, 256
+  end
+
+   version :avatar do
+    resize_to_fit 150, 150;
   end
 
   version :bright_face do
