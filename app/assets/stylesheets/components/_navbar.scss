@@ -10,9 +10,17 @@
   justify-content: space-between;
 }
 
+.logo {
+  color: #FF385C;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 /* Logo */
 .navbar-wagon-brand img {
   height: 50px;
+  border-radius: 50%;
 }
 
 /* User Avatar */
