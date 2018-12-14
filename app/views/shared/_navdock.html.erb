@@ -1,8 +1,8 @@
 <div class="tabs">
-  <a class="tab active" href="#">
+  <%= link_to dashboard_path, class:"tab" do %>
     <i class="fas fa-home"></i>
     <p class="dock-text">Home</p>
-  </a>
+  <% end %>
   <%= link_to availabilities_path, class:"tab" do %>
     <i class="fas fa-calendar-alt"></i>
     <p class="dock-text">Availability</p>
