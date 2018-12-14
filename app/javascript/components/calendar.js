@@ -55,7 +55,9 @@ const addDayListener = (day) => {
     // max_date.setHours(0,0,0,0);
 
     // if(date >= min_date && date <= max_date){
-      if(scheduling_day(day)){
+      let date = new Date(day.innerText)
+      date.setHours(0,0,0,0);
+      if(scheduling_day(date)){
         // debugger;
         day.classList.add("selectable-day");
         day.addEventListener('click', (event) => {
@@ -77,14 +79,13 @@ const calendarListener = () => {
   }
 };
 
-const scheduling_day = (day) =>{
-  let date = new Date(day.innerText);
-  date.setHours(0,0,0,0);
+const scheduling_day = (date) =>{
+
   let min_date = new Date();
   min_date.setDate(min_date.getDate() + 7);
   min_date.setHours(0,0,0,0);
   let max_date = new Date();
-  max_date.setDate(min_date.getDate() + 7);
+  max_date.setDate(min_date.getDate() + 14);
   max_date.setHours(0,0,0,0);
 
   return date >= min_date && date <= max_date
