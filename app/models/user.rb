@@ -31,7 +31,8 @@ class User < ApplicationRecord
             and \
             status = 'Confirmed' \
             and \
-            user_id = #{id}"
+            user_id = #{id}
+            order by meals.reservation_date DESC"
     Meal.find_by_sql(query)
   end
 
@@ -43,7 +44,8 @@ class User < ApplicationRecord
             and \
             status != 'Rejected' \
             and \
-            user_id = #{id}"
+            user_id = #{id}
+            order by meals.reservation_date ASC"
     Meal.find_by_sql(query)
   end
 
@@ -55,7 +57,8 @@ class User < ApplicationRecord
             and \
             status = 'Invited' \
             and \
-            user_id = #{id}"
+            user_id = #{id}
+            order by meals.reservation_date ASC"
     Meal.find_by_sql(query)
   end
 
@@ -67,7 +70,8 @@ class User < ApplicationRecord
             and \
             status = 'Confirmed' \
             and \
-            user_id = #{id}"
+            user_id = #{id}
+            order by meals.reservation_date ASC"
     Meal.find_by_sql(query)
   end
 
