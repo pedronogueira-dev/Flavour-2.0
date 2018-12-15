@@ -44,7 +44,6 @@ const reserveAvailability = (date) => {
 
 const addDayListener = (day) => {
 
-  if (day.children.length == 0 ){
     // let date = new Date(day.innerText);
     // date.setHours(0,0,0,0);
     // let min_date = new Date();
@@ -55,20 +54,23 @@ const addDayListener = (day) => {
     // max_date.setHours(0,0,0,0);
 
     // if(date >= min_date && date <= max_date){
+      if(day.children.length > 0) {
+        day.classList.add("applied-day");
+      }
+
       let date = new Date(day.innerText)
       date.setHours(0,0,0,0);
       if(scheduling_day(date)){
-        // debugger;
-        day.classList.add("selectable-day");
+        if (day.children.length == 0 ){
+          day.classList.add("selectable-day");
+        }
         day.addEventListener('click', (event) => {
 
         console.log(">>>CREATE AVAILABILITY");
         reserveAvailability(date);
       });
     }
-  }else{
-     day.classList.add("applied-day");
-  }
+
 };
 
 const calendarListener = () => {

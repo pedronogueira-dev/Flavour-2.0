@@ -197,6 +197,12 @@ puts "Created #{User.count} New Users"
 
 puts "----------------Seeding meals--------------------"
 
+User.all.each do |user|
+  Availability.create!(date: "2018-12-4", user: user)
+  Availability.create!(date: "2018-12-20", user: user)
+  Availability.create!(date: "2018-12-24", user: user)
+end
+
 meals = [{
   restaurant: Restaurant.where(location: "New York City").sample,
   capacity: 8,
