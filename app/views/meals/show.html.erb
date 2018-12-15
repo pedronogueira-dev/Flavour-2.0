@@ -1,2 +1,15 @@
 <h1>Meals#show</h1>
 <p>Find me in app/views/meals/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <% @meals.each do |meal| %>
+      <%= link_to meal_path(meal) do %>
+        <% if @attending.meal == meal %>
+          <%= render partial: "confirmed_meal", locals: {meal: meal, status: @attending.status} %>
+        <% else %>
+          <%= render partial: "not_confirmed_meal", locals: {meal: meal} %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

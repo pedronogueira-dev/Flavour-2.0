@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Cleaning up database..."
+Attendee.destroy_all
 Meal.destroy_all
 Restaurant.destroy_all
 User.destroy_all
@@ -199,33 +200,145 @@ puts "----------------Seeding meals--------------------"
 
 User.all.each do |user|
   Availability.create!(date: "2018-12-4", user: user)
+  Availability.create!(date: "2018-12-5", user: user)
+  Availability.create!(date: "2018-12-10", user: user)
   Availability.create!(date: "2018-12-20", user: user)
   Availability.create!(date: "2018-12-24", user: user)
+  Availability.create!(date: "2018-12-25", user: user)
+  Availability.create!(date: "2018-12-23", user: user)
 end
 
 meals = [{
   restaurant: Restaurant.where(location: "New York City").sample,
   capacity: 8,
   reservation_date: "2018-12-4"
-},
-{
-  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
+},{
+  restaurant: Restaurant.where(location: "New York City").sample,
   capacity: 8,
-  reservation_date: "2019-12-27"
+  reservation_date: "2018-12-5"
+},{
+  restaurant: Restaurant.where(location: "New York City").sample,
+  capacity: 8,
+  reservation_date: "2018-12-24"
+},{
+  restaurant: Restaurant.where(location: "New York City").sample,
+  capacity: 8,
+  reservation_date: "2018-12-25"
+},{
+  restaurant: Restaurant.where(location: "New York City").sample,
+  capacity: 8,
+  reservation_date: "2018-12-23"
+},{
+  restaurant: Restaurant.where(location: "New York City").sample,
+  capacity: 8,
+  reservation_date: "2018-12-27"
 }]
 
 meals.each do |meal|
   Meal.create!(meal)
 end
 
-puts "Created #{Meal.count} New meals"
-meal = Meal.first
+meal = Meal.find_by(reservation_date: '2018-12-4')
 User.where(location: "New York City").limit(5).each do |user|
   Attendee.create!(user: user, meal: meal, status: "Confirmed")
   meal.capacity -= 1
   meal.save!
 end
 
+meal = Meal.find_by(reservation_date: '2018-12-24')
+User.where(location: "New York City").limit(5).each do |user|
+  Attendee.create!(user: user, meal: meal, status: "Confirmed")
+  meal.capacity -= 1
+  meal.save!
+end
+
+meal = Meal.find_by(reservation_date: '2018-12-25')
+User.where(location: "New York City").limit(8).each do |user|
+  Attendee.create!(user: user, meal: meal, status: "Invited")
+  meal.capacity -= 1
+  meal.save!
+end
+
+meal = Meal.find_by(reservation_date: '2018-12-23')
+User.where(location: "New York City").limit(5).each do |user|
+  Attendee.create!(user: user, meal: meal, status: "Rejected")
+  meal.capacity -= 1
+  meal.save!
+end
+
+meal = Meal.find_by(reservation_date: '2018-12-27')
+User.where(location: "New York City").limit(5).each do |user|
+  Attendee.create!(user: user, meal: meal, status: "Invited")
+  meal.capacity -= 1
+  meal.save!
+end
+
+# ----------------------------------------------------------
+meals = [{
+  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
+  capacity: 8,
+  reservation_date: "2018-11-4"
+},{
+  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
+  capacity: 8,
+  reservation_date: "2018-11-5"
+},{
+  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
+  capacity: 8,
+  reservation_date: "2019-01-1"
+},{
+  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
+  capacity: 8,
+  reservation_date: "2019-01-2"
+},{
+  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
+  capacity: 8,
+  reservation_date: "2019-01-3"
+},{
+  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
+  capacity: 8,
+  reservation_date: "2019-01-4"
+}]
+
+meals.each do |meal|
+  Meal.create!(meal)
+end
+
+meal = Meal.find_by(reservation_date: '2018-11-4')
+User.where(location: "Greater Lisbon").limit(5).each do |user|
+  Attendee.create!(user: user, meal: meal, status: "Confirmed")
+  meal.capacity -= 1
+  meal.save!
+end
+
+meal = Meal.find_by(reservation_date: '2019-01-2')
+User.where(location: "Greater Lisbon").limit(5).each do |user|
+  Attendee.create!(user: user, meal: meal, status: "Confirmed")
+  meal.capacity -= 1
+  meal.save!
+end
+
+meal = Meal.find_by(reservation_date: '2019-01-3')
+User.where(location: "Greater Lisbon").limit(8).each do |user|
+  Attendee.create!(user: user, meal: meal, status: "Invited")
+  meal.capacity -= 1
+  meal.save!
+end
+
+meal = Meal.find_by(reservation_date: '2019-01-1')
+User.where(location: "Greater Lisbon").limit(5).each do |user|
+  Attendee.create!(user: user, meal: meal, status: "Rejected")
+  meal.capacity -= 1
+  meal.save!
+end
+
+meal = Meal.find_by(reservation_date: '2019-01-4')
+User.where(location: "Greater Lisbon").limit(5).each do |user|
+  Attendee.create!(user: user, meal: meal, status: "Invited")
+  meal.capacity -= 1
+  meal.save!
+end
+
 puts "--------------------------------------------------"
-puts "Created #{Attendee.count} Attendee"
-p Attendee.first.meal
+puts "Added #{Meal.count} Meals"
+puts "Added #{Attendee.count} Attendees"
