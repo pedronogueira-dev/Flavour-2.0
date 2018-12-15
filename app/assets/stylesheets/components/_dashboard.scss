@@ -29,14 +29,23 @@
   top: 27.6vh;
 }
 
+.dashboard-status-text {
+  margin: 0px;
+  color: white;
+  text-align: center;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transform:rotate(-6.5deg);
+  position: fixed;
+  top: 25.3vh;
+  right: 8vw;
+}
 
 .dashboard-status-summary p {
   color: white;
   text-align: right;
   margin-top: 4vh;
-  font-size: 18px;
-  font-weight: lighter;
-  padding-right: 8vw;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .dashboard-event-card {
@@ -67,21 +76,21 @@
   overflow: auto;
 }
 
-.dashboard-event-summary {
-  width: 90vw;
-  height: 35vh;
-  border: solid 2px white;
-  border-radius: 12px;
-  -webkit-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
-  -moz-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
-  box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+//.dashboard-event-summary {
+//  width: 90vw;
+//  height: 35vh;
+//  border: solid 2px white;
+//  border-radius: 12px;
+//  -webkit-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+//  -moz-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+//  box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+//  margin: auto;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//}
 
-.badge-status, .city-status {
+.badge-status, {
   height: 3vh;
   width: 90vw;
   margin: auto;
@@ -98,9 +107,15 @@
 }
 
 .city-status {
+margin-bottom: 0px;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transform:rotate(-6.5deg);
   position: fixed;
-   bottom: 27.5vh;
-     border-radius: 0 0 12px 12px ;
+  top: 28vh;
+  left: 35vw;
 }
 
 .meal-status {
@@ -131,6 +146,12 @@
   font-size: 18px;
   font-weight: lighter;
   padding-right: 8vw;
+   -webkit-transform:rotate(6.5deg);
+  position: fixed;
+  right: 3vw;
+  bottom: 18vh;
+  font-size: 12px;
+  font-weight: lighter;
 }
 
 
