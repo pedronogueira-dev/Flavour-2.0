@@ -23,14 +23,15 @@ class User < ApplicationRecord
   validates :location, presence: true, inclusion: { in: LOCATIONS }
   validates :age, numericality: { greater_than_or_equal_to: 18 }
 
-
   def past_meals
     query = "Select Distinct(meals.*) \
-            from meals join attendees \
-            on attendees.meal_id = meals.id \
+            from meals \
+            join attendees on attendees.meal_id = meals.id \
             where reservation_date < \'#{Date.today}\' \
             and \
-            status = 'Confirmed'"
+            status = 'Confirmed' \
+            and \
+            user_id = #{id}"
     Meal.find_by_sql(query)
   end
 

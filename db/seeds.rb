@@ -199,13 +199,27 @@ puts "Created #{User.count} New Users"
 puts "----------------Seeding meals--------------------"
 
 User.all.each do |user|
+  Availability.create!(date: "2018-11-4", user: user)
+  Availability.create!(date: "2018-11-5", user: user)
+  Availability.create!(date: "2018-11-10", user: user)
+  Availability.create!(date: "2018-11-11", user: user)
+
   Availability.create!(date: "2018-12-4", user: user)
   Availability.create!(date: "2018-12-5", user: user)
   Availability.create!(date: "2018-12-10", user: user)
   Availability.create!(date: "2018-12-20", user: user)
+  Availability.create!(date: "2018-12-23", user: user)
   Availability.create!(date: "2018-12-24", user: user)
   Availability.create!(date: "2018-12-25", user: user)
-  Availability.create!(date: "2018-12-23", user: user)
+  Availability.create!(date: "2018-12-27", user: user)
+
+
+  Availability.create!(date: "2019-01-1", user: user)
+  Availability.create!(date: "2019-01-2", user: user)
+  Availability.create!(date: "2019-01-3", user: user)
+  Availability.create!(date: "2019-01-4", user: user)
+  Availability.create!(date: "2019-01-5", user: user)
+  Availability.create!(date: "2019-01-6", user: user)
 end
 
 meals = [{

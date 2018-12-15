@@ -5,7 +5,7 @@ class MealsController < ApplicationController
   end
 
   def past_meals
-    @meals = current_user.meals.where(['reservation_date >= ?', DateTime.now])
+    @meals = current_user.past_meals
   end
 
   def show
