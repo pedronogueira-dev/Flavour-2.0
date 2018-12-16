@@ -140,7 +140,8 @@ users = [{
   age: 27,
   photo: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/vshknq7igz6riezeeo4n.jpg",
   gender: "Male",
-  location: "Greater Lisbon"
+  location: "Greater Lisbon",
+  admin: true
 },
 {
   first_name: "Larry",
