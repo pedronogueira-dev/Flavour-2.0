@@ -1,2 +1,14 @@
 <h1>Meals#past_meals</h1>
 <p>Find me in app/views/meals/past_meals.html.erb</p>
+<% @meals.each do |meal| %>
+  <div>
+    <%= meal.reservation_date %>
+    <% meal.attendees.each do |attendee| %>
+      <%= attendee.user.first_name %>
+      <%= attendee.status %>
+    <% end %>
+    <%= meal.restaurant.location %>
+    <%= meal.restaurant.name %>
+    <%= meal.capacity %>
+  </div>
+<% end %>
