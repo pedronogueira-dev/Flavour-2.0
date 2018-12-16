@@ -10,13 +10,22 @@
   box-shadow: inset 0px 11px 8px -10px #CCC;
 }
 .tabs a {
-  color: grey;
+  text-shadow: 1px 1px $turquoise;
+  color: $pink;
+  opacity: 0.6;
 }
+.tabs a.active {
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 1;
+  border-top: solid 1vh $turquoise;
+}
+
 .tabs a:hover {
   cursor: pointer;
   text-decoration: none;
-  opacity: 0.8;
 }
+
 .tabs h3 {
   font-size: 14px;
   font-weight: bold;
@@ -29,25 +38,19 @@
 .tab {
   flex: 0 1 20%;
   text-align: center;
-  padding: 20px 0;
-}
-
-.tab.active {
-  background: white;
-  color: #FF385C;
-  box-shadow: inset 0px 11px 8px -10px #FF385C;
-  font-weight: bold;
-  font-size: 14px;
+  padding: 1vh 0;
   height: 10vh;
+  border-top: solid 1vh white;
 }
 
 .tab.active p {
-  color: #FF385C;
-  font-size: 16px;
+  opacity: 1;
 }
 
 .dock-text {
   font-size: 14px;
-  font-weight: lighter;
-  color: grey;
+  font-weight:  bold;
+  text-shadow: 1px 1px $turquoise;
+  color: $pink;
+  opacity: 0.6;
 }

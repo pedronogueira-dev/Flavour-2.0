@@ -20,6 +20,7 @@ gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
 gem 'httparty'
 gem 'simple_calendar', '~>2.0'
+gem "geocoder"
 
 group :development do
   gem 'web-console', '>= 3.3.0'
