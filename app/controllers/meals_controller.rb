@@ -9,6 +9,14 @@ class MealsController < ApplicationController
 
   def show
     #@meals = Meal.find(meal_params[:id])
+    #@meals = Meal.restaurants.where.not(latitude: nil, longitude: nil)
+
+    #@markers = @meals.map do |flat|
+    #  {
+    #    lng: flat.longitude,
+    #    lat: flat.latitude
+    #  }
+    #end
   end
 
   private
