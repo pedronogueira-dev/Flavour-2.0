@@ -8,5 +8,12 @@ class MealsController < ApplicationController
   end
 
   def show
+    #@meals = Meal.find(meal_params[:id])
+  end
+
+  private
+
+  def meal_params
+    #params.require(:meal).permit(:name, :rating)
   end
 end

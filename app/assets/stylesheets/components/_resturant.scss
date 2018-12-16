@@ -24,7 +24,7 @@
 .photo-1, .photo-2, .photo-3, .photo-4, .photo-5, .photo-6, .photo-7, .photo-8, {
   background-image: url('http://genfkd.wpengine.netdna-cdn.com/wp-content/uploads/2018/05/shutterstock_793117360-503x518.jpg');
   background-size: cover !important;
-background-position: center;
+  background-position: center;
   height: 60px;
   width: 60px;
   border-radius: 50%;
@@ -32,7 +32,7 @@ background-position: center;
 }
 
 .blur {
-  filter: blur(3px);
+  filter: blur(4px);
 }
 
 .meal-show-container {
@@ -40,7 +40,46 @@ background-position: center;
   width: 100vw;
   margin: auto;
   padding-top: 4vh;
+}
 
+.meals-show-resturant h3 {
+  font-size: 32px;
+  color: #FF385C;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.stars {
+  margin: 0px;
+  color:  #FFDF00;
+  font-size: 16px;
+  padding-bottom: 4px;
+}
+
+.review-rating {
+  color: grey;
+  font-style: italic;
+}
+
+.meal-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filler-word {
+  margin: 0px;
+  color:  grey;
+  font-size: 16px;
+  padding-bottom: 4px;
+}
+
+.main-word {
+  margin: 0px;
+  color:  #FF385C;
+  font-size: 24px;
+  padding-bottom: 4px;
+  font-weight: bold;
 }
 
 .meal-show-map {

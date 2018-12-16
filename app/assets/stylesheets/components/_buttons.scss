@@ -45,8 +45,11 @@ border: none;
   background-color: #74E8E8;
   color: white;
   border: none;
-  height: 5vh;
-  width: 30vw;
+ height: 8vh;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .reject-button {
@@ -54,6 +57,9 @@ border: none;
   background-color: #e8304f;
   color: white;
   border: none;
-  height: 5vh;
-  width: 30vw;
+  height: 8vh;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
