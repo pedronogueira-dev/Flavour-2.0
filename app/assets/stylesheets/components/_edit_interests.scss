@@ -7,8 +7,9 @@ $pink: #FF385C;
   border: 1px solid rgba(255,56,92, 0.3);
   box-shadow: 5px 5px lightgrey;
   background-color: white;
-  height:15vh;
+  height:13vh;
   overflow-y: scroll;
+  width: 50% !important;
 }
 
 .name {
@@ -24,4 +25,7 @@ $pink: #FF385C;
   color: $pink;
 }
 
+.i-am-centered {
+  margin: auto; max-width: 300px;
+}
 
