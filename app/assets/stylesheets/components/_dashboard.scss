@@ -2,8 +2,33 @@
   margin: 0 0 0 0;
   padding: 0 0 0 0;
 }
+
+.dashboard-badge-summary{
+  height: 7.5vh;
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FF385C;
+  -webkit-clip-path: polygon(0 0%, 100% 0, 0% 100%, 0 100%);
+  clip-path:         polygon(0 0%, 100% 0, 0% 100%, 0 100%);
+}
+
+.dashboard-badge-text {
+  margin: 0px;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transform:rotate(-6.5deg);
+  position: fixed;
+  top: 13vh;
+  left: 4vw;
+
+
+}
+
 .dashboard-location-photo {
-  height: 25vh;
+  height: 35vh;
   width: 100vw;
   background-size: cover !important;
   margin-left: auto;
@@ -11,10 +36,10 @@
   position: center;
   background-image: linear-gradient(-225deg, rgba(249,249,249,0.6) 0%, rgba(100,100,100,0.6) 50%), url('https://media-cdn.urbanadventures.com/data/149/tour_316/c-fakepath-tour-experience-lisbon-lead.jpg');
   background-position: center;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
-  clip-path:         polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  -webkit-clip-path: polygon(0 22%, 100% 0, 100% 78%, 0 100%);
+  clip-path:         polygon(0 22%, 100% 0, 100% 78%, 0 100%);
   position: fixed;
-  top: 10vh;
+  top: 10.1vh;
 }
 
 .dashboard-status-summary {
@@ -26,7 +51,7 @@
   -webkit-clip-path: polygon(0 100%, 100% 0%, 100% 100%, 0 100%);
   clip-path:         polygon(0 100%, 100% 0%, 100% 100%, 0 100%);
   position: fixed;
-  top: 27.6vh;
+  top: 37.65vh;
 }
 
 .dashboard-status-text {
@@ -34,9 +59,8 @@
   color: white;
   text-align: center;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-  -webkit-transform:rotate(-6.5deg);
   position: fixed;
-  top: 25.3vh;
+  top: 27.5vh;
   right: 8vw;
 }
 
@@ -48,12 +72,61 @@
   font-weight: bold;
 }
 
+.dashboard-blank-block {
+  height: 2vh;
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FF385C;
+  -webkit-clip-path: polygon(0 0%, 100% 0, 0% 100%, 0 100%);
+  clip-path:         polygon(0 0%, 100% 0, 0% 100%, 0 100%);
+  position: fixed;
+  top: 45vh;
+}
+
+.photo-box {
+  background-color: $pink;
+  height: 25vh;
+  position: fixed;
+  bottom: 30vh;
+  border: none;
+}
+
+.dashboard-profile-photo-row-1 {
+  width: 120vw;
+  height: 10vh;
+  position: fixed;
+  bottom:43vh;
+  display: flex;
+    margin-left: auto;
+  margin-right: auto;
+}
+
+.dashboard-profile-photo-row-2 {
+  width: 100vw;
+  position: fixed;
+  bottom: 33vh;
+   display: flex;
+     margin-left: auto;
+  margin-right: auto;
+}
+
+.dashboard-blank-block-2 {
+  position: fixed;
+  bottom: 22.6vh;
+  width: 100vw;
+  height: 7.5vh;
+    background-color: #FF385C;
+  -webkit-clip-path: polygon(0 0%, 100% 0, 0% 100%, 0 100%);
+  clip-path:         polygon(0 0%, 100% 0, 0% 100%, 0 100%);
+}
+
 .dashboard-event-card {
   position: fixed;
-  top: 35vh;
+  top: 40vh;
   border: none;
   width: 100vw;
-  height: 40vh;
+  height: 30vh;
   background-color: white;
   margin: auto;
   display: flex;
@@ -65,7 +138,7 @@
 
 .dashboard-event-border {
   width: 100vw;
-  height: 39vh;
+  height: 29vh;
   border-top: solid 2px #74E8E8;
   border-bottom: solid 2px #74E8E8;
   margin: auto;
@@ -75,6 +148,8 @@
   resize: vertical;
   overflow: auto;
 }
+
+
 
 //.dashboard-event-summary {
 //  width: 90vw;
@@ -107,15 +182,15 @@
 }
 
 .city-status {
-margin-bottom: 0px;
+  margin-bottom: 0px;
   color: white;
-  font-size: 12px;
+  font-size: 44px;
   text-align: center;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-  -webkit-transform:rotate(-6.5deg);
+  -webkit-transform:rotate(-8.5deg);
   position: fixed;
-  top: 28vh;
-  left: 35vw;
+  top: 14vh;
+  left: 10vw;
 }
 
 .meal-status {
@@ -146,7 +221,7 @@ margin-bottom: 0px;
   font-size: 18px;
   font-weight: lighter;
   padding-right: 8vw;
-   -webkit-transform:rotate(6.5deg);
+  -webkit-transform:rotate(-6.5deg);
   position: fixed;
   right: 3vw;
   bottom: 18vh;
@@ -156,15 +231,52 @@ margin-bottom: 0px;
 
 
 .dashboard-meal-photo {
-  height: 15vh;
+  height: 20vh;
   width: 100vw;
   background-size: cover !important;
   margin-left: auto;
   margin-right: auto;
   position: center;
   background-image: linear-gradient(-225deg, rgba(249,249,249,0.6) 0%, rgba(100,100,100,0.6) 50%), url('https://images.unsplash.com/photo-1532597540419-b176991847e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80');
-  -webkit-clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
-  clip-path:         polygon(0 0,100% 50%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 38%, 100% 0, 100% 62%, 0 100%);
+  clip-path:         polygon(0 38%, 100% 0, 100% 62%, 0 100%);
   position: fixed;
   bottom: 10vh;
+}
+
+.dashboard-meal-photo p {
+  margin-bottom: 0px;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transform:rotate(-8.5deg);
+  position: fixed;
+  bottom: 18vh;
+  left: 32vw;
+}
+
+.dashboard-bottom-block {
+  height: 7.4vh;
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FF385C;
+  -webkit-clip-path: polygon(0 100%, 100% 0%, 100% 100%, 0 100%);
+  clip-path:         polygon(0 100%, 100% 0%, 100% 100%, 0 100%);
+  position: fixed;
+  bottom: 10vh;
+}
+
+.dashboard-bottom-block p {
+   margin: 0px;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transform:rotate(-6.5deg);
+  position: fixed;
+  bottom: 13vh;
+  right: 4vw;
+
 }

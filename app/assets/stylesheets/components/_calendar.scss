@@ -1,3 +1,6 @@
+$pink: #FF385C;
+$turquoise: #74E8E8;
+
 .day-applied {
   color: blue;
   font-size: 20pt;
@@ -5,8 +8,8 @@
 }
 
 .selectable-day{
-  background-color: lightblue;
+  background-color: $turquoise
 }
 .applied-day{
-  background-color: red;
+  background-color: $pink;
 }
