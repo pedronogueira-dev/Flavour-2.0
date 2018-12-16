@@ -15,7 +15,7 @@ Interest.destroy_all
 
 puts "----------------Seeding restaurants--------------------"
 
-lisbon_restaurants = [{
+restaurants = [{
   zomato_restaurant_id: 18545575,
   name: "Golden Sushi",
   address: "Hotel Portugal, Rua João das Regras, 4C, Mouraria, Lisboa",
@@ -37,12 +37,7 @@ lisbon_restaurants = [{
   longitude: -9.1368068755,
   latitude: 38.7148174085,
   website: "https://www.zomato.com/grande-lisboa/premium-winehouse-hotel-portugal-mouraria-lisboa?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1"
-}]
-lisbon_restaurants.each do |restaurant|
-  Restaurant.create!(restaurant)
-end
-
-new_york_restaurants = [{
+},{
   zomato_restaurant_id: 16771079,
   name: "Lombardi's Pizza",
   address: "32 Spring Street, New York 10012",
@@ -53,7 +48,7 @@ new_york_restaurants = [{
   longitude: -73.9955888889,
   latitude: 40.7216750000,
   website: "https://www.zomato.com/new-york-city/lombardis-pizza-lower-east-side?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1"
-}, {
+},{
   zomato_restaurant_id: 16769546,
   name: "Katz's Delicatessen",
   address: "205 East Houston Street, New York 10002",
@@ -66,7 +61,7 @@ new_york_restaurants = [{
   website: "https://www.zomato.com/new-york-city/katzs-delicatessen-lower-east-side?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1"
 
 }]
-new_york_restaurants.each do |restaurant|
+restaurants.each do |restaurant|
   Restaurant.create!(restaurant)
 end
 
@@ -89,7 +84,8 @@ users = [{
   age: 26,
   photo: "https://avatars1.githubusercontent.com/u/42552935?v=4",
   gender: "Female",
-  location: "New York City"
+  location: "New York City",
+  admin: true
 },{
   first_name: "Chad",
   email: "chad@flavour.com",
@@ -97,7 +93,8 @@ users = [{
   age: 21,
   photo: "https://avatars2.githubusercontent.com/u/25643328?v=4",
   gender: "Male",
-  location: "New York City"
+  location: "New York City",
+  admin: true
 },{
   first_name: "Bradly",
   email: "bigB@flavour.com",
@@ -122,6 +119,24 @@ users = [{
   password: "456789",
   age: 50,
   photo: "https://images.unsplash.com/photo-1495078065017-564723e7e3e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80",
+  gender: "Male",
+  location: "New York City"
+},
+{
+  first_name: "Ana",
+  email: "a_silva@flavour.com",
+  password: "789123",
+  age: 23,
+  photo: "https://www.maxpixel.net/static/photo/2x/Femininity-Eyes-Beauty-Portrait-Face-Hair-Woman-1319951.jpg",
+  gender: "Female",
+  location: "New York City"
+},
+{
+  first_name: "João",
+  email: "johnnyJ@flavour.com",
+  password: "456789",
+  age: 25,
+  photo: "https://www.maxpixel.net/static/photo/2x/Summer-Vacation-Smile-Young-Man-3382131.jpg",
   gender: "Male",
   location: "New York City"
 },
@@ -162,24 +177,6 @@ users = [{
   location: "Greater Lisbon"
 },
 {
-  first_name: "Ana",
-  email: "a_silva@flavour.com",
-  password: "789123",
-  age: 23,
-  photo: "https://www.maxpixel.net/static/photo/2x/Femininity-Eyes-Beauty-Portrait-Face-Hair-Woman-1319951.jpg",
-  gender: "Female",
-  location: "New York City"
-},
-{
-  first_name: "João",
-  email: "johnnyJ@flavour.com",
-  password: "456789",
-  age: 25,
-  photo: "https://www.maxpixel.net/static/photo/2x/Summer-Vacation-Smile-Young-Man-3382131.jpg",
-  gender: "Male",
-  location: "New York City"
-},
-{
   first_name: "Joana",
   email: "j_silva@flavour.com",
   password: "joanas",
@@ -187,7 +184,61 @@ users = [{
   photo: "https://www.maxpixel.net/static/photo/2x/Country-Acoustic-Guitar-Guitar-Girl-Talent-Woman-944261.jpg",
   gender: "Female",
   location: "Greater Lisbon"
+},{
+  first_name: "Jonas",
+  email: "j-n@flavour.com",
+  password: "123456",
+  age: 26,
+  photo: "https://jooinn.com/images600_/young-man-2.jpg",
+  gender: "Male",
+  location: "Greater Lisbon"
+},
+{
+  first_name: "Raquel",
+  email: "r_s@flavour.com",
+  password: "789123",
+  age: 23,
+  photo: "https://www.maxpixel.net/static/photo/2x/Femininity-Eyes-Beauty-Portrait-Face-Hair-Woman-1319951.jpg",
+  gender: "Female",
+  location: "Greater Lisbon"
+},
+{
+  first_name: "João F.",
+  email: "jf@flavour.com",
+  password: "456789",
+  age: 25,
+  photo: "https://www.maxpixel.net/static/photo/2x/Summer-Vacation-Smile-Young-Man-3382131.jpg",
+  gender: "Male",
+  location: "Greater Lisbon"
+},
+{
+  first_name: "Joana R",
+  email: "jR@flavour.com",
+  password: "joanas",
+  age: 33,
+  photo: "https://www.maxpixel.net/static/photo/2x/Country-Acoustic-Guitar-Guitar-Girl-Talent-Woman-944261.jpg",
+  gender: "Female",
+  location: "Greater Lisbon"
+},
+{
+  first_name: "Carlota",
+  email: "cara@flavour.com",
+  password: "carlota",
+  age: 33,
+  photo: "https://www.maxpixel.net/static/photo/2x/Country-Acoustic-Guitar-Guitar-Girl-Talent-Woman-944261.jpg",
+  gender: "Female",
+  location: "Greater Lisbon"
+},
+{
+  first_name: "Maria",
+  email: "maryM@flavour.com",
+  password: "maria123",
+  age: 33,
+  photo: "https://www.maxpixel.net/static/photo/2x/Country-Acoustic-Guitar-Guitar-Girl-Talent-Woman-944261.jpg",
+  gender: "Female",
+  location: "Greater Lisbon"
 }]
+
 
 users.each do |user|
   u = User.new(user)
@@ -199,52 +250,38 @@ puts "Created #{User.count} New Users"
 
 puts "----------------Seeding meals--------------------"
 
-User.all.each do |user|
-  Availability.create!(date: "2018-11-4", user: user)
-  Availability.create!(date: "2018-11-5", user: user)
-  Availability.create!(date: "2018-11-10", user: user)
+User.where(location: "Greater Lisbon").each do |user|
   Availability.create!(date: "2018-11-11", user: user)
 
   Availability.create!(date: "2018-12-4", user: user)
   Availability.create!(date: "2018-12-5", user: user)
   Availability.create!(date: "2018-12-10", user: user)
-  Availability.create!(date: "2018-12-20", user: user)
-  Availability.create!(date: "2018-12-23", user: user)
   Availability.create!(date: "2018-12-24", user: user)
   Availability.create!(date: "2018-12-25", user: user)
+end
+
+User.where(location: "New York City").each do |user|
   Availability.create!(date: "2018-12-27", user: user)
-
-
-  Availability.create!(date: "2019-01-1", user: user)
-  Availability.create!(date: "2019-01-2", user: user)
-  Availability.create!(date: "2019-01-3", user: user)
-  Availability.create!(date: "2019-01-4", user: user)
-  Availability.create!(date: "2019-01-5", user: user)
-  Availability.create!(date: "2019-01-6", user: user)
 end
 
 meals = [{
-  restaurant: Restaurant.where(location: "New York City").sample,
+  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
   capacity: 8,
-  reservation_date: "2018-12-4"
+  reservation_date: "2018-11-11"
 },{
-  restaurant: Restaurant.where(location: "New York City").sample,
+  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
   capacity: 8,
-  reservation_date: "2018-12-5"
+  reservation_date: "2018-12-10"
 },{
-  restaurant: Restaurant.where(location: "New York City").sample,
+  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
+  capacity: 8,
+  reservation_date: Date.today - 1
+},{
+  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
   capacity: 8,
   reservation_date: "2018-12-24"
 },{
-  restaurant: Restaurant.where(location: "New York City").sample,
-  capacity: 8,
-  reservation_date: "2018-12-25"
-},{
-  restaurant: Restaurant.where(location: "New York City").sample,
-  capacity: 8,
-  reservation_date: "2018-12-23"
-},{
-  restaurant: Restaurant.where(location: "New York City").sample,
+  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
   capacity: 8,
   reservation_date: "2018-12-27"
 }]
@@ -253,106 +290,69 @@ meals.each do |meal|
   Meal.create!(meal)
 end
 
-meal = Meal.find_by(reservation_date: '2018-12-4')
-User.where(location: "New York City").limit(5).each do |user|
-  Attendee.create!(user: user, meal: meal, status: "Confirmed")
+meal = Meal.find_by(reservation_date: '2018-11-11')
+counter = 0
+User.where(location: "Greater Lisbon").limit(8).each do |user|
+  if counter <6
+    Attendee.create!(user: user, meal: meal, status: "Confirmed")
+  else
+    Attendee.create!(user: user, meal: meal, status: "Invited")
+  end
+  counter +=1
   meal.capacity -= 1
-  meal.save!
 end
+
+counter = 0
+meal.save!
+
+meal = Meal.find_by(reservation_date: '2018-12-10')
+User.where(location: "Greater Lisbon").limit(8).each do |user|
+  if counter <6
+    Attendee.create!(user: user, meal: meal, status: "Confirmed")
+  else
+    Attendee.create!(user: user, meal: meal, status: "Invited")
+  end
+  counter +=1
+  meal.capacity -= 1
+end
+
+counter = 0
+meal.save!
+
+meal = Meal.find_by(reservation_date: Date.today - 1)
+User.where(location: "Greater Lisbon").limit(8).each do |user|
+  if counter < 4
+    Attendee.create!(user: user, meal: meal, status: "Confirmed")
+  else
+    Attendee.create!(user: user, meal: meal, status: "Invited")
+  end
+  counter +=1
+  meal.capacity -= 1
+end
+
+counter = 0
+meal.save!
 
 meal = Meal.find_by(reservation_date: '2018-12-24')
-User.where(location: "New York City").limit(5).each do |user|
-  Attendee.create!(user: user, meal: meal, status: "Confirmed")
-  meal.capacity -= 1
-  meal.save!
-end
-
-meal = Meal.find_by(reservation_date: '2018-12-25')
-User.where(location: "New York City").limit(8).each do |user|
-  Attendee.create!(user: user, meal: meal, status: "Invited")
-  meal.capacity -= 1
-  meal.save!
-end
-
-meal = Meal.find_by(reservation_date: '2018-12-23')
-User.where(location: "New York City").limit(5).each do |user|
-  Attendee.create!(user: user, meal: meal, status: "Rejected")
-  meal.capacity -= 1
-  meal.save!
-end
-
-meal = Meal.find_by(reservation_date: '2018-12-27')
-User.where(location: "New York City").limit(5).each do |user|
-  Attendee.create!(user: user, meal: meal, status: "Invited")
-  meal.capacity -= 1
-  meal.save!
-end
-
-# ----------------------------------------------------------
-meals = [{
-  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
-  capacity: 8,
-  reservation_date: "2018-11-4"
-},{
-  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
-  capacity: 8,
-  reservation_date: "2018-11-5"
-},{
-  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
-  capacity: 8,
-  reservation_date: "2019-01-1"
-},{
-  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
-  capacity: 8,
-  reservation_date: "2019-01-2"
-},{
-  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
-  capacity: 8,
-  reservation_date: "2019-01-3"
-},{
-  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
-  capacity: 8,
-  reservation_date: "2019-01-4"
-}]
-
-meals.each do |meal|
-  Meal.create!(meal)
-end
-
-meal = Meal.find_by(reservation_date: '2018-11-4')
-User.where(location: "Greater Lisbon").limit(5).each do |user|
-  Attendee.create!(user: user, meal: meal, status: "Confirmed")
-  meal.capacity -= 1
-  meal.save!
-end
-
-meal = Meal.find_by(reservation_date: '2019-01-2')
-User.where(location: "Greater Lisbon").limit(5).each do |user|
-  Attendee.create!(user: user, meal: meal, status: "Confirmed")
-  meal.capacity -= 1
-  meal.save!
-end
-
-meal = Meal.find_by(reservation_date: '2019-01-3')
 User.where(location: "Greater Lisbon").limit(8).each do |user|
   Attendee.create!(user: user, meal: meal, status: "Invited")
   meal.capacity -= 1
   meal.save!
 end
 
-meal = Meal.find_by(reservation_date: '2019-01-1')
-User.where(location: "Greater Lisbon").limit(5).each do |user|
-  Attendee.create!(user: user, meal: meal, status: "Rejected")
+meal = Meal.find_by(reservation_date: '2018-12-27')
+User.where(location: "Greater Lisbon").limit(8).each do |user|
+  if counter <5
+    Attendee.create!(user: user, meal: meal, status: "Confirmed")
+  else
+    Attendee.create!(user: user, meal: meal, status: "Invited")
+  end
+  counter +=1
   meal.capacity -= 1
-  meal.save!
 end
 
-meal = Meal.find_by(reservation_date: '2019-01-4')
-User.where(location: "Greater Lisbon").limit(5).each do |user|
-  Attendee.create!(user: user, meal: meal, status: "Invited")
-  meal.capacity -= 1
-  meal.save!
-end
+counter = 0
+meal.save!
 
 puts "--------------------------------------------------"
 puts "Added #{Meal.count} Meals"

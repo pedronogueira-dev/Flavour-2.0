@@ -4,20 +4,22 @@ class AttendeeRedrawService
     meals.each do |meal|
       location = meal.restaurant.location
       # possible_users = User.joins(:availabilities).where.not(id: meal.users.select(:id).map(&:id)).where(location: location).where("availabilities.date = '#{meal.reservation_date}'").limit(meal.capactiy)
+      possible_users = get_possible_users(meal, location)
       puts "\n--------------------------------------------------"
-      puts "Finding new attendees for #{meal}"
+      puts "Finding new attendees for #{meal.reservation_date}"
       puts "Possible Users:\n #{possible_users.map(&:id)}"
-      send_invite(get_possible_users(meal, location), meal) unless possible_users.empty
+
+      send_invite(possible_users, meal) unless possible_users.empty?
 
       puts "\n--------------------------------------------------"
     end
   end
 
   private
-
   def get_possible_users(meal, location)
-    return User.joins(:availabilities).where.not(id: meal.users.select(:id).map(&:id)).where(location: location).where("availabilities.date = '#{meal.reservation_date}'").limit(meal.capactiy)
+    return User.joins(:availabilities).where.not(id: meal.users.select(:id).map(&:id)).where(location: location).where("availabilities.date = '#{meal.reservation_date}'").limit(meal.capacity)
   end
+
   def send_invite(users, meal)
     number_of_invitations = 0
     users.each do |user|
