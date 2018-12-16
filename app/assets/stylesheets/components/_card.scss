@@ -7,7 +7,7 @@
 }
 
 .active-meals-status {
-  width: 25vw;
+  width: 28vw;
   height: 2vh;
   margin-left: 6.8vw;
   margin-right: auto;
@@ -51,7 +51,7 @@
   background-image: linear-gradient(-225deg, rgba(249,249,249,0.6) 0%, rgba(100,100,100,0.6) 50%), url('https://media-cdn.urbanadventures.com/data/149/tour_316/c-fakepath-tour-experience-lisbon-lead.jpg');
   background-position: center;
   height: 12vh;
-  width: 42.5vw;
+  width: 35vw;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   clip-path:         polygon(0 0, 80% 0, 100% 100%, 0 100%);
   margin-left: 0px;
@@ -70,11 +70,11 @@
 }
 
 .active-meals-date {
-  width:15vh;
+  width:20vh;
   background-color: white;
   color: black;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  clip-path:         polygon(0 0, 70% 0, 100% 100%, 30% 100%);
+  clip-path:         polygon(0 0, 80% 0, 100% 100%, 20% 100%);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -112,7 +112,7 @@
   background-image: linear-gradient(-225deg, rgba(249,249,249,0.6) 0%, rgba(100,100,100,0.6) 50%), url('https://images.unsplash.com/photo-1532597540419-b176991847e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80');
   background-position: center;
   height: 12vh;
-  width: 42.5vw;
+  width: 35vw;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   clip-path:         polygon(0 0, 100% 0, 100% 100%, 20% 100%);
   display: flex;

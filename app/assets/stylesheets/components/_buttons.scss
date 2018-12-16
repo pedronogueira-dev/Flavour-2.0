@@ -1,8 +1,14 @@
 .meals-button {
   border-radius: 12px;
-  background-color: #FF385C;
+  background-color: white;
   color: white;
   border: none;
+  z-index: 1;
+  position:fixed;
+  bottom: 38vh;
+  left: 30vw;
+  width: 40vw;
+  height: 10vh;
 }
 
 .meals-button:hover {
@@ -38,4 +44,28 @@ border: none;
   color: white;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 
+}
+
+.confirm-button {
+  border-radius: 12px;
+  background-color: #74E8E8;
+  color: white;
+  border: none;
+ height: 8vh;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reject-button {
+  border-radius: 12px;
+  background-color: #e8304f;
+  color: white;
+  border: none;
+  height: 8vh;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
