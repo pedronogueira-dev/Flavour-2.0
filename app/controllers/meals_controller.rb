@@ -9,9 +9,20 @@ class MealsController < ApplicationController
   end
 
   def show
-    # meal
-    # restaurant info
-    # attendee info if date > current_date
+    #@meals = Meal.find(meal_params[:id])
+    #@meals = Meal.restaurants.where.not(latitude: nil, longitude: nil)
 
+    #@markers = @meals.map do |flat|
+    #  {
+    #    lng: flat.longitude,
+    #    lat: flat.latitude
+    #  }
+    #end
+  end
+
+  private
+
+  def meal_params
+    #params.require(:meal).permit(:name, :rating)
   end
 end
