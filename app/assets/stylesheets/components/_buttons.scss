@@ -1,8 +1,14 @@
 .meals-button {
   border-radius: 12px;
-  background-color: #FF385C;
+  background-color: white;
   color: white;
   border: none;
+  z-index: 1;
+  position:fixed;
+  bottom: 38vh;
+  left: 30vw;
+  width: 40vw;
+  height: 10vh;
 }
 
 .meals-button:hover {

@@ -1,7 +1,7 @@
 .tabs {
   position: fixed;
   bottom: 0;
-  background: #e8304f;
+  background: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,14 +10,15 @@
   box-shadow: inset 0px 11px 8px -10px #CCC;
 }
 .tabs a {
-  color: white;
+  text-shadow: 1px 1px $turquoise;
+  color: $pink;
   opacity: 0.6;
 }
 .tabs a.active {
   cursor: pointer;
   text-decoration: none;
   opacity: 1;
-  border-top: solid 1vh white;
+  border-top: solid 1vh $turquoise;
 }
 
 .tabs a:hover {
@@ -39,7 +40,7 @@
   text-align: center;
   padding: 1vh 0;
   height: 10vh;
-  border-top: solid 1vh #e8304f;
+  border-top: solid 1vh white;
 }
 
 .tab.active p {
@@ -49,6 +50,7 @@
 .dock-text {
   font-size: 14px;
   font-weight:  bold;
-  color: white;
+  text-shadow: 1px 1px $turquoise;
+  color: $pink;
   opacity: 0.6;
 }
