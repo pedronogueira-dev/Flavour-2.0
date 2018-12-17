@@ -18,21 +18,10 @@
   padding: 4px;
   position: fixed;
   top: 25vh;
-
-}
-
-.photo-1, .photo-2, .photo-3, .photo-4, .photo-5, .photo-6, .photo-7, .photo-8, {
-  background-image: url('http://genfkd.wpengine.netdna-cdn.com/wp-content/uploads/2018/05/shutterstock_793117360-503x518.jpg');
-  background-size: cover !important;
-  background-position: center;
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  border: 1px solid #74E8E8;
 }
 
 .blur {
-  filter: blur(4px);
+  filter: blur(2px);
 }
 
 .meal-show-container {

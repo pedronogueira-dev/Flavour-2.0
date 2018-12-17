@@ -21,6 +21,7 @@ gem 'carrierwave', '~> 1.2'
 gem 'httparty'
 gem 'simple_calendar', '~>2.0'
 gem "geocoder"
+gem 'activesupport'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
