@@ -3,7 +3,7 @@ let element = document.querySelector("[data-availability-id='<%= @availability.i
 // document.querySelector("[data-availability-id='<%= @availability.id %>']")
 
  element.parentElement.classList.remove("applied-day");
-if(appliableDay(new Date(element.parentElement.innerText))){
+if(appliableDay(new Date(element.dataset.date))){
   element.parentElement.classList.add("selectable-day");
 }
 element.remove();

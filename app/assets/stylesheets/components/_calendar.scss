@@ -3,8 +3,10 @@ $turquoise: #74E8E8;
 
 .simple-calendar {
   width: 90vw;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 75%;
+  margin-top: 12vh;
 }
 .calendar-heading {
   display: flex;
@@ -13,6 +15,10 @@ $turquoise: #74E8E8;
   font-size: 24px;
   color: $pink;
   font-weight: bold;
+}
+
+.table {
+  margin-bottom: 1vh;
 }
 
 th {
