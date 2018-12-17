@@ -31,46 +31,63 @@ class User < ApplicationRecord
             and \
             status = 'Confirmed' \
             and \
-            user_id = #{id}
+            user_id = #{id} \
             order by meals.reservation_date DESC"
     Meal.find_by_sql(query)
   end
 
   def upcoming_meals
-    query = "Select Distinct(meals.*) \
+    query = "Select Distinct(meals.*), \
+            attendees.status as status \
             from meals join attendees \
             on attendees.meal_id = meals.id \
             where reservation_date >= \'#{Date.today}\' \
             and \
             status != 'Rejected' \
             and \
-            user_id = #{id}
+            user_id = #{id} \
             order by meals.reservation_date ASC"
     Meal.find_by_sql(query)
   end
 
   def upcoming_unconfirmed_meals
-    query = "Select Distinct(meals.*) \
+    query = "Select Distinct(meals.*), \
+            attendees.status as status \
             from meals join attendees \
             on attendees.meal_id = meals.id \
             where reservation_date >= \'#{Date.today}\' \
             and \
             status = 'Invited' \
             and \
-            user_id = #{id}
+            user_id = #{id} \
             order by meals.reservation_date ASC"
     Meal.find_by_sql(query)
   end
 
   def upcoming_confirmed_meals
-    query = "Select Distinct(meals.*) \
+    query = "Select Distinct(meals.*), \
+            attendees.status as status \
             from meals join attendees \
             on attendees.meal_id = meals.id \
             where reservation_date >= \'#{Date.today}\' \
             and \
             status = 'Confirmed' \
             and \
-            user_id = #{id}
+            user_id = #{id} \
+            order by meals.reservation_date ASC"
+    Meal.find_by_sql(query)
+  end
+
+  def upcoming_confirmed_and_cancelled_meals
+    query = "Select Distinct(meals.*), \
+            attendees.status as status \
+            from meals join attendees \
+            on attendees.meal_id = meals.id \
+            where reservation_date >= \'#{Date.today}\' \
+            and \
+            status = any(array['Confirmed', 'Cancelled']) \
+            and \
+            user_id = #{id} \
             order by meals.reservation_date ASC"
     Meal.find_by_sql(query)
   end
@@ -82,3 +99,4 @@ class User < ApplicationRecord
     end
   end
 end
+
