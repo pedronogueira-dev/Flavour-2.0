@@ -83,3 +83,12 @@
   width: 20vw;
   left: 80vw;
 }
+
+.photo-avatar {
+  background-size: cover !important;
+  background-position: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid #74E8E8;
+}
