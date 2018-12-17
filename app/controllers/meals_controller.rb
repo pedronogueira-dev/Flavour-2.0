@@ -10,6 +10,13 @@ class MealsController < ApplicationController
 
   def show
     @meal = Meal.find(params[:id])
+    #@meals = Meal.restaurants.where.not(latitude: nil, longitude: nil)
+    @restaurant = @meal.restaurant
+    @marker = {
+       lng: @restaurant.longitude,
+       lat: @restaurant.latitude,
+       infoWindow: { content: render_to_string(partial: "/meals/restaurant", locals: { restaurant: @restaurant }) }
+     }
   end
 
   def reject

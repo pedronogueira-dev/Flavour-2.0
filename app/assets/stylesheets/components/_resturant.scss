@@ -72,9 +72,6 @@
 }
 
 .meal-show-map {
-  background-size: cover !important;
-  background-image: url('https://media.wired.com/photos/59269cd37034dc5f91bec0f1/2:1/w_2500,c_limit/GoogleMapTA.jpg');
-  background-position: center;
   height: 25vh;
   width: 100vw;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
