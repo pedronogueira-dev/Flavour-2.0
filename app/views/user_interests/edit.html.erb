@@ -1,28 +1,31 @@
 <div class="container interests-container">
-  <h2 class="text-center"><strong class="name"><%= current_user.first_name %></strong>, update your Interests!</h2>
-  <div class="i-am-centered">
-  <div class="row">
-  <% @interests.each do |i| %>
-   <%=  form_for(i, url: user_interest_path(i), method: :patch) do |f| %>
+  <div class="introduction">
+  <h2 class="text-center"><strong class="name">
+    <%= current_user.first_name %></strong>, update your Interests!
+  </h2>
+  </div>
+  <div class="tiny-wrapper">
+    <div class="row interests-box">
+      <% @interests.each do |i| %>
+      <%=  form_for(i, url: user_interest_path(i), method: :patch) do |f| %>
       <div class="col-xs-6 interest-container">
-
         <% if i.interest.name == "Video Games" %>
-         <div class="interest-long-name">
-            <p><%= i.interest.name %></p>
+        <div class="interest-long-name">
+          <p><%= i.interest.name %></p>
         </div>
         <% else %>
-          <div class="interest-name">
-            <p><%= i.interest.name %></p>
-          </div>
+        <div class="interest-name">
+          <p><%= i.interest.name %></p>
+        </div>
         <% end %>
-           <label class="switch pull-right">
-              <%= f.check_box :active, class: "submit-interests" %>
-              <span class="slider round"></span>
-          </label>
+        <label class="switch pull-right">
+          <%= f.check_box :active, class: "submit-interests" %>
+          <span class="slider round"></span>
+        </label>
       </div>
-    <% end %>
-  <% end %>
-  </div>
+      <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
 
