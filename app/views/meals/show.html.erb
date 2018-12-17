@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12 no-mp">
@@ -61,7 +62,14 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 no-mp">
-      <div class="meal-show-map"></div>
+      <div class="meal-show-map">
+        <div
+          id="map"
+          style=";width:50%; height: 500px;"
+          data-marker="<%= @marker.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+        ></div>
+      </div>
     </div>
   </div>
 </div>
