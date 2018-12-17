@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<div class="wrapper">
-  <div class="calendar">
-    <%= month_calendar events: @availabilities, attribute: :date do |date, availabilities| %>
-    <%= date.day %>
-=======
 <div class="wrapper availabilities-container">
   <h1>Calendar</h1>
   <%= month_calendar events: @availabilities, attribute: :date do |date, availabilities| %>
   <%= date %>
->>>>>>> ed6cf79ad54e18d77cfc2e45e715d6c186a5100b
 
     <% availabilities.each do |availability| %>
 
