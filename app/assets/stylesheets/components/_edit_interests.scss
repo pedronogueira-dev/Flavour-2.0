@@ -2,14 +2,16 @@ $turquoise: #74E8E8;
 $inactive: #E5E5E5;
 $pink: #FF385C;
 
+
+
 .interest-container {
   border-radius: 15px;
   border: 1px solid rgba(255,56,92, 0.3);
   box-shadow: 5px 5px lightgrey;
   background-color: white;
   height:13vh;
-  overflow-y: scroll;
   width: 50% !important;
+
 }
 
 .name {
@@ -29,3 +31,14 @@ $pink: #FF385C;
   margin: auto; max-width: 300px;
 }
 
+.interest-long-name {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 3px;
+  text-shadow: 1px 1px $turquoise;
+  color: $pink;
+  padding-bottom: 15px;
+}
+.interests-container {
+  height: 80vh;
+}

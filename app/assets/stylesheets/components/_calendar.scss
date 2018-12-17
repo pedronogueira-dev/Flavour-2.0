@@ -69,6 +69,11 @@ td {
   background-color: $pink;
 }
 
+.availabilities-container {
+  height: 80vh;
+  overflow-y: scroll;
+}
+
 .simple-calendar {
   .day {
     border-radius: 4px;
@@ -129,4 +134,4 @@ td {
       #bc2740 20px
       ) !important;
   }
-}
+
