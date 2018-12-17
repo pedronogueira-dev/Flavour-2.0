@@ -232,6 +232,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport
   autoprefixer-rails
   bootsnap
   bootstrap-sass (~> 3.3)

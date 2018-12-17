@@ -9,15 +9,7 @@ class MealsController < ApplicationController
   end
 
   def show
-    #@meals = Meal.find(meal_params[:id])
-    #@meals = Meal.restaurants.where.not(latitude: nil, longitude: nil)
-
-    #@markers = @meals.map do |flat|
-    #  {
-    #    lng: flat.longitude,
-    #    lat: flat.latitude
-    #  }
-    #end
+    @meal = Meal.find(params[:id])
   end
 
   def reject
@@ -45,10 +37,6 @@ class MealsController < ApplicationController
   end
 
   private
-
-  def meal_params
-    #params.require(:meal).permit(:name, :rating)
-  end
 
   def update_attendee_status(meal, status)
     attendee = Attendee.where(meal: meal, user: current_user)
