@@ -1,8 +1,6 @@
-<div class="wrapper calendar-container">
-  <div class="calendar">
-    <%= month_calendar events: @availabilities, attribute: :date do |date, availabilities| %>
-    <%= date.day %>
-
+<div class="wrapper availabilities-container">
+  <%= month_calendar events: @availabilities, attribute: :date do |date, availabilities| %>
+  <%= date %>
     <% availabilities.each do |availability| %>
 
     <div data-availability-id="<%= availability.id %>" data-date="<%= date %>">

@@ -25,9 +25,16 @@ $pink: #FF385C;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $inactive;
-  -webkit-transition: .4s;
-  transition: .4s;
+  background: repeating-linear-gradient(
+      45deg,
+      $inactive,
+      $inactive 5px,
+      #f4f4f4 5px,
+      #f4f4f4 10px
+      ) !important;
+  opacity: 0.9;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
 }
 
 .slider:before {
@@ -43,7 +50,14 @@ $pink: #FF385C;
 }
 
 input:checked + .slider {
-  background-color: $turquoise;
+  background: repeating-linear-gradient(
+      45deg,
+      $turquoise,
+      $turquoise 5px,
+      #4c9393 5px,
+      #4c9393 10px
+      ) !important;
+    opacity: 0.9;
 }
 
 input:focus + .slider {
@@ -61,10 +75,16 @@ input:checked + .slider:before {
   border-radius: 34px;
   }
 
+input:checked + .slider.round:before {
+  border-radius: 50%;
+  background-color: $turquoise;
+  border:solid 2px white;
+}
+
 .slider.round:before {
   border-radius: 50%;
-  border: 2px solid rgba(255,56,92, 0.4);
-
+  background-color: $pink;
+  border:solid 2px white;
 }
 
 .toggle-container {
