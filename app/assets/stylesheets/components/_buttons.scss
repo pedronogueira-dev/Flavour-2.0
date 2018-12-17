@@ -1,14 +1,20 @@
 .meals-button {
   border-radius: 12px;
-  background-color: white;
+  background-color: $pink;
   color: white;
   border: none;
   z-index: 1;
   position:fixed;
-  bottom: 38vh;
-  left: 30vw;
-  width: 40vw;
-  height: 10vh;
+  bottom: 37vh;
+  left: 25vw;
+  width: 50vw;
+  height: 12vh;
+  -webkit-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+  -moz-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+  box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+  display: flex;
+  justify-content: center;
+
 }
 
 .meals-button:hover {
@@ -18,9 +24,8 @@
   border: none;
 }
 
-.meals-button h3 {
-  margin-top: 12px;
-  margin-bottom: 12px;
+.meals-button h2 {
+  margin: auto;
 }
 
 .active-meals-button {
