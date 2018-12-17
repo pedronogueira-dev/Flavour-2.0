@@ -1,4 +1,4 @@
-<div class="container upcoming_unconfirmed_meals">
+<div class="container upcoming-unconfirmed-meals-container">
   <div class="row">
     <% @unconfirmed_meals.each do |meal| %>
       <%= link_to meal_path(meal) do %>
@@ -8,11 +8,15 @@
   </div>
 </div>
 
-<div class="container upcoming_confirmed_meals">
+<div class="container upcoming_confirmed_and_cancelled_meals">
   <div class="row">
     <% @meals.each do |meal| %>
       <%= link_to meal_path(meal) do %>
+        <% if meal.status == "Confirmed" %>
           <%= render partial: "confirmed_meal", locals: {meal: meal, status: meal.status} %>
+        <% else %>
+          <!-- RENDER CANCELLED -->
+        <% end %>
       <% end %>
     <% end %>
   </div>
