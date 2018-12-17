@@ -5,16 +5,18 @@ const mapElement = document.getElementById('map');
 
 if (mapElement) { // only build a map if there's a div#map to inject into
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
+  const marker = JSON.parse(mapElement.dataset.marker);
   const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9'
+    style: 'mapbox://styles/mapbox/streets-v9',
   });
 
-  const marker = JSON.parse(mapElement.dataset.marker);
   new mapboxgl.Marker()
     .setLngLat([marker.lng, marker.lat])
+    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+    .setHTML(marker.infoWindow.content))
     .addTo(map);
 
-    map.setZoom(12);
-    map.setCenter([marker.lng, marker.lat]);
+  map.setZoom(13);
+  map.setCenter([marker.lng, marker.lat]);
 }
