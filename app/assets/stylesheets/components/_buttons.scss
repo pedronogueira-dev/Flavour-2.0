@@ -74,3 +74,17 @@ border: none;
   justify-content: center;
   align-items: center;
 }
+
+.back-button {
+  border-radius: 12px;
+  background-color: $pink;
+  color: white;
+  border: none;
+  margin: auto;
+}
+
+.button-containter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,10 +1,11 @@
 <div class="wrapper">
   <div class="calendar">
     <%= month_calendar events: @availabilities, attribute: :date do |date, availabilities| %>
-    <%= date %>
+    <%= date.day %>
 
     <% availabilities.each do |availability| %>
-    <div data-availability-id="<%= availability.id %>">
+
+    <div data-availability-id="<%= availability.id %>" data-date="<%= date %>">
       <% if( date >= Date.today && date <= Date.today + 21) %>
       <%= link_to availability_delete_path(date: availability.date.to_s), method: :delete, remote: true do %>
       <div class="day-applied">
@@ -20,7 +21,9 @@
 
     <% end %>
     <% end %>
-    <%= link_to "Back to Dashboard", dashboard_path, class:"btn btn-default"  %>
+    <div class="button-containter">
+      <%= link_to "Back to Dashboard", dashboard_path, class:"btn btn-default back-button"  %>
+    </div>
   </div>
 
 
