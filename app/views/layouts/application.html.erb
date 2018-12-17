@@ -14,15 +14,16 @@
 </head>
 <body>
   <% unless action_name == "home" %>
-  <%= render 'shared/navbar' %>
+    <%= render 'shared/navbar' %>
   <% end %>
-  <div class="application-container">
-    <%= render 'shared/flashes' %>
-    <%= yield %>
-  </div>
-  <% unless action_name == "home" %>
-  <%= render 'shared/navdock' %>
-  <% end %>
+
+      <%= render 'shared/flashes' %>
+      <%= yield %>
+
+    <% unless action_name == "home" %>
+      <%= render 'shared/navdock' %>
+    <% end %>
+
   <%= javascript_include_tag 'application' %>
   <%= javascript_pack_tag 'application' %>
   <%= javascript_pack_tag 'map' %>

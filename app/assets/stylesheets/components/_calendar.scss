@@ -13,3 +13,8 @@ $turquoise: #74E8E8;
 .applied-day{
   background-color: $pink;
 }
+
+.availabilities-container {
+  height: 80vh;
+  overflow-y: scroll;
+}
