@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   patch 'interests/edit', to: 'user_interests#update'
   #patch 'meals/:id/confirm', to: 'user'
 
+  patch 'meals/:id/confirm', to: 'meals#confirm', as: 'confirm'
+  patch 'meals/:id/reject', to: 'meals#reject', as: 'reject'
+
   devise_for :users
   root to: 'pages#home'
 
