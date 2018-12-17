@@ -1,7 +1,6 @@
 <div class="wrapper availabilities-container">
   <%= month_calendar events: @availabilities, attribute: :date do |date, availabilities| %>
   <%= date %>
-
     <% availabilities.each do |availability| %>
 
     <div data-availability-id="<%= availability.id %>" data-date="<%= date %>">
@@ -23,5 +22,6 @@
     <div class="button-containter">
       <%= link_to "Back to Dashboard", dashboard_path, class:"btn btn-default back-button"  %>
     </div>
+  </div>
   </div>
 </div>

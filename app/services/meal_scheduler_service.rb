@@ -3,6 +3,8 @@ class MealSchedulerService
   MAXIMUM_PEOPLE = 8  # Maximum amount of people allowed for a meal
   MINIMUM_DAYS = 1
 
+# TODO INCLUDE INTEREST SEARCH
+
   USER_AVAILABILITY_QUERY = "SELECT users.location, availabilities.date, count(users.*), array_agg(users.id) AS user_ids \
                             FROM users \
                             JOIN availabilities \
@@ -89,3 +91,5 @@ class MealSchedulerService
 ## => Not attending any event on the same day
 ## => The sum of users is greater then the minimun amount required
 end
+
+

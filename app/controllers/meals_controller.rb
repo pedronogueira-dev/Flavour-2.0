@@ -1,7 +1,8 @@
 class MealsController < ApplicationController
   def upcoming_meals
-    @meals = Meal.where(['reservation_date >= ?', DateTime.now])
+    @unconfirmed_meals = current_user.upcoming_unconfirmed_meals
     @attending = Attendee.find_by(user: current_user)
+    @meals = current_user.upcoming_confirmed_and_cancelled_meals
   end
 
   def past_meals
@@ -26,9 +27,9 @@ class MealsController < ApplicationController
     redirect_to :upcoming_meals
   end
 
-  def accept
+  def confirm
     @meal = Meal.find(params[:id])
-    update_attendee_status(@meal, "Accepted")
+    update_attendee_status(@meal, "Confirmed")
     redirect_to :upcoming_meals
   end
 
@@ -46,7 +47,8 @@ class MealsController < ApplicationController
   private
 
   def update_attendee_status(meal, status)
-    attendee = Attendee.where(meal: meal, user: current_user)
+    attendee = Attendee.find_by(meal: meal, user: current_user)
     attendee.update(status: status)
+    puts attendee.errors
   end
 end
