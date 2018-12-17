@@ -52,8 +52,6 @@
   background-position: center;
   height: 12vh;
   width: 35vw;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  clip-path:         polygon(0 0, 80% 0, 100% 100%, 0 100%);
   margin-left: 0px;
   display: flex;
   justify-content: flex-start;
@@ -73,12 +71,12 @@
   width:20vh;
   background-color: white;
   color: black;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  clip-path:         polygon(0 0, 80% 0, 100% 100%, 20% 100%);
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  border-left: solid 20px #74E8E8;
+  border-right: solid 20px #74E8E8;
 }
 
 .active-meals-date h5 {
@@ -113,8 +111,6 @@
   background-position: center;
   height: 12vh;
   width: 35vw;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  clip-path:         polygon(0 0, 100% 0, 100% 100%, 20% 100%);
   display: flex;
   justify-content: flex-end;
 }
@@ -129,4 +125,17 @@
   text-align: center;
 }
 
+.meal-card {
+  flex: 0 0 auto;
+  width: 100vw;
+  margin: auto;
+  background: repeating-linear-gradient(
+      45deg,
+      #E5E5E5,
+      #E5E5E5 5px,
+      #f4f4f4 5px,
+      #f4f4f4 10px
+      ) !important;
+  height: 23vh;
+}
 

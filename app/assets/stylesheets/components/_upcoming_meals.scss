@@ -1,4 +1,23 @@
 .upcoming-meals-container {
   height: 80vh;
-  overflow-y: scroll;
+}
+
+.scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-box {
+  display: flex;
+  align-items: center;
+}
+
+.upcoming-header {
+  margin:0px;
+  padding: 0px;
+  width: 100vw;
+  background: $pink;
+  color: white;
 }
