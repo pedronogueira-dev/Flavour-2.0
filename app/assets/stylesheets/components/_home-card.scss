@@ -5,25 +5,17 @@
   background-position: center;
   color: white;
   position: relative;
-}
-.card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 40px;
-  border-radius: 50%;
+  margin: 30px;
+  border-radius: 10px;
 }
 .card-category {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  position:center;
   font-size: 15px;
   text-transform: uppercase;
+  padding-top: 20px;
 }
 .card-description {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+  position: center;
 }
 .card-description h2 {
   font-size: 24px;
@@ -45,4 +37,8 @@
 }
 .card-link:hover {
   opacity: 0.1;
+}
+
+.big-icon {
+  font-size: 36px !important;
 }
