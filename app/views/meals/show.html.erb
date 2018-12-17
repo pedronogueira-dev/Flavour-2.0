@@ -12,7 +12,7 @@
     <div class="col-xs-12 no-mp">
       <div class="meal-show-photos">
         <% @meal.confirmed_users.each do |user| %>
-        <%= cl_image_tag(user.photo, :class => "photo-avatar blur")%>
+        <%= cl_image_tag user.photo.url(:blured), class: "photo-avatar"%>
         <% end %>
       </div>
     </div>

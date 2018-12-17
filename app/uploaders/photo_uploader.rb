@@ -48,8 +48,12 @@ class PhotoUploader < CarrierWave::Uploader::Base
     resize_to_fit 256, 256
   end
 
+  version :blured  do
+    cloudinary_transformation effect: 'blur:1000'
+  end
    version :avatar do
-    resize_to_fit 150, 150;
+    resize_to_fit 150, 150
+
   end
 
   version :bright_face do
