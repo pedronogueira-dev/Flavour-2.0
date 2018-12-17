@@ -1,6 +1,55 @@
 $pink: #FF385C;
 $turquoise: #74E8E8;
 
+.simple-calendar {
+  width: 90vw;
+  margin: auto;
+  font-size: 75%;
+}
+.calendar-heading {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 24px;
+  color: $pink;
+  font-weight: bold;
+}
+
+th {
+  background-color: $pink;
+  color: white;
+  border: solid 2px white !important;
+  text-align: center !important;
+}
+
+thead, tr, body, td {
+  border: none !important;
+}
+
+td {
+  height: 10vh !important;
+}
+
+.fa-angellist {
+  color: white;
+  font-weight: lighter;
+}
+
+.fa-check {
+    color: white;
+}
+
+.calendar-heading a{
+  font-size: 18px;
+  color: $turquoise;
+  font-weight: bold;
+}
+
+.calendar {
+  margin: auto;
+
+}
+
 .day-applied {
   color: blue;
   font-size: 20pt;
@@ -18,3 +67,65 @@ $turquoise: #74E8E8;
   height: 80vh;
   overflow-y: scroll;
 }
+
+.simple-calendar {
+  .day {
+    border-radius: 4px;
+  }
+
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .today {
+    color: white;
+    font-weight: bold;
+    background-color: $pink !important;
+  }
+
+  .past.has-events {
+    color: white;
+    font-weight: bold;
+    background: repeating-linear-gradient(
+      45deg,
+      $turquoise,
+      $turquoise 10px,
+      #4c9393 10px,
+      #4c9393 20px
+      ) !important;
+    opacity: 0.9;
+  }
+
+  .past {
+    background-color: #f7f7f7;
+    font-style: italic;
+    color: #e8e8e8;
+  }
+  .future {
+    background-color: white;
+    color: $pink;
+    font-weight: bold;
+  }
+
+  .start-date {}
+
+  .prev-month {}
+  .next-month { }
+  .current-month {}
+
+  .has-events {
+    color: white;
+    font-weight: bold;
+    background: repeating-linear-gradient(
+      45deg,
+      $pink,
+      $pink 10px,
+      #bc2740 10px,
+      #bc2740 20px
+      ) !important;
+  }
+
