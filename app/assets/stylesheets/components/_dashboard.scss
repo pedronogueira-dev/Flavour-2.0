@@ -50,7 +50,13 @@
   width: 100vw;
   margin-left: auto;
   margin-right: auto;
-  background-color: #FF385C;
+   background: repeating-linear-gradient(
+      -45deg,
+      $pink,
+      $pink 5px,
+      #bc2740 5px,
+      #bc2740 10px
+      ) !important;
   -webkit-clip-path: polygon(0 100%, 100% 0%, 100% 100%, 0 100%);
   clip-path:         polygon(0 100%, 100% 0%, 100% 100%, 0 100%);
   position: fixed;
@@ -88,7 +94,13 @@
 }
 
 .photo-box {
-  background-color: $pink;
+   background: repeating-linear-gradient(
+      45deg,
+      $pink,
+      $pink 5px,
+      #bc2740 5px,
+      #bc2740 10px
+      ) !important;
   height: 25vh;
   position: fixed;
   bottom: 30vh;
@@ -119,7 +131,13 @@
   bottom: 22.6vh;
   width: 100vw;
   height: 7.5vh;
-    background-color: #FF385C;
+     background: repeating-linear-gradient(
+      -45deg,
+      $pink,
+      $pink 5px,
+      #bc2740 5px,
+      #bc2740 10px
+      ) !important;
   -webkit-clip-path: polygon(0 0%, 100% 0, 0% 100%, 0 100%);
   clip-path:         polygon(0 0%, 100% 0, 0% 100%, 0 100%);
 }

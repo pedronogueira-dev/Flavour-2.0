@@ -12,7 +12,7 @@
     <div class="col-xs-12 no-mp">
       <div class="meal-show-photos">
         <% @meal.confirmed_users.each do |user| %>
-        <%= cl_image_tag(user.photo, :class => "photo-avatar blur")%>
+        <%= cl_image_tag user.photo.url(:blured), class: "photo-avatar"%>
         <% end %>
       </div>
     </div>
@@ -46,20 +46,22 @@
             <li class="main-word"><p><%= @meal.reservation_date.strftime("%H %p") %></p></li>
           </ul>
         </div>
-        <div class="meals-show-button">
-<!--           <div class="btn btn-primary confirm-button">
-            <h2 class="no-mp text-align">confirm</h2>
-          </div> -->
-          <%= link_to confirm_path(@meal), class:"btn btn-primary confirm-button no-mp text-align", method: :patch do%>
-          <h2 class="no-mp text-align">Confirm</h2>
-          <% end %>
-          <!--  <div class="btn btn-primary reject-button">
-            <h2 class="no-mp text-align">reject</h2>
-          </div>-->
-          <%= link_to reject_path(@meal), class:"btn btn-primary reject-button no-mp text-align", method: :patch do%>
-            <h2 class="no-mp text-align">Reject</h2>
-          <% end %>
-      </div>
+        <% if @status == 'Invited' %>
+          <div class="meals-show-button">
+  <!--           <div class="btn btn-primary confirm-button">
+              <h2 class="no-mp text-align">confirm</h2>
+            </div> -->
+            <%= link_to confirm_path(@meal), class:"btn btn-primary confirm-button no-mp text-align", method: :patch do%>
+            <h2 class="no-mp text-align">Confirm</h2>
+            <% end %>
+            <!--  <div class="btn btn-primary reject-button">
+              <h2 class="no-mp text-align">reject</h2>
+            </div>-->
+            <%= link_to reject_path(@meal), class:"btn btn-primary reject-button no-mp text-align", method: :patch do%>
+              <h2 class="no-mp text-align">Reject</h2>
+            <% end %>
+         </div>
+        <% end %>
       </div>
     </div>
   </div>
@@ -69,12 +71,12 @@
   <div class="row">
     <div class="col-xs-12 no-mp">
       <div class="meal-show-map">
-        <div
-        id="map"
-        style="width:100;height:25vh"
-        data-marker="<%= @marker.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-        ></div>
+          <div
+          id="map"
+          style="width:100;height:25vh"
+          data-marker="<%= @marker.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+          ></div>
       </div>
     </div>
   </div>

@@ -54,9 +54,6 @@ const addDayListener = (day) => {
     // max_date.setHours(0,0,0,0);
 
     // if(date >= min_date && date <= max_date){
-      if(day.children.length > 0) {
-        day.classList.add("applied-day");
-      }
 
       let date = new Date(day.innerText)
       date.setHours(0,0,0,0);
@@ -66,7 +63,6 @@ const addDayListener = (day) => {
         }
         day.addEventListener('click', (event) => {
 
-        console.log(">>>CREATE AVAILABILITY");
         reserveAvailability(date);
       });
     }
@@ -84,10 +80,10 @@ const calendarListener = () => {
 const scheduling_day = (date) =>{
 
   let min_date = new Date();
-  min_date.setDate(min_date.getDate() + 7);
+  min_date.setDate(min_date.getDate() + 3);
   min_date.setHours(0,0,0,0);
   let max_date = new Date();
-  max_date.setDate(min_date.getDate() + 14);
+  max_date.setDate(min_date.getDate() + 10);
   max_date.setHours(0,0,0,0);
 
   return date >= min_date && date <= max_date
