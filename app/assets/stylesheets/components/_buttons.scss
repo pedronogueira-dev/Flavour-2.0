@@ -1,17 +1,18 @@
 .meals-button {
   border-radius: 12px;
-  background-color: $pink;
+  background-color: $turquoise;
   color: white;
-  border: none;
+  border: solid 2px $turquoise;
   z-index: 1;
   position:fixed;
-  bottom: 37vh;
+  bottom: 39vh;
   left: 25vw;
   width: 50vw;
-  height: 12vh;
-  -webkit-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
-  -moz-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
-  box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+  height: 10vh;
+-webkit-box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
+-moz-box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
+box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
+
   display: flex;
   justify-content: center;
 
