@@ -14,7 +14,8 @@ class MealsController < ApplicationController
     @restaurant = @meal.restaurant
     @marker = {
        lng: @restaurant.longitude,
-       lat: @restaurant.latitude
+       lat: @restaurant.latitude,
+       infoWindow: { content: render_to_string(partial: "/meals/restaurant", locals: { restaurant: @restaurant }) }
      }
   end
 
