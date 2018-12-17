@@ -13,15 +13,10 @@ class MealSchedulerService
                             AND availabilities.date > current_date + #{MINIMUM_DAYS} \
                             ORDER BY date ASC, \
                                     count(users.*) DESC;"
-
   def initialize
   end
 
-  def queryDb
-    User.find_by_sql(USER_AVAILABILITY_QUERY)
-  end
-
-  def perform
+  def create_events
     possible_events = User.find_by_sql(USER_AVAILABILITY_QUERY)
 
     possible_events.each do |day|
@@ -43,7 +38,20 @@ class MealSchedulerService
     end
   end
 
+  def register_to_event_today(user)
+    possible_meals = Meal.where("reservation_date = current_date and capacity >= #{MINIMUM_PEOPLE} and capacity < #{MAXIMUM_PEOPLE}").limit(1)
+    if possbile_meals.empty?
+      # Return nil -> on the controller side, redirect to dashboard with no match flash rendered
+      return nil
+    else
+      Attendee.create(user:user, meal:possible_meals.first, status: "Invited")
+      # Return Meal, redirect to meal page for confirmation
+      return possible_meals.first
+    end
+  end
+
   private
+
   def gather_possible_invites(user_ids, reservation_date)
     invites = []
     existing_meal = false

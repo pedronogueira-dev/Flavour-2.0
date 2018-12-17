@@ -10,13 +10,9 @@
   <div class="row">
     <div class="col-xs-12 no-mp">
       <div class="meal-show-photos">
-        <div class="photo-1 blur"></div>
-        <div class="photo-2 blur"></div>
-        <div class="photo-3 blur"></div>
-        <div class="photo-4 blur"></div>
-        <div class="photo-5 blur"></div>
-        <div class="photo-6 blur"></div>
-        <div class="photo-7 blur"></div>
+          <% @meal.users.each do |user| %>
+            <%= cl_image_tag(user.photo, :class => "photo-avatar blur")%>
+          <% end %>
       </div>
     </div>
   </div>
@@ -28,27 +24,25 @@
     <div class="col-xs-12 no-mp">
       <div class="meal-show-container text-center">
         <div class="meals-show-resturant">
-          <h3> the amazing resutrant </h3>
+          <h3> <%= @meal.restaurant.name %> </h3>
         </div>
         <div class="meals-show-rating">
           <ul class="list-inline stars">
-              <li><i class="fa fa-star stars" aria-hidden="true"></i></li>
-              <li><i class="fa fa-star stars" aria-hidden="true"></i></li>
-              <li><i class="fa fa-star stars" aria-hidden="true"></i></li>
-              <li><i class="fa fa-star stars" aria-hidden="true"></i></li>
-              <li><i class="fa fa-star stars" aria-hidden="true"></i></li>
-              <li class="review-rating">(4.7 out of 5 stars)</li>
+              <% @meal.restaurant.rating.round.times do %>
+                <li><i class="fa fa-star stars" aria-hidden="true"></i></li>
+              <% end %>
+              <li class="review-rating">(<%= @meal.restaurant.rating %> out of 5 stars)</li>
             </ul>
 
         </div>
         <div class="meals-show-date">
           <ul class="list-inline no-mp meal-date">
             <li class="filler-word"><p>this</p></li>
-            <li class="main-word"><p>friday</p></li>
+            <li class="main-word"><p><%= @meal.reservation_date.strftime("%A") %></p></li>
             <li class="filler-word"><p>the</p></li>
-            <li class="main-word"><p>28</p></li>
+            <li class="main-word"><p><%= @meal.reservation_date.day.ordinalize %></p></li>
             <li class="filler-word"><p>at</p></li>
-            <li class="main-word"><p>8pm</p></li>
+            <li class="main-word"><p><%= @meal.reservation_date.strftime("%H %p") %></p></li>
           </ul>
         </div>
         <div class="meals-show-button">
