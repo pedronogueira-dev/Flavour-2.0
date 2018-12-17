@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'edit_profile', to: 'users#edit_profile', as: 'edit_profile'
   patch 'dashboard', to: 'users#update', as: :update_profile
   patch 'interests/edit', to: 'user_interests#update'
+  #patch 'meals/:id/confirm', to: 'user'
 
   devise_for :users
   root to: 'pages#home'
