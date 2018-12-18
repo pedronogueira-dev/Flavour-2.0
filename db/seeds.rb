@@ -218,27 +218,33 @@ end
 meals = [{
   restaurant: Restaurant.where(location: "New York City").sample,
   capacity: 8,
-  reservation_date: "2018-12-4"
+  reservation_date: "2018-12-4",
+  interest: Interest.all.sample
 },{
   restaurant: Restaurant.where(location: "New York City").sample,
   capacity: 8,
-  reservation_date: "2018-12-5"
+  reservation_date: "2018-12-5",
+  interest: Interest.all.sample
 },{
   restaurant: Restaurant.where(location: "New York City").sample,
   capacity: 8,
-  reservation_date: "2018-12-24"
+  reservation_date: "2018-12-24",
+  interest: Interest.all.sample
 },{
   restaurant: Restaurant.where(location: "New York City").sample,
   capacity: 8,
-  reservation_date: "2018-12-25"
+  reservation_date: "2018-12-25",
+  interest: Interest.all.sample
 },{
   restaurant: Restaurant.where(location: "New York City").sample,
   capacity: 8,
-  reservation_date: "2018-12-23"
+  reservation_date: "2018-12-23",
+  interest: Interest.all.sample
 },{
   restaurant: Restaurant.where(location: "New York City").sample,
   capacity: 8,
-  reservation_date: "2018-12-27"
+  reservation_date: "2018-12-27",
+  interest: Interest.all.sample
 }]
 
 meals.each do |meal|
@@ -284,27 +290,33 @@ end
 meals = [{
   restaurant: Restaurant.where(location: "Greater Lisbon").sample,
   capacity: 8,
-  reservation_date: "2018-11-4"
+  reservation_date: "2018-11-4",
+  interest: Interest.all.sample
 },{
   restaurant: Restaurant.where(location: "Greater Lisbon").sample,
   capacity: 8,
-  reservation_date: "2018-11-5"
+  reservation_date: "2018-11-5",
+  interest: Interest.all.sample
 },{
   restaurant: Restaurant.where(location: "Greater Lisbon").sample,
   capacity: 8,
-  reservation_date: "2019-01-1"
+  reservation_date: "2019-01-1",
+  interest: Interest.all.sample
 },{
   restaurant: Restaurant.where(location: "Greater Lisbon").sample,
   capacity: 8,
-  reservation_date: "2019-01-2"
+  reservation_date: "2019-01-2",
+  interest: Interest.all.sample
 },{
   restaurant: Restaurant.where(location: "Greater Lisbon").sample,
   capacity: 8,
-  reservation_date: "2019-01-3"
+  reservation_date: "2019-01-3",
+  interest: Interest.all.sample
 },{
   restaurant: Restaurant.where(location: "Greater Lisbon").sample,
   capacity: 8,
-  reservation_date: "2019-01-4"
+  reservation_date: "2019-01-4",
+  interest: Interest.all.sample
 }]
 
 meals.each do |meal|
@@ -616,26 +628,32 @@ SEEDS USED FOR  MEAL_CANCELLATION_SERVICE AND ATTENDEE_REDRAW_SERVICE
 # meals = [{
 #   restaurant: Restaurant.where(location: "Greater Lisbon").sample,
 #   capacity: 8,
-#   reservation_date: "2018-11-11"
+#   reservation_date: "2018-11-11",
+#   interest: Interest.all.sample
 # },{
 #   restaurant: Restaurant.where(location: "Greater Lisbon").sample,
 #   capacity: 8,
-#   reservation_date: "2018-12-10"
+#   reservation_date: "2018-12-10",
+#   interest: Interest.all.sample
 # },{
 #   restaurant: Restaurant.where(location: "Greater Lisbon").sample,
 #   capacity: 8,
-#   reservation_date: Date.today - 1
+#   reservation_date: Date.today - 1,
+#   interest: Interest.all.sample
 # },{
 #   restaurant: Restaurant.where(location: "Greater Lisbon").sample,
 #   capacity: 8,
-#   reservation_date: "2018-12-24"
+#   reservation_date: "2018-12-24",
+#   interest: Interest.all.sample
 # },{
 #   restaurant: Restaurant.where(location: "Greater Lisbon").sample,
 #   capacity: 8,
-#   reservation_date: "2018-12-27"
+#   reservation_date: "2018-12-27",
+#   interest: Interest.all.sample
 # }]
 
 # meals.each do |meal|
+
 #   Meal.create!(meal)
 # end
 
