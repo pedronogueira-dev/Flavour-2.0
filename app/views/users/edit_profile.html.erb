@@ -1,6 +1,8 @@
 <div class="container">
   <%= simple_form_for @user, url: update_profile_url, method: :patch do |f| %>
-  <%= cl_image_tag @user.photo.url(:avatar)  %>
+  <div class="text-center">
+    <%= cl_image_tag @user.photo.url(:avatar)  %>
+  </div>
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
   <%= f.input :first_name,
