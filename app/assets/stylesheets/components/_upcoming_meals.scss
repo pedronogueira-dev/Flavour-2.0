@@ -18,6 +18,18 @@
   margin:0px;
   padding: 0px;
   width: 100vw;
-  background: $pink;
+  height: 13vh;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.upcoming-header h3, h5 {
+  margin:0px;
+  padding: 0px;
+  border: $pink;
+   color: white;
+     text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }

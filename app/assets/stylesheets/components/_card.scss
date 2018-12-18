@@ -2,8 +2,24 @@
   background-color: #74E8E8;
 }
 
+.confirmed-stripe {
+      text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+      background-color: $turquoise;
+  border: 8px dashed #4c9393;
+  border-width: 0px 8px;
+  border-image: repeating-linear-gradient( -45deg, #4c9393, #4c9393 5px, $turquoise 6px, $turquoise 10px) 0 25;
+}
+
 .not-confirmed {
   background-color: #FF385C;
+}
+
+.not-confirmed-stripe {
+      text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+      background-color: $pink;
+  border: 8px dashed #bc2740;
+  border-width: 0 8px;
+  border-image: repeating-linear-gradient( -45deg, #bc2740, #bc2740 5px, $pink 6px, $pink 10px) 0 25;
 }
 
 .active-meals-status {
@@ -29,7 +45,7 @@
   border: none;
   border-radius: 12px 12px 0 0;
   color: black;
-  height: 12vh;
+  height: 18vh;
   width: 90vw;
   margin-top: 12px;
   margin-bottom: 12px;
@@ -50,7 +66,7 @@
   background-size: cover !important;
   background-image: linear-gradient(-225deg, rgba(249,249,249,0.6) 0%, rgba(100,100,100,0.6) 50%), url('https://media-cdn.urbanadventures.com/data/149/tour_316/c-fakepath-tour-experience-lisbon-lead.jpg');
   background-position: center;
-  height: 12vh;
+  height: 18vh;
   width: 35vw;
   margin-left: 0px;
   display: flex;
@@ -67,7 +83,7 @@
   text-align: center;
 }
 
-.active-meals-date {
+.active-meals-date-confirmed {
   width:20vh;
   background-color: white;
   color: black;
@@ -75,29 +91,37 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  border-left: solid 20px #74E8E8;
-  border-right: solid 20px #74E8E8;
+  border-left: solid 12px#74E8E8;
+  border-right: solid 12px#74E8E8;
 }
 
-.active-meals-date h5 {
-  margin: 0 3vw 0 0;
-  padding: 0px 0px;
+.active-meals-date-not-confirmed {
+  width:20vh;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.active-meals-date-confirmed h5, .active-meals-date-not-confirmed h5  {
+  margin: auto;  padding: 0px 0px;
   color: #a0a0a0;
   font-size: 16px;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
 
-.active-meals-date h4 {
-  margin: 0 0 0 0;
+.active-meals-date-confirmed h4, .active-meals-date-not-confirmed h4 {
+  margin: auto;
   padding: 0px 0px;
   font-weight: bold;
   color:#74E8E8;
   font-size: 32px;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
-
-.active-meals-date h6 {
-  margin: 0 -3vw 0 0;
+.active-meals-date-confirmed h6, .active-meals-date-not-confirmed h6 {
+  margin: auto;
   padding: 0px 0px;
   color: #a0a0a0;
   font-size: 14px;
@@ -109,7 +133,7 @@
   background-size: cover !important;
   background-image: linear-gradient(-225deg, rgba(249,249,249,0.6) 0%, rgba(100,100,100,0.6) 50%), url('https://images.unsplash.com/photo-1532597540419-b176991847e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80');
   background-position: center;
-  height: 12vh;
+  height: 18vh;
   width: 35vw;
   display: flex;
   justify-content: flex-end;
@@ -130,12 +154,12 @@
   width: 100vw;
   margin: auto;
   background: repeating-linear-gradient(
-      45deg,
+      0deg,
       #E5E5E5,
       #E5E5E5 5px,
       #f4f4f4 5px,
       #f4f4f4 10px
       ) !important;
-  height: 23vh;
+  height: 27vh;
 }
 

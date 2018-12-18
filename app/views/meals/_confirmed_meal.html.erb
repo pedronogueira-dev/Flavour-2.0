@@ -6,9 +6,9 @@
     <div class="active-meals-city-photo">
       <p> <%= meal.restaurant.location %> </p>
     </div>
-    <div class="active-meals-date">
+    <div class="active-meals-date-confirmed">
       <h5>  <%= meal.reservation_date.strftime("%A") %></h5>
-      <h4> <%= meal.reservation_date.day %> </h4>
+      <h4> <%= meal.reservation_date.day.ordinalize %> </h4>
       <h6> <%= meal.reservation_date.strftime("%B") %></h6>
     </div>
     <div class="active-meals-resturant-photo">

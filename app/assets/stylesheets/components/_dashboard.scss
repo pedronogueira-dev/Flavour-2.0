@@ -26,11 +26,9 @@
   position: fixed;
   top: 13vh;
   left: 4vw;
-
-
 }
 
-.dashboard-location-photo {
+.dashboard-location-photo-lisbon {
   height: 35vh;
   width: 100vw;
   background-size: cover !important;
@@ -38,6 +36,21 @@
   margin-right: auto;
   position: center;
   background-image: linear-gradient(-225deg, rgba(249,249,249,0.6) 0%, rgba(100,100,100,0.6) 50%), url('https://media-cdn.urbanadventures.com/data/149/tour_316/c-fakepath-tour-experience-lisbon-lead.jpg');
+  background-position: center;
+  -webkit-clip-path: polygon(0 22%, 100% 0, 100% 78%, 0 100%);
+  clip-path:         polygon(0 22%, 100% 0, 100% 78%, 0 100%);
+  position: fixed;
+  top: 10.1vh;
+}
+
+.dashboard-location-photo-newyork {
+  height: 35vh;
+  width: 100vw;
+  background-size: cover !important;
+  margin-left: auto;
+  margin-right: auto;
+  position: center;
+  background-image: linear-gradient(-225deg, rgba(249,249,249,0.6) 0%, rgba(100,100,100,0.6) 50%), url('https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1507218132/new-york-city-skyline-CHEAPNYCFLIGHT1017.jpg?itok=BuIH6Efp');
   background-position: center;
   -webkit-clip-path: polygon(0 22%, 100% 0, 100% 78%, 0 100%);
   clip-path:         polygon(0 22%, 100% 0, 100% 78%, 0 100%);
@@ -205,14 +218,34 @@
 .city-status {
   margin-bottom: 0px;
   color: white;
-  font-size: 44px;
   text-align: center;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
   -webkit-transform:rotate(-8.5deg);
-  position: fixed;
-  top: 14vh;
-  left: 10vw;
 }
+
+.city-status p {
+  font-size: 34px;
+  position: fixed;
+  top: 4vh;
+  left: 4vw;
+}
+
+.city-status h6 {
+  font-size: 44px;
+  position: fixed;
+  top: 2vh;
+  left: 20vw;
+}
+
+.city-status h5 {
+  font-size: 54px;
+  position: fixed;
+  top: 23vh;
+  right: 10vw;
+  text-shadow: 1px 1px $pink;
+  color: $turquoise;
+}
+
 
 .meal-status {
   text-align: center;
