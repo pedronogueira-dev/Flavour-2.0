@@ -19,7 +19,7 @@ box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
 
 .avail-button {
   border-radius: 12px;
-  background-color: turquoise;
+  background-color: $turquoise;
   color: white;
   border: none;
   z-index: 1;
@@ -125,6 +125,22 @@ box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.sign-up-btn {
+  background-color: $turquoise;
+  border-color: $turquoise;
+  text-shadow: 1px 1px $olive;
+  border-radius: 12px;
+  margin: 10px;
+}
+
+.log-in-btn {
+  background-color: $pink;
+  border-color: $pink;
+  text-shadow: 1px 1px $burgundy;
+  border-radius: 12px;
+  margin: 10px;
 }
 
 //.meals-button {
