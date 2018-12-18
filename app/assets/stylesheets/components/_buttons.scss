@@ -126,3 +126,26 @@ box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
   justify-content: center;
   align-items: center;
 }
+
+//.meals-button {
+//  cursor: pointer;
+//  box-shadow: 0 0 0 0 rgba(#5a99d4, .5);
+//  -webkit-animation: pulse 1.5s infinite;
+//}
+//.meals-button:hover {
+//  -webkit-animation: none;
+//}
+//
+//@-webkit-keyframes pulse {
+//  0% {
+//    @include transform(scale(.9));
+//  }
+//  70% {
+//    @include transform(scale(1));
+//    box-shadow: 0 0 0 50px rgba(#5a99d4, 0);
+//  }
+//    100% {
+//    @include transform(scale(.9));
+//    box-shadow: 0 0 0 0 rgba(#5a99d4, 0);
+//  }
+//}
