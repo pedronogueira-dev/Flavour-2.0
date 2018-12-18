@@ -28,7 +28,7 @@ module ApplicationHelper
   end
 
   def past_page?
-    current_page?(controller: 'users', action: 'dashboard')
+    current_page?(controller: 'meals', action: 'past_meals')
   end
 
   def  interests_page?
