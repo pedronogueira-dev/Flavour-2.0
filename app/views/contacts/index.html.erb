@@ -1,0 +1,28 @@
+<div class="container interests-container">
+  <div class="introduction">
+    <h2 class="text-center"><strong class="name">
+      <%= current_user.first_name %></strong>, update your contacts!
+    </h2>
+  </div>
+
+  <%= render "contacts/contact_form", contact: @contact %>
+
+  <div class="tiny-wrapper">
+    <div class="row interests-box">
+      <% @contacts.each do |contact| %>
+      <%= form_for(contact, url: contacts_path(id: contact.id), method: :patch, remote: true) do |f| %>
+      <div class="col-xs-6 interest-container">
+        <div class="interest-name">
+          <p><%= contact.contact %></p>
+        </div>
+
+        <label class="switch pull-right">
+          <%= f.check_box :share, class: "submit-interests" %>
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
