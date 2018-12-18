@@ -3,25 +3,18 @@ class MealSchedulerService
   MAXIMUM_PEOPLE = 8  # Maximum amount of people allowed for a meal
   MINIMUM_DAYS = 3
 
-# TODO INCLUDE INTEREST SEARCH
-
-  USER_AVAILABILITY_QUERY = "SELECT users.location, \
-                                    availabilities.date, \
-                                    user_interests.interest_id, \
-                                    count(users.*), \
-                                    array_agg(users.id) AS user_ids \
-                            FROM users \
-                            JOIN availabilities \
-                              ON availabilities.user_id = users.id \
-                            JOIN user_interests \
-                              ON users.id = user_interests.user_id \
-                            GROUP BY users.location, \
-                                      availabilities.date, \
-                                      user_interests.interest_id \
-                            HAVING count(users.*) >= #{MINIMUM_PEOPLE} \
-                              AND availabilities.date > current_date + #{MINIMUM_DAYS} \
-                            ORDER BY date ASC, \
-                                    count(users.*) DESC;"
+  USER_AVAILABILITY_QUERY = "Select users.location, \
+                              availabilities.date, \
+                              user_interests.interest_id as interest, \
+                              count(users.*) as number_of_users, \
+                              array_agg(users.id) as user_ids \
+                              from users \
+                              join availabilities on availabilities.user_id = users.id \
+                              join user_interests on user_interests.user_id = users.id \
+                              where user_interests.active = true \
+                              group by users.location, availabilities.date, user_interests.interest_id \
+                              having count(users.*) > #{MINIMUM_PEOPLE} and availabilities.date > current_date + #{MINIMUM_DAYS} \
+                              order by availabilities.date ASC, count(users.*) DESC;"
 
   def initialize
   end
@@ -33,8 +26,8 @@ class MealSchedulerService
     possible_events.each do |day|
       location = day.location
       reservation_date = day.date
-      interest = Interest.find(day.interest_id)
-      invites = gather_possible_invites(day.user_ids.shuffleg, reservation_date)
+      interest = Interest.find(day.interest)
+      invites = gather_possible_invites(day.user_ids.shuffle, reservation_date)
 
       if invites.count > MINIMUM_PEOPLE
         new_event = Meal.new(reservation_date: reservation_date, restaurant: Restaurant.where(location: location).sample, interest: interest)
@@ -101,7 +94,5 @@ class MealSchedulerService
       puts "\tCREATED #{Attendee.last}"
     end
   end
-# location | date | count | user_ids
-# if
 
 end
