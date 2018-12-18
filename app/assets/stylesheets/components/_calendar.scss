@@ -98,6 +98,7 @@ td {
   .past.has-events {
     color: white;
     font-weight: bold;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
     background: repeating-linear-gradient(
       45deg,
       $turquoise,
@@ -128,6 +129,7 @@ td {
   .has-events {
     color: white;
     font-weight: bold;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
     background: repeating-linear-gradient(
       45deg,
       $pink,

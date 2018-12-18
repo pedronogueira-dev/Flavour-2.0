@@ -1,27 +1,29 @@
- <div class="upcoming-header text-center confirmed">
-    <h3>confirmed & cancelled meals</h3>
-  </div>
-<div class="container upcoming_confirmed_and_cancelled_meals">
-  <div class="row scroll scroll-box">
-      <% @meals.each do |meal| %>
-      <%= link_to meal_path(meal) do %>
-      <% if meal.status == "Confirmed" %>
-      <%= render partial: "confirmed_meal", locals: {meal: meal, status: meal.status} %>
-      <% else %>
-      <!-- RENDER CANCELLED -->
-      <% end %>
-      <% end %>
-      <% end %>
-    </div>
+<div class="upcoming-header text-center not-confirmed-stripe">
+  <h3>pending confirmation</h3>
+    <h5>you have 99 meals for review</h5>
 </div>
-  <div class="upcoming-header text-center">
-    <h3>pending confirmation</h3>
-  </div>
 <div class="container upcoming-unconfirmed-meals-container">
   <div class="row scroll">
     <% @unconfirmed_meals.each do |meal| %>
     <%= link_to meal_path(meal) do %>
     <%= render partial: "not_confirmed_meal", locals: {meal: meal} %>
+    <% end %>
+    <% end %>
+  </div>
+</div>
+ <div class="upcoming-header text-center confirmed-stripe">
+  <h3>upcoming meals</h3>
+  <h5>you have 99 upcoming meals</h5>
+</div>
+<div class="container upcoming_confirmed_and_cancelled_meals">
+  <div class="row scroll">
+    <% @meals.each do |meal| %>
+    <%= link_to meal_path(meal) do %>
+    <% if meal.status == "Confirmed" %>
+    <%= render partial: "confirmed_meal", locals: {meal: meal, status: meal.status} %>
+    <% else %>
+    <!-- RENDER CANCELLED -->
+    <% end %>
     <% end %>
     <% end %>
   </div>
