@@ -1,0 +1,21 @@
+.sign_up-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.sign_up-container h2 {
+  color: white;
+  text-shadow: 2px 2px $burgundy;
+  background-color: $turquoise;
+  padding: 10px;
+  border-radius: 12px;
+  background: repeating-linear-gradient(
+      45deg,
+      $turquoise,
+      $turquoise 5px,
+      $olive 5px,
+      $olive 10px
+      ) !important;
+    opacity: 0.9;
+}
+

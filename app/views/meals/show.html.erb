@@ -43,7 +43,7 @@
             <li class="filler-word"><p>the</p></li>
             <li class="main-word"><p><%= @meal.reservation_date.day.ordinalize %></p></li>
             <li class="filler-word"><p>at</p></li>
-            <li class="main-word"><p><%= @meal.reservation_date.strftime("%H %p") %></p></li>
+            <li class="main-word"><p>8:30 PM</p></li>
           </ul>
         </div>
         <% if @status == 'Invited' %>
@@ -60,6 +60,12 @@
             <%= link_to reject_path(@meal), class:"btn btn-primary reject-button no-mp text-align", method: :patch do%>
               <h2 class="no-mp text-align">Reject</h2>
             <% end %>
+         </div>
+         <% else %>
+         <div class="meals-show-interest">
+            <p>Everyone attending has </p>
+            <h3 class="interest-category"><%= @meal.interest.name %></h3>
+            <p>As a common interest</p>
          </div>
         <% end %>
       </div>

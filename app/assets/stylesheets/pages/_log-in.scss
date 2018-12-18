@@ -1,0 +1,20 @@
+.log-in-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.log-in-container h2 {
+  color: white;
+  text-shadow: 2px 2px $olive;
+  background-color: $pink;
+  padding: 10px;
+  border-radius: 12px;
+  background: repeating-linear-gradient(
+      45deg,
+      $pink,
+      $pink 5px,
+      $burgundy 5px,
+      $burgundy 10px
+      ) !important;
+    opacity: 0.9;
+}

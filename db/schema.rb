@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_16_164602) do
+ActiveRecord::Schema.define(version: 2018_12_18_110844) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 2018_12_16_164602) do
     t.date "reservation_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "interest_id"
+    t.index ["interest_id"], name: "index_meals_on_interest_id"
     t.index ["restaurant_id"], name: "index_meals_on_restaurant_id"
   end
 
@@ -94,6 +96,7 @@ ActiveRecord::Schema.define(version: 2018_12_16_164602) do
   add_foreign_key "attendees", "meals"
   add_foreign_key "attendees", "users"
   add_foreign_key "availabilities", "users"
+  add_foreign_key "meals", "interests"
   add_foreign_key "meals", "restaurants"
   add_foreign_key "user_interests", "interests"
   add_foreign_key "user_interests", "users"
