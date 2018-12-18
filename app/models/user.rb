@@ -92,6 +92,16 @@ class User < ApplicationRecord
     Meal.find_by_sql(query)
   end
 
+  def users_searching_by_loaction
+    array = []
+    User.all.each do |t|
+      if t.location == location
+        array << t
+      end
+    end
+    array.length
+  end
+
   private
   def create_user_interests
     Interest.all.each do |interest|
