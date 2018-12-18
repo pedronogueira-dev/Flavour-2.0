@@ -51,6 +51,11 @@
         <li><%= link_to edit_profile_path do %>
           <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
           <% end %>
+        </li>
+        <li><%= link_to contacts_path do %>
+          <i class="fas fa-user-friends"></i> <%= t(".profile", default: "Contacts") %>
+          <% end %>
+        </li>
         <li><%= link_to destroy_user_session_path, method: :delete do %>
           <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
           <% end %>
