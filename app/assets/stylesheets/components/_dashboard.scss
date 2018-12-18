@@ -203,14 +203,34 @@
 .city-status {
   margin-bottom: 0px;
   color: white;
-  font-size: 44px;
   text-align: center;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
   -webkit-transform:rotate(-8.5deg);
-  position: fixed;
-  top: 14vh;
-  left: 10vw;
 }
+
+.city-status p {
+  font-size: 34px;
+  position: fixed;
+  top: 4vh;
+  left: 4vw;
+}
+
+.city-status h6 {
+  font-size: 44px;
+  position: fixed;
+  top: 2vh;
+  left: 20vw;
+}
+
+.city-status h5 {
+  font-size: 54px;
+  position: fixed;
+  top: 23vh;
+  right: 10vw;
+  text-shadow: 1px 1px $pink;
+  color: $turquoise;
+}
+
 
 .meal-status {
   text-align: center;

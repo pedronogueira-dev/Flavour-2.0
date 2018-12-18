@@ -127,6 +127,44 @@ box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
   align-items: center;
 }
 
+.scroll-prompt-button-top {
+  height: 2h;
+  width: 35vw;
+  position: fixed;
+  border-radius: 12px;
+  top: 21.5vh;
+  right: 5vw;
+  background-color: #bc2740;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-prompt-button-top p {
+  font-size: 14px;
+  color: white;
+  margin: 0px;
+}
+
+.scroll-prompt-button-bottom {
+  height: 2h;
+  width: 35vw;
+  position: fixed;
+  border-radius: 12px;
+  bottom: 35.8vh;
+  right: 5vw;
+  background-color: #4c9393;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-prompt-button-bottom p {
+  font-size: 14px;
+  color: white;
+  margin: 0px;
+}
+
 //.meals-button {
 //  cursor: pointer;
 //  box-shadow: 0 0 0 0 rgba(#5a99d4, .5);

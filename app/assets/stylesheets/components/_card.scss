@@ -5,9 +5,9 @@
 .confirmed-stripe {
       text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
       background-color: $turquoise;
-  border: 8px solid #4c9393;
-  border-width: 8px 0;
-  border-image: repeating-linear-gradient( -45deg, #4c9393, #4c9393 5px, $turquoise 6px, $turquoise 10px) 25 0;
+  border: 8px dashed #4c9393;
+  border-width: 0px 8px;
+  border-image: repeating-linear-gradient( -45deg, #4c9393, #4c9393 5px, $turquoise 6px, $turquoise 10px) 0 25;
 }
 
 .not-confirmed {
@@ -17,9 +17,9 @@
 .not-confirmed-stripe {
       text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
       background-color: $pink;
-  border: 8px solid #bc2740;
-  border-width: 8px 0;
-  border-image: repeating-linear-gradient( -45deg, #bc2740, #bc2740 5px, $pink 6px, $pink 10px) 25 0;
+  border: 8px dashed #bc2740;
+  border-width: 0 8px;
+  border-image: repeating-linear-gradient( -45deg, #bc2740, #bc2740 5px, $pink 6px, $pink 10px) 0 25;
 }
 
 .active-meals-status {
