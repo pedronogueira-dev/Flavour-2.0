@@ -40,7 +40,20 @@ class ContactsController < ApplicationController
     end
   end
 
-  def destoy
+  def destroy
+    @contact = Contact.find_by(user: current_user, id: params[:id])
+
+    if @contact.destroy
+      respond_to do |format|
+        format.html { redirect_to contacts_path }
+        format.js { head :ok }
+      end
+    else
+      respond_to do |format|
+        format.html { render :index }
+        format.js { head :ok }
+      end
+    end
   end
 
   private
