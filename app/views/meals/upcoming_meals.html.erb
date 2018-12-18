@@ -2,6 +2,14 @@
   <h3>pending confirmation</h3>
   <h5>you have 99 meals for review</h5>
 </div>
+<% if @unconfirmed_meals.length == 0 %>
+<div class="container upcoming-unconfirmed-meals-container">
+  <div class="row scroll">
+    <%= render partial: "no_meal"%>
+  </div>
+</div>
+  </div>
+<% end %>
 <div class="container upcoming-unconfirmed-meals-container">
   <div class="row scroll">
     <% @unconfirmed_meals.each do |meal| %>
@@ -12,7 +20,16 @@
   </div>
 </div>
 <% if @unconfirmed_meals.length > 1 %>
-  <div class="scroll-prompt-button-top"><p>scroll for details</p></div>
+<div class="scroll-prompt-button-top"><p>scroll for details</p></div>
+<% end %>
+
+<% if @meals.length == 0 %>
+<div class="container upcoming-unconfirmed-meals-container">
+  <div class="row scroll">
+    <%= render partial: "no_meal"%>
+  </div>
+</div>
+  </div>
 <% end %>
 <div class="upcoming-header text-center confirmed-stripe">
   <h3>upcoming meals</h3>
@@ -32,5 +49,5 @@
   </div>
 </div>
 <% if @meals.length > 1 %>
-  <div class="scroll-prompt-button-bottom"><p>scroll for details</p></div>
+<div class="scroll-prompt-button-bottom"><p>scroll for details</p></div>
 <% end %>

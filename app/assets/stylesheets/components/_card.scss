@@ -27,7 +27,7 @@
   height: 2vh;
   margin-left: 6.8vw;
   margin-right: auto;
-  margin-top: 2vh;
+  margin-top: 1.5vh;
   margin-bottom: 0px;
   border-radius: 12px 12px 0 0;
 }
@@ -163,3 +163,33 @@
   height: 27vh;
 }
 
+.no-meal-card {
+  width: 90vw;
+  height: 22vh;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  margin-top: 2vh;
+    -webkit-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+  -moz-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+  box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 20px dashed #E5E5E5;
+  border-width: 20px 20px;
+  border-image: repeating-linear-gradient( -45deg, #E5E5E5, #E5E5E5 5px, #f4f4f4 6px, #f4f4f4 10px) 25 25;
+}
+
+.no-meal-card p {
+  font-size: 26px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2px;
+    margin-left: auto;
+  margin-right: auto;
+  color: grey;
+  font-weight: lighter;
+}
