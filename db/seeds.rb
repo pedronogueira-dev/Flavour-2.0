@@ -635,102 +635,102 @@ User.where(location: "New York City").each do |user|
   Availability.create!(date: "2018-12-27", user: user)
 end
 
-meals = [{
-  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
-  capacity: 8,
-  reservation_date: "2018-11-11",
-  interest: Interest.all.sample
-},{
-  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
-  capacity: 8,
-  reservation_date: "2018-12-10",
-  interest: Interest.all.sample
-},{
-  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
-  capacity: 8,
-  reservation_date: Date.today - 1,
-  interest: Interest.all.sample
-},{
-  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
-  capacity: 8,
-  reservation_date: "2018-12-24",
-  interest: Interest.all.sample
-},{
-  restaurant: Restaurant.where(location: "Greater Lisbon").sample,
-  capacity: 8,
-  reservation_date: "2018-12-27",
-  interest: Interest.all.sample
-}]
+# meals = [{
+#   restaurant: Restaurant.where(location: "Greater Lisbon").sample,
+#   capacity: 8,
+#   reservation_date: "2018-11-11",
+#   interest: Interest.all.sample
+# },{
+#   restaurant: Restaurant.where(location: "Greater Lisbon").sample,
+#   capacity: 8,
+#   reservation_date: "2018-12-10",
+#   interest: Interest.all.sample
+# },{
+#   restaurant: Restaurant.where(location: "Greater Lisbon").sample,
+#   capacity: 8,
+#   reservation_date: Date.today - 1,
+#   interest: Interest.all.sample
+# },{
+#   restaurant: Restaurant.where(location: "Greater Lisbon").sample,
+#   capacity: 8,
+#   reservation_date: "2018-12-24",
+#   interest: Interest.all.sample
+# },{
+#   restaurant: Restaurant.where(location: "Greater Lisbon").sample,
+#   capacity: 8,
+#   reservation_date: "2018-12-27",
+#   interest: Interest.all.sample
+# }]
 
-meals.each do |meal|
+# meals.each do |meal|
 
-  Meal.create!(meal)
-end
+#   Meal.create!(meal)
+# end
 
-meal = Meal.find_by(reservation_date: '2018-11-11')
-counter = 0
-User.where(location: "Greater Lisbon").limit(8).each do |user|
-  if counter <6
-    Attendee.create!(user: user, meal: meal, status: "Confirmed")
-  else
-    Attendee.create!(user: user, meal: meal, status: "Invited")
-  end
-  counter +=1
-  meal.capacity -= 1
-end
+# meal = Meal.find_by(reservation_date: '2018-11-11')
+# counter = 0
+# User.where(location: "Greater Lisbon").limit(8).each do |user|
+#   if counter <6
+#     Attendee.create!(user: user, meal: meal, status: "Confirmed")
+#   else
+#     Attendee.create!(user: user, meal: meal, status: "Invited")
+#   end
+#   counter +=1
+#   meal.capacity -= 1
+# end
 
-counter = 0
-meal.save!
+# counter = 0
+# meal.save!
 
-meal = Meal.find_by(reservation_date: '2018-12-10')
-User.where(location: "Greater Lisbon").limit(8).each do |user|
-  if counter <6
-    Attendee.create!(user: user, meal: meal, status: "Confirmed")
-  else
-    Attendee.create!(user: user, meal: meal, status: "Invited")
-  end
-  counter +=1
-  meal.capacity -= 1
-end
+# meal = Meal.find_by(reservation_date: '2018-12-10')
+# User.where(location: "Greater Lisbon").limit(8).each do |user|
+#   if counter <6
+#     Attendee.create!(user: user, meal: meal, status: "Confirmed")
+#   else
+#     Attendee.create!(user: user, meal: meal, status: "Invited")
+#   end
+#   counter +=1
+#   meal.capacity -= 1
+# end
 
-counter = 0
-meal.save!
+# counter = 0
+# meal.save!
 
-meal = Meal.find_by(reservation_date: Date.today - 1)
-User.where(location: "Greater Lisbon").limit(8).each do |user|
-  if counter < 4
-    Attendee.create!(user: user, meal: meal, status: "Confirmed")
-  else
-    Attendee.create!(user: user, meal: meal, status: "Invited")
-  end
-  counter +=1
-  meal.capacity -= 1
-end
+# meal = Meal.find_by(reservation_date: Date.today - 1)
+# User.where(location: "Greater Lisbon").limit(8).each do |user|
+#   if counter < 4
+#     Attendee.create!(user: user, meal: meal, status: "Confirmed")
+#   else
+#     Attendee.create!(user: user, meal: meal, status: "Invited")
+#   end
+#   counter +=1
+#   meal.capacity -= 1
+# end
 
-counter = 0
-meal.save!
+# counter = 0
+# meal.save!
 
-meal = Meal.find_by(reservation_date: '2018-12-24')
-User.where(location: "Greater Lisbon").limit(8).each do |user|
-  Attendee.create!(user: user, meal: meal, status: "Invited")
-  meal.capacity -= 1
-  meal.save!
-end
+# meal = Meal.find_by(reservation_date: '2018-12-24')
+# User.where(location: "Greater Lisbon").limit(8).each do |user|
+#   Attendee.create!(user: user, meal: meal, status: "Invited")
+#   meal.capacity -= 1
+#   meal.save!
+# end
 
-meal = Meal.find_by(reservation_date: '2018-12-27')
-User.where(location: "Greater Lisbon").limit(8).each do |user|
-  if counter <5
-    Attendee.create!(user: user, meal: meal, status: "Confirmed")
-  else
-    Attendee.create!(user: user, meal: meal, status: "Invited")
-  end
-  counter +=1
-  meal.capacity -= 1
-end
+# meal = Meal.find_by(reservation_date: '2018-12-27')
+# User.where(location: "Greater Lisbon").limit(8).each do |user|
+#   if counter <5
+#     Attendee.create!(user: user, meal: meal, status: "Confirmed")
+#   else
+#     Attendee.create!(user: user, meal: meal, status: "Invited")
+#   end
+#   counter +=1
+#   meal.capacity -= 1
+# end
 
-counter = 0
-meal.save!
-
+# counter = 0
+# meal.save!
+MealSchedulerService.new.create_events
 puts "--------------------------------------------------"
 puts "Added #{Meal.count} Meals"
 puts "Added #{Attendee.count} Attendees"
