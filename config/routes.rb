@@ -27,6 +27,8 @@ Rails.application.routes.draw do
   delete 'contacts/index', to: 'contacts#destroy'
   resources :contacts, only: [:update]
 
+  # route for mailer
+  get 'meals/:meal_id/attendees/:id/send', to: 'meals#contact_attendees', as: 'share_contact'
 
   devise_for :users
   root to: 'pages#home'

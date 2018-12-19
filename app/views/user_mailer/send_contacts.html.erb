@@ -1,0 +1,15 @@
+<h1><%=  @greeting %></h1>
+
+<p>
+  We have been asked to send you contact information from <%= @sender_first_name %>.
+  You attended a Flavour meal with this person on:  <%= @meal_date %>,  at: <%= @meal_location  %>.
+
+</p>
+
+<ul>
+  <% @sender_contacts.each  do |contact| %>
+  <li> <%= contact.contact %></li>
+  <% end %>
+</ul>
+
+<h3><%= @sign_off %></h3>
