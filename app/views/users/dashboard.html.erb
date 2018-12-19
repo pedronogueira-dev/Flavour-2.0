@@ -66,23 +66,27 @@
           <div class="photo-box">
             <div class="user-action-button">
               <% if current_user.availabilities.length > 0  && current_user.upcoming_unconfirmed_meals.length + current_user.upcoming_confirmed_meals.length > 0 %>
-              <%= link_to upcoming_meals_path, :class => "button" do %>
-              <div class="meals-button btn btn-lrg">
-                <h2>see meals</h2>
-              </div>
-              <% end %>
-              <% elsif current_user.upcoming_unconfirmed_meals.length + current_user.upcoming_confirmed_meals.length == 0 %>
-              <div class="searching-button btn btn-lrg">
-                <h2>searching...</h2>
-              </div>
+                <%= link_to upcoming_meals_path, :class => "button" do %>
+                  <div class="meals-button btn btn-lrg">
+                    <h2>see meals</h2>
+                  </div>
+                <% end %>
+
+              <% elsif current_user.upcoming_unconfirmed_meals.length + current_user.upcoming_confirmed_meals.length == 0 && current_user.availabilities.length > 0%>
+                <div class="searching-button btn btn-lrg">
+                  <h2>searching...</h2>
+                </div>
               <% else %>
+
               <%= link_to availabilities_path, :class => "button" do %>
-              <div class="avail-button btn btn-lrg">
-                <h3>set availabilty</h3>
-              </div>
+                <div class="avail-button btn btn-lrg">
+                  <h3>set availabilty</h3>
+                </div>
+                <% end %>
               <% end %>
-              <% end %>
+
             </div>
+
             <div class="dashboard-profile-photo-row-1">
               <div class="prof-1"></div>
               <div class="prof-2"></div>
