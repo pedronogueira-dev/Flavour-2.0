@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  require "sidekiq/web"
+  authenticate :user, lambda { |u| u.admin } do
+    mount Sidekiq::Web => '/sidekiq'
+  end
+
   get 'contacts/index'
   get 'meals/upcoming_meals', to: 'meals#upcoming_meals', as: 'upcoming_meals'
   get 'meals/past_meals', to: 'meals#past_meals', as: 'past_meals'
