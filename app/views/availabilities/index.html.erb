@@ -7,11 +7,9 @@
           <% if date >= Date.today  && date <= Date.today + 13%>
           <%= link_to availability_delete_path(date: availability.date.to_s), method: :delete, remote: true do %>
           <div class="day-applied">
-            <i class="fab fa-angellist"></i>
           </div>
           <% end %>
           <% else %>
-            <i class="fa fa-check" aria-hidden="true"></i>
           <% end %>
         </div>
       <% end %>

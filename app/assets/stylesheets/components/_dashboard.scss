@@ -1,3 +1,7 @@
+.wrapper {
+  height: calc(100% - 148px);
+}
+
 .no-mp {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
@@ -10,7 +14,15 @@
   margin-left: auto;
   margin-right: auto;
   background-color: #FF385C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.dashboard-badge-summary p{
+  margin: 0px;
+}
+
 
 .dashboard-badge-text {
   margin: 0px;
@@ -43,7 +55,7 @@
 }
 
 .dashboard-status-summary {
-  height: 250px;
+  height: 25px;
   width: 100vw;
   margin-left: auto;
   margin-right: auto;
@@ -79,15 +91,25 @@
 }
 
 .photo-box {
-   background: repeating-linear-gradient(
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+    background: repeating-linear-gradient(
       45deg,
       $pink,
       $pink 5px,
       #bc2740 5px,
       #bc2740 10px
       ) !important;
-  height: 250px;
-  border: none;
+  height: 200px;
+}
+
+.photo-row {
+    border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center
 }
 
 .dashboard-profile-photo-row-1 {
@@ -108,7 +130,7 @@
 
 .dashboard-blank-block-2 {
   width: 100vw;
-  height: 40px;
+  height: 25px;
      background: repeating-linear-gradient(
       -45deg,
       $pink,
@@ -179,22 +201,31 @@
   color: white;
   text-align: center;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .city-status p {
   font-size: 34px;
+  margin-top: 28px;
+  margin-bottom: 0px
+
 }
 
 .city-status h6 {
   font-size: 44px;
-  top: 4px;
+  top: 8px;
   left: 20vw;
+    margin: 0px;
 }
 
 .city-status h5 {
   font-size: 54px;
   text-shadow: 1px 1px $pink;
   color: $turquoise;
+    margin: 0px;
 }
 
 
@@ -227,7 +258,7 @@
 
 
 .dashboard-meal-photo {
-  height: 200px;
+  height: 100px;
   width: 100vw;
       background-image: linear-gradient(-225deg, rgba(249,249,249,0.6) 0%, rgba(100,100,100,0.6) 50%), url('https://images.unsplash.com/photo-1532597540419-b176991847e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80');
 
@@ -246,18 +277,25 @@
 }
 
 .dashboard-bottom-block {
-  height: 20px;
+  height: 50px;
   width: 100vw;
   margin-left: auto;
   margin-right: auto;
   background-color: #FF385C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dashboard-bottom-block p {
-   margin: 0px;
+  margin: 0px;
   font-size: 12px;
   color: white;
   text-align: center;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 
+}
+
+.user-action-button {
+  position: absolute;
 }
