@@ -80,8 +80,8 @@ class User < ApplicationRecord
   end
 
   def upcoming_confirmed_and_cancelled_meals
-    query = "Select Distinct(meals.*), \
-            attendees.status as status \
+    query = "Select attendees.status as status, \
+            meals.* \
             from meals join attendees \
             on attendees.meal_id = meals.id \
             where reservation_date >= \'#{Date.today}\' \
@@ -89,6 +89,7 @@ class User < ApplicationRecord
             status = any(array['Confirmed', 'Cancelled']) \
             and \
             user_id = #{id} \
+            group by status, meals.id \
             order by meals.reservation_date ASC"
     Meal.find_by_sql(query)
   end

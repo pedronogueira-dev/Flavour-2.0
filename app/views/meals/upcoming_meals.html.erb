@@ -31,22 +31,24 @@
   </div>
   <div class="container upcoming_confirmed_and_cancelled_meals">
     <div class="row scroll">
+
       <% if @meals.length == 0 %>
-  <div class="container upcoming-unconfirmed-meals-container">
-    <div class="row scroll">
-      <%= render partial: "no_meal"%>
-    </div>
-  </div>
-  <% end %>
+        <div class="container upcoming-unconfirmed-meals-container">
+          <div class="row scroll">
+            <%= render partial: "no_meal"%>
+          </div>
+        </div>
+      <% end %>
 
       <% @meals.each do |meal| %>
-      <%= link_to meal_path(meal) do %>
-      <% if meal.status == "Confirmed" %>
-      <%= render partial: "confirmed_meal", locals: {meal: meal, status: meal.status} %>
-      <% else %>
+        <%= link_to meal_path(meal) do %>
+          <% if meal.status == "Confirmed" %>
+            <%= render partial: "confirmed_meal", locals: {meal: meal, status: meal.status} %>
+          <% elsif meal.status == "Cancelled" %>
       <!-- RENDER CANCELLED -->
-      <% end %>
-      <% end %>
+            <%= render partial: "canceled_meal", locals: {meal: meal, status: meal.status} %>
+          <% end %>
+        <% end %>
       <% end %>
     </div>
   </div>
