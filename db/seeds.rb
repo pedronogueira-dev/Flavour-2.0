@@ -166,7 +166,7 @@ Contact.create!([{
 
 new_user = {
   first_name: "Chad",
-  email: "jeemii2@yahoo.com",
+  email: "chad@flavour.com",
   password: "123456",
   age: 26,
   photo: "https://res.cloudinary.com/pnogueira/image/upload/ar_1:1,c_fill,g_auto,e_art:hokusai/v1545136189/qhtqm9hckle9vgpczorn.jpg",
@@ -499,7 +499,8 @@ new_user = {
   age: 27,
   photo: "https://res.cloudinary.com/pnogueira/image/upload/ar_1:1,c_fill,g_auto,e_art:hokusai/v1544716538/sxr96ouzry0cvcmd2chf.jpg",
   gender: "Male",
-  location: location
+  location: location,
+  admin: true
 }
 user = User.new(new_user)
 user.remote_photo_url = new_user[:photo]  if new_user.key?(:photo)

@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2018_12_18_165901) do
 
   create_table "meals", force: :cascade do |t|
     t.bigint "restaurant_id"
-    t.integer "capacity"
+    t.integer "capacity", default: 8
     t.date "reservation_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
