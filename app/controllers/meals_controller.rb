@@ -15,7 +15,6 @@ class MealsController < ApplicationController
     attendee = Attendee.find_by(meal: @meal, user: current_user)
 
     # redirect_to error_path("You don't have the permission to access the requested meal.") if attendee.nil?
-
     @status = attendee.status
     @restaurant = @meal.restaurant
     @marker = {
