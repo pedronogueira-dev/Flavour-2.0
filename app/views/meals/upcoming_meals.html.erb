@@ -1,4 +1,4 @@
-<div class="full-page">
+<div class="book-today-container">
   <div class="wrapper">
     <div class="upcoming-header text-center not-confirmed-stripe">
       <h3>pending confirmation</h3>
@@ -8,8 +8,8 @@
     <div class="container upcoming-unconfirmed-meals-container">
       <div class="row scroll">
         <%= render partial: "no_meal"%>
+        </div>
       </div>
-    </div>
     <% end %>
     <div class="container upcoming-unconfirmed-meals-container">
       <div class="row scroll">
@@ -22,7 +22,7 @@
     </div>
     <% if @unconfirmed_meals.length > 1 %>
     <div class="scroll-prompt-button-top"><p>scroll for details</p></div>
-    <% end %>
+  <% end %>
   </div>
 
   <div class="upcoming-header text-center confirmed-stripe">
@@ -31,27 +31,29 @@
   </div>
   <div class="container upcoming_confirmed_and_cancelled_meals">
     <div class="row scroll">
+
       <% if @meals.length == 0 %>
-      <div class="container upcoming-unconfirmed-meals-container">
-        <div class="row scroll">
-          <%= render partial: "no_meal"%>
+        <div class="container upcoming-unconfirmed-meals-container">
+          <div class="row scroll">
+            <%= render partial: "no_meal"%>
+          </div>
         </div>
-      </div>
       <% end %>
 
       <% @meals.each do |meal| %>
-      <%= link_to meal_path(meal) do %>
-      <% if meal.status == "Confirmed" %>
-      <%= render partial: "confirmed_meal", locals: {meal: meal, status: meal.status} %>
-      <% else %>
+        <%= link_to meal_path(meal) do %>
+          <% if meal.status == "Confirmed" %>
+            <%= render partial: "confirmed_meal", locals: {meal: meal, status: meal.status} %>
+          <% elsif meal.status == "Cancelled" %>
       <!-- RENDER CANCELLED -->
-      <% end %>
-      <% end %>
+            <%= render partial: "canceled_meal", locals: {meal: meal, status: meal.status} %>
+          <% end %>
+        <% end %>
       <% end %>
     </div>
   </div>
   <% if @meals.length > 1 %>
   <div class="scroll-prompt-button-bottom"><p>scroll for details</p></div>
   <% end %>
-</div>
+  </div>
 </div>
