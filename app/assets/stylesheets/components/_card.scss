@@ -10,6 +10,15 @@
   border-image: repeating-linear-gradient( -45deg, #4c9393, #4c9393 5px, $turquoise 6px, $turquoise 10px) 0 25;
 }
 
+.past-stripe {
+      text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+      background-color: $olive;
+  border: 8px dashed #4c9393;
+  border-width: 0px 8px;
+  border-image: repeating-linear-gradient( -45deg, #4c9393, #4c9393 5px, $turquoise 6px, $turquoise 10px) 0 25;
+}
+
+
 .not-confirmed {
   background-color: #FF385C;
 }
