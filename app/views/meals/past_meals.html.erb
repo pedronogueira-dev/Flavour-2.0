@@ -4,7 +4,7 @@
 <div>
   <% @meals.each do |meal|%>
     <%= link_to meal_path(meal) do %>
-      <%= render partial: "confirmed_meal", locals: {meal: meal, status: "past"} %>
+      <%= render partial: "past_meal", locals: {meal: meal, status: "past"} %>
     <% end %>
   <% end %>
 </div>
