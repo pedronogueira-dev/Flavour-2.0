@@ -76,7 +76,7 @@ puts "----------------Seeding Users--------------------"
 
 users = [{
   first_name: "Jami",
-  email: "jami@flavour.com",
+  email: "jamirene88@gmail.com",
   password: "123456",
   age: 26,
   photo: "https://avatars1.githubusercontent.com/u/42552935?v=4",
@@ -84,7 +84,7 @@ users = [{
   location: "New York City"
 },{
   first_name: "Chad",
-  email: "chad@flavour.com",
+  email: "jeemii2@yahoo.com",
   password: "123456",
   age: 21,
   photo: "https://avatars2.githubusercontent.com/u/25643328?v=4",

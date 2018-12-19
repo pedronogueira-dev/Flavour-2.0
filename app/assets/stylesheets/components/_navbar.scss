@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-   border-bottom: solid white 2px;
+  border-bottom: solid white 2px;
 }
 
 .logo {
@@ -24,6 +24,7 @@
   position: fixed;
   top: -3.4vh;
   left: 0vw;
+  z-index: 100;
 
 }
 
@@ -95,7 +96,10 @@
 }
 
 .dropdown-menu {
-
-
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown {
+  z-index: 100;
+  position: fixed;
 }

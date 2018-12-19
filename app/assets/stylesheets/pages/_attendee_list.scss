@@ -1,3 +1,21 @@
 .attendee-container  {
   margin-bottom: 20vh;
 }
+
+.attendee {
+  margin: 5px;
+  display: center;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.attendee-name {
+  color: $pink;
+  font-weight: bold;
+  text-shadow: 2px 2px $turquoise;
+  padding-top: 10px;
+}
+
+.attendee-pic {
+  padding: 10px;
+}

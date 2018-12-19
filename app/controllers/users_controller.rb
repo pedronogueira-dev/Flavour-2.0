@@ -15,9 +15,11 @@ class UsersController < ApplicationController
     else
       render :edit_profile
     end
+
   end
 
   private
+
   def params_update
     params.require(:user).permit(:name, :age, :gender, :location)
   end

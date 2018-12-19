@@ -22,6 +22,7 @@ gem 'httparty'
 gem 'simple_calendar', '~>2.0'
 gem "geocoder"
 gem 'activesupport'
+gem "letter_opener", group: :development
 
 group :development do
   gem 'web-console', '>= 3.3.0'
