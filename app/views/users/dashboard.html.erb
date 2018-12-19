@@ -1,137 +1,140 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 no-mp">
-      <div class="dashboard-badge-summary">
-        <div class="dashboard-badge-text">
-          <p><strong><%= current_user.users_searching_by_loaction %> </strong> people looking for meals this week </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<div class="wrapper">
 
-<% if current_user.location == "New York City" %>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 no-mp">
-      <div class="dashboard-summary">
-        <div class="dashboard-location-photo-newyork">
-          <div class="city-status text-center">
-            <p>lets</p>
-            <h6>discover</h6>
-            <h5><%= current_user.location %></h5>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 no-mp">
+        <div class="dashboard-badge-summary">
+          <div class="dashboard-badge-text">
+            <p><strong><%= current_user.users_searching_by_loaction %> </strong> people looking for meals this week </p>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<% else %>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 no-mp">
-      <div class="dashboard-summary">
-        <div class="dashboard-location-photo-lisbon">
-          <div class="city-status text-center">
-            <p>lets</p>
-            <h6>discover</h6>
-            <h5><%= current_user.location %></h5>
+
+  <% if current_user.location == "New York City" %>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 no-mp">
+        <div class="dashboard-summary">
+          <div class="dashboard-location-photo-newyork">
+            <div class="city-status text-center">
+              <div>
+                <p>lets</p>
+                <h6>discover</h6>
+                <h5><%= current_user.location %></h5>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<% end %>
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 no-mp">
-      <div class="dashboard-status-summary">
-        <div class="dashboard-status-text">
+  <% else %>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 no-mp">
+        <div class="dashboard-summary">
+          <div class="dashboard-location-photo-lisbon">
+            <div class="city-status text-center">
+              <p>lets</p>
+              <h6>discover</h6>
+              <h5><%= current_user.location %></h5>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+  <% end %>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 no-mp">
-      <div class="dashboard-blank-block">
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 photo-box no-mp">
-      <% if current_user.availabilities.length > 0  && current_user.upcoming_unconfirmed_meals.length + current_user.upcoming_confirmed_meals.length > 0 %>
-      <%= link_to upcoming_meals_path, :class => "button" do %>
-      <div class="meals-button btn btn-lrg">
-        <h2>see meals</h2>
-      </div>
-      <% end %>
-      <% elsif current_user.upcoming_unconfirmed_meals.length + current_user.upcoming_confirmed_meals.length == 0 %>
-      <div class="searching-button btn btn-lrg">
-        <h2>searching...</h2>
-      </div>
-      <% else %>
-      <%= link_to availabilities_path, :class => "button" do %>
-      <div class="avail-button btn btn-lrg">
-        <h3>set availabilty</h3>
-      </div>
-      <% end %>
-      <% end %>
-
-      <div class="dashboard-profile-photo-row-1">
-        <div class="prof-1"></div>
-        <div class="prof-2"></div>
-        <div class="prof-3"></div>
-        <div class="prof-4"></div>
-        <div class="prof-5"></div>
-      </div>
-      <div class="dashboard-profile-photo-row-2">
-        <div class="prof-6"></div>
-        <div class="prof-7"></div>
-        <div class="prof-8"></div>
-        <div class="prof-9"></div>
-        <div class="prof-10"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 no-mp">
-      <div class="dashboard-blank-block-2">
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 no-mp">
-      <div class="dashboard-summary">
-        <div class="dashboard-meal-photo">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 no-mp">
+        <div class="dashboard-status-summary">
+          <div class="dashboard-status-text">
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 no-mp">
+        <div class="photo-with-meals-box">
+          <div class="photo-box">
+            <div class="user-action-button">
+              <% if current_user.availabilities.length > 0  && current_user.upcoming_unconfirmed_meals.length + current_user.upcoming_confirmed_meals.length > 0 %>
+                <%= link_to upcoming_meals_path, :class => "button" do %>
+                  <div class="meals-button btn btn-lrg">
+                    <h2>see meals</h2>
+                  </div>
+                <% end %>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 no-mp">
-      <div class="dashboard-bottom-block">
-        <p>you have earned the <strong>flavour flav badge</strong></p>
+              <% elsif current_user.upcoming_unconfirmed_meals.length + current_user.upcoming_confirmed_meals.length == 0 && current_user.availabilities.length > 0%>
+                <div class="searching-button btn btn-lrg">
+                  <h2>searching...</h2>
+                </div>
+              <% else %>
+
+              <%= link_to availabilities_path, :class => "button" do %>
+                <div class="avail-button btn btn-lrg">
+                  <h3>set availabilty</h3>
+                </div>
+                <% end %>
+              <% end %>
+
+            </div>
+
+            <div class="dashboard-profile-photo-row-1">
+              <div class="prof-1"></div>
+              <div class="prof-2"></div>
+              <div class="prof-3"></div>
+              <div class="prof-4"></div>
+              <div class="prof-5"></div>
+            </div>
+            <div class="dashboard-profile-photo-row-2">
+              <div class="prof-6"></div>
+              <div class="prof-7"></div>
+              <div class="prof-8"></div>
+              <div class="prof-9"></div>
+              <div class="prof-10"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 no-mp">
+        <div class="dashboard-blank-block-2">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 no-mp">
+        <div class="dashboard-summary">
+          <div class="dashboard-meal-photo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 no-mp">
+        <div class="dashboard-bottom-block">
+          <p>you have earned the <strong>flavour flav badge</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

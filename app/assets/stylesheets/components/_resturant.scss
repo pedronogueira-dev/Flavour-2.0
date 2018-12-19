@@ -2,7 +2,7 @@
   background-size: cover !important;
   background-image: linear-gradient(-225deg, rgba(249,249,249,0.6) 0%, rgba(100,100,100,0.6) 50%), url('https://images.unsplash.com/photo-1532597540419-b176991847e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80');
   background-position: center;
-  height: 20vh;
+  height: 140px;
   width: 100vw;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   clip-path:         polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -10,14 +10,15 @@
 }
 
 .meal-show-photos {
-  height: 10vh;
+  height: 70px;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 4px;
-  position: fixed;
-  top: 25vh;
+  position: absolute;
+  top: -35px;
+
 }
 
 .blur {
@@ -25,10 +26,10 @@
 }
 
 .meal-show-container {
-  height: 35vh;
+  height: 260px;
   width: 100vw;
   margin: auto;
-  padding-top: 4vh;
+  padding-top: 30px;
 }
 
 .meals-show-resturant h3 {
@@ -72,7 +73,7 @@
 }
 
 .meal-show-map {
-  height: 25vh;
+  height: 185px;
   width: 100vw;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   clip-path:         polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -87,14 +88,17 @@
 }
 
 .meals-show-interest {
-  border: solid;
+  background-color: $pink;
+  border-top: solid 2px $turquoise;
+    border-bottom: solid 2px $turquoise;
+  color: white;
   padding: 0px;
   p {
     margin: 0px;
   }
   .interest-category {
       margin: 0px;
-      color:  #FF385C;
+      color:  $turquoise;
       font-weight: bold;
   }
 }
