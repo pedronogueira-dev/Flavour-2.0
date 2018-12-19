@@ -8,7 +8,7 @@ class MealsController < ApplicationController
     @unconfirmed_meals = current_user.upcoming_unconfirmed_meals
     @attending = Attendee.find_by(user: current_user)
     @meals = current_user.upcoming_confirmed_and_cancelled_meals
-    byebug
+
   end
 
   def past_meals

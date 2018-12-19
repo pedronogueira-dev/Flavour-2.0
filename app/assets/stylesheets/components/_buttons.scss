@@ -141,7 +141,7 @@ box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
 }
 
 .scroll-prompt-button-top {
-  height: 2h;
+  height: 16px;
   width: 35vw;
   position: absolute;
   border-radius: 12px;
@@ -160,11 +160,11 @@ box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
 }
 
 .scroll-prompt-button-bottom {
-  height: 2h;
+  height: 16px;
   width: 35vw;
   position: absolute;
   border-radius: 12px;
-  bottom: 35.8vh;
+  bottom: 263px;
   right: 5vw;
   background-color: #4c9393;
   display: flex;

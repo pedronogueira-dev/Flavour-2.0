@@ -4,7 +4,6 @@
   background: white;
   transition: all 0.3s ease;
   height: 74px;
-  width: 100vw;
   padding: 0px 30px;
   display: flex;
   align-items: center;
@@ -24,9 +23,9 @@
   background-image: url('https://res.cloudinary.com/dmmvkoibj/image/upload/v1545245835/flavour-logo.png');
   background-position: center;
   position: fixed;
-  top: -3.4vh;
+  top: -0.0vh;
   left: 0vw;
-  z-index: 100;
+  z-index: 99;
 
 }
 
