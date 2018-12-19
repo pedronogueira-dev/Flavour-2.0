@@ -6,6 +6,7 @@ class MealsController < ApplicationController
   end
 
   def past_meals
+    @user = current_user
     @meals = current_user.past_meals
   end
 
