@@ -17,6 +17,7 @@ class User < ApplicationRecord
 
   has_many :user_interests, dependent: :destroy
   has_many :interests, through: :user_interests
+  has_many :contacts, dependent: :destroy
 
   validates :first_name, presence: true, blank: false
   validates :gender, presence: true, inclusion: { in: GENDERS }

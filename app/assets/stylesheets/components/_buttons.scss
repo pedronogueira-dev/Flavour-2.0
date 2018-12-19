@@ -178,6 +178,30 @@ box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
   margin: 0px;
 }
 
+.home-btn {
+  background-color: $turquoise;
+  border-radius: 25px;
+  text-shadow: 2px 2px $burgundy;
+  border: none;
+}
+
+.delete-btn {
+  color: $turquoise;
+  border-radius: 12px;
+  background-color: $burgundy;
+  border: none;
+}
+
+.attendee-btn {
+  background-color: $turquoise;
+  border-color: $pink;
+  text-shadow: 0.5px 0.5px $pink;
+  border-radius: 5px;
+  margin: 5px;
+  box-shadow: 4px 4px $pink;
+}
+
+
 //.meals-button {
 //  cursor: pointer;
 //  box-shadow: 0 0 0 0 rgba(#5a99d4, .5);

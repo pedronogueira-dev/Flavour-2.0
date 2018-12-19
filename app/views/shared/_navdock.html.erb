@@ -13,10 +13,10 @@
       <p class="dock-text">Book Today</p>
     </div>
   <% end %>
-  <a class="tab" href="#">
+   <%= link_to past_meals_path, class: "tab #{'active' if icon_active?('past')}" do %>
     <i class="fas fa-users"></i>
     <p class="dock-text">Past Meals</p>
-  </a>
+  <% end %>
   <%= link_to interests_edit_path, class: "tab #{'active' if icon_active?('interests')}" do %>
     <i class="fas fa-heart"></i>
     <p class="dock-text">Interests</p>

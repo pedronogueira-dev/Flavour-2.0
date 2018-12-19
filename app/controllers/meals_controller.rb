@@ -1,4 +1,9 @@
 class MealsController < ApplicationController
+  def attendee_list
+    @meal = Meal.find(params[:id])
+    @attendees = @meal.attendees.where.not(user: current_user)
+  end
+
   def upcoming_meals
     @unconfirmed_meals = current_user.upcoming_unconfirmed_meals
     @attending = Attendee.find_by(user: current_user)
@@ -6,6 +11,7 @@ class MealsController < ApplicationController
   end
 
   def past_meals
+    @user = current_user
     @meals = current_user.past_meals
   end
 
@@ -14,7 +20,6 @@ class MealsController < ApplicationController
     attendee = Attendee.find_by(meal: @meal, user: current_user)
 
     # redirect_to error_path("You don't have the permission to access the requested meal.") if attendee.nil?
-
     @status = attendee.status
     @restaurant = @meal.restaurant
     @marker = {
@@ -46,6 +51,15 @@ class MealsController < ApplicationController
     else
       redirect_to meal_path(@meal)
     end
+  end
+
+  def contact_attendees
+    sender = current_user
+    recipient = Attendee.find(params[:id])
+    meal = Meal.find(params[:meal_id])
+
+    UserMailer.send_contacts(recipient, sender, meal).deliver_now
+    redirect_to attendee_list_path(meal.id)
   end
 
   private

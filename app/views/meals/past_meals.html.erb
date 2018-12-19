@@ -1,14 +1,10 @@
-<h1>Meals#past_meals</h1>
-<p>Find me in app/views/meals/past_meals.html.erb</p>
-<% @meals.each do |meal| %>
-  <div>
-    <%= meal.reservation_date %>
-    <% meal.attendees.each do |attendee| %>
-      <%= attendee.user.first_name %>
-      <%= attendee.status %>
+<div class="upcoming-header text-center confirmed-stripe">
+  <h3>Checkout your past meals</h3>
+</div>
+<div class="past-meals">
+  <% @meals.each do |meal|%>
+    <%= link_to meal_path(meal) do %>
+      <%= render partial: "past_meal", locals: {meal: meal, status: "past"} %>
     <% end %>
-    <%= meal.restaurant.location %>
-    <%= meal.restaurant.name %>
-    <%= meal.capacity %>
-  </div>
-<% end %>
+  <% end %>
+</div>
