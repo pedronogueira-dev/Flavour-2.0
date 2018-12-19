@@ -22,6 +22,159 @@
   border-image: repeating-linear-gradient( -45deg, #bc2740, #bc2740 5px, $pink 6px, $pink 10px) 0 25;
 }
 
+.active-meals-status {
+  width: 28vw;
+  height: 16px;
+  margin-left: 6.8vw;
+  margin-right: auto;
+  margin-top: 12px;
+  margin-bottom: 0px;
+  border-radius: 12px 12px 0 0;
+}
+
+.active-meals-status p {
+  margin-bottom: 0px;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.active-meals-card {
+  border: none;
+  border-radius: 12px 12px 0 0;
+  color: black;
+  height: 130px;
+  width: 90vw;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-right: 0px;
+  margin-left: 0px;
+  overflow: hidden;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  -webkit-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+  -moz-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+  box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
+}
+
+.active-meals-city-photo-lisbon {
+  background-size: cover !important;
+  background-image: linear-gradient(-225deg, rgba(249,249,249,0.6) 0%, rgba(100,100,100,0.6) 50%), url('https://media-cdn.urbanadventures.com/data/149/tour_316/c-fakepath-tour-experience-lisbon-lead.jpg');
+  background-position: center;
+  height: 130px;
+  width: 35vw;
+  margin-left: 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.active-meals-city-photo-newyork {
+  background-size: cover !important;
+  background-image: linear-gradient(-225deg, rgba(249,249,249,0.6) 0%, rgba(100,100,100,0.6) 50%), url('https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1507218132/new-york-city-skyline-CHEAPNYCFLIGHT1017.jpg?itok=BuIH6Efp');
+  background-position: center;
+  height: 130px;
+  width: 35vw;
+  margin-left: 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.active-meals-city-photo-lisbon p,.active-meals-city-photo-newyork p {
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  color: white;
+  width: 25vw;
+  text-align: center;
+}
+
+.active-meals-date-confirmed {
+  width:150px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-left: solid 12px#74E8E8;
+  border-right: solid 12px#74E8E8;
+}
+
+.active-meals-date-not-confirmed {
+  width:150px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+    border-left: solid 12px $pink;
+  border-right: solid 12px $pink;
+}
+
+.active-meals-date-confirmed h5, .active-meals-date-not-confirmed h5  {
+  margin: auto;  padding: 0px 0px;
+  color: #a0a0a0;
+  font-size: 16px;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.active-meals-date-confirmed h4 {
+  margin: auto;
+  padding: 0px 0px;
+  font-weight: bold;
+  color:#74E8E8;
+  font-size: 32px;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.active-meals-date-not-confirmed h4{
+  margin: auto;
+  padding: 0px 0px;
+  font-weight: bold;
+  color: $pink;
+  font-size: 32px;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.active-meals-date-confirmed h6, .active-meals-date-not-confirmed h6 {
+  margin: auto;
+  padding: 0px 0px;
+  color: #a0a0a0;
+  font-size: 14px;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+.active-meals-resturant-photo {
+  background-size: cover !important;
+  background-image: linear-gradient(-225deg, rgba(249,249,249,0.6) 0%, rgba(100,100,100,0.6) 50%), url('https://images.unsplash.com/photo-1532597540419-b176991847e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80');
+  background-position: center;
+  height: 130px;
+  width: 35vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.active-meals-resturant-photo p {
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  color: white;
+  width: 25vw;
+  text-align: center;
+}
+
 .meal-card {
   flex: 0 0 auto;
   width: 100vw;
@@ -33,17 +186,17 @@
       #f4f4f4 5px,
       #f4f4f4 10px
       ) !important;
-  height: 27vh;
+  height: 200px;
 }
 
 .no-meal-card {
   width: 90vw;
-  height: 22vh;
+  height: 130px;
   background-color: white;
   margin-left: auto;
   margin-right: auto;
   border-radius: 12px;
-  margin-top: 2vh;
+  margin-top: 16px;
     -webkit-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
   -moz-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
   box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);

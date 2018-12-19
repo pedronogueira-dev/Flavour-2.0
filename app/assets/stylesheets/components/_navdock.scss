@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 10vh;
+  height: 74px;
   box-shadow: inset 0px 11px 8px -10px #CCC;
 }
 .tabs a {
@@ -18,7 +18,7 @@
   cursor: pointer;
   text-decoration: none;
   opacity: 1;
-  border-top: solid 1vh $turquoise;
+  border-top: solid 8px $turquoise;
 }
 
 .tabs a:hover {
@@ -38,9 +38,9 @@
 .tab {
   flex: 0 1 20%;
   text-align: center;
-  padding: 1vh 0;
-  height: 10vh;
-  border-top: solid 1vh white;
+  padding: 8px 0;
+  height: 74px;
+  border-top: solid 8px white;
 }
 
 .tab.active p {
