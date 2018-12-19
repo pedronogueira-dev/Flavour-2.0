@@ -235,7 +235,7 @@ Availability.create([{
   date: '2018-12-27'
 },{
   user: user,
-  date: '2018-12-30'
+  date: '2018-12-29'
 }])
 
 Contact.create!([{
@@ -364,7 +364,7 @@ Availability.create([{
   date: '2018-12-26'
 },{
   user: user,
-  date: '2018-12-30'
+  date: '2018-12-29'
 }])
 
 Contact.create!([{
@@ -408,7 +408,7 @@ Availability.create([{
   date: '2018-12-28'
 },{
   user: user,
-  date: '2018-12-30'
+  date: '2018-12-29'
 }])
 
 Contact.create!([{
@@ -444,6 +444,9 @@ Availability.create([{
 },{
   user: user,
   date: '2018-12-27'
+},{
+  user: user,
+  date: '2018-12-29'
 }])
 
 Contact.create!([{
@@ -522,7 +525,7 @@ Availability.create!([{
   date: '2018-12-28'
 },{
   user: user,
-  date: '2018-12-30'
+  date: '2018-12-29'
 }])
 
 Contact.create!([{
@@ -589,4 +592,4 @@ future_meals('2018-12-26', attendees_26, "Invited") # TO BE REJECTED
 future_meals('2018-12-27', attendees_27, "Invited")
 future_meals('2018-12-28', attendees_28, "Confirmed")
 
-future_meals('2018-12-30', attendees_30, "Invited") # 4 people, change interests so that only 1 or 2 match
+#future_meals('2018-12-29', attendees_30, "Invited") # 4 people, change interests so that only 1 or 2 match

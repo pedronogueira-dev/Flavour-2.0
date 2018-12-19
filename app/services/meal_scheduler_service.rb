@@ -13,7 +13,7 @@ class MealSchedulerService
                               join user_interests on user_interests.user_id = users.id \
                               where user_interests.active = true \
                               group by users.location, availabilities.date, user_interests.interest_id \
-                              having count(users.*) > #{MINIMUM_PEOPLE} and availabilities.date > current_date + #{MINIMUM_DAYS} \
+                              having count(users.*) >= #{MINIMUM_PEOPLE} and availabilities.date > current_date + #{MINIMUM_DAYS} \
                               order by availabilities.date ASC, count(users.*) DESC;"
 
   def initialize
@@ -27,9 +27,10 @@ class MealSchedulerService
       location = day.location
       reservation_date = day.date
       interest = Interest.find(day.interest)
+
       invites = gather_possible_invites(day.user_ids.shuffle, reservation_date)
 
-      if invites.count > MINIMUM_PEOPLE
+      if invites.count >= MINIMUM_PEOPLE
         new_event = Meal.new(reservation_date: reservation_date, restaurant: Restaurant.where(location: location).sample, interest: interest)
         if new_event.save
           created_meals << new_event
@@ -71,6 +72,7 @@ class MealSchedulerService
     invites = []
     existing_meal = false
     user_ids.each do |user_id|
+
       user = User.find(user_id)
       user.upcoming_meals.each do |meal|
         if meal.reservation_date == reservation_date
