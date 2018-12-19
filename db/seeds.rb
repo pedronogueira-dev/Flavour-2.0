@@ -126,7 +126,7 @@ puts "------------------- Seeding Users ---------------------"
 location = "New York City"
 new_user = {
   first_name: "Jami",
-  email: "jami@flavour.com",
+  email: "jamirene88@gmail.com",
   password: "123456",
   age: 26,
   photo: "https://res.cloudinary.com/pnogueira/image/upload/ar_1:1,c_fill,g_auto,e_art:hokusai/v1545136188/zgbijybxmndiwsffnpja.jpg",
@@ -166,7 +166,7 @@ Contact.create!([{
 
 new_user = {
   first_name: "Chad",
-  email: "chad@flavour.com",
+  email: "jeemii2@yahoo.com",
   password: "123456",
   age: 26,
   photo: "https://res.cloudinary.com/pnogueira/image/upload/ar_1:1,c_fill,g_auto,e_art:hokusai/v1545136189/qhtqm9hckle9vgpczorn.jpg",
