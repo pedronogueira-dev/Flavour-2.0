@@ -15,7 +15,7 @@ $pink: #FF385C;
   padding-left: 0px;
   padding-right: 0px;
   padding-top: 2px;
-  padding-bottom: 2px;
+  padding-bottom: 15vh;
 }
 
 .interests-box {
@@ -24,7 +24,6 @@ $pink: #FF385C;
   background-color: white;
   padding: 4px;
   border-radius: 12px;
-
 }
 
 .interest-container {
@@ -66,7 +65,4 @@ $pink: #FF385C;
   text-shadow: 1px 1px $turquoise;
   color: $pink;
   padding-bottom: 3px;
-}
-.interests-container {
-  height: 80vh;
 }
