@@ -17,5 +17,19 @@
 }
 
 .attendee-pic {
-  padding: 10px;
+  padding: 0px 10px 10px 10px;
+  background-color: $pink;
+      border-radius: 5px;
+
+        background: repeating-linear-gradient(
+      45deg,
+      $turquoise,
+      $turquoise 5px,
+      $olive 5px,
+      $olive 10px
+      ) !important;
+    opacity: 0.9;
+    box-shadow: 4px 4px lightgrey;
 }
+
+.attendee-pic-btn {}
