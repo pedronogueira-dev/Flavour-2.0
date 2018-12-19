@@ -1,4 +1,9 @@
 class MealsController < ApplicationController
+  def attendee_list
+    @meal = Meal.find(params[:id])
+    @attendees = @meal.attendees.where.not(user: current_user)
+  end
+
   def upcoming_meals
     @unconfirmed_meals = current_user.upcoming_unconfirmed_meals
     @attending = Attendee.find_by(user: current_user)

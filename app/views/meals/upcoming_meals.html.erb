@@ -1,6 +1,6 @@
 <div class="upcoming-header text-center not-confirmed-stripe">
   <h3>pending confirmation</h3>
-  <h5>you have 99 meals for review</h5>
+  <h5>you have <%= current_user.upcoming_unconfirmed_meals.length %> meals for review</h5>
 </div>
 <% if @unconfirmed_meals.length == 0 %>
 <div class="container upcoming-unconfirmed-meals-container">
@@ -33,7 +33,7 @@
 <% end %>
 <div class="upcoming-header text-center confirmed-stripe">
   <h3>upcoming meals</h3>
-  <h5>you have 99 upcoming meals</h5>
+  <h5>you have <%= current_user.upcoming_confirmed_meals.length %> upcoming meals</h5>
 </div>
 <div class="container upcoming_confirmed_and_cancelled_meals">
   <div class="row scroll">

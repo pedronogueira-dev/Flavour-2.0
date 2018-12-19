@@ -1,0 +1,7 @@
+<div>
+  <li>
+    <%= cl_image_tag attendee.user.photo.url(:avatar) %>
+    <%= attendee.user.first_name %>
+    <%= link_to "send contacts", class: "btn btn-primary"  %>
+  </li>
+</div>
