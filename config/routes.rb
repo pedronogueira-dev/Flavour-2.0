@@ -22,8 +22,8 @@ Rails.application.routes.draw do
 
   get 'contacts/index', to: 'contacts#index', as: 'contacts'
   post 'contacts/index', to: 'contacts#create'
-  patch 'contacts/index', to: 'contacts#update'
   delete 'contacts/index', to: 'contacts#destroy'
+  resources :contacts, only: [:update]
 
 
   devise_for :users

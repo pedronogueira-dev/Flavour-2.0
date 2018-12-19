@@ -15,8 +15,19 @@ const addEventListenersToInterests = function() {
     for(i=0; i<submitButtons.length; i++) {
       const form = submitButtons[i].closest("form")
       submitButtons[i].addEventListener("click", (event) => {
+        const interestId = form.id.split('_')[2];
+        const activeInput = form.querySelector('#user_interest_active');
+        const activeValue = activeInput.checked ? 1 : 0
 
-        form.submit();
+        fetch(`/contacts/${interestId}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRF-Token": Rails.csrfToken()
+          },
+          credencials: 'same-origin',
+          body: JSON.stringify({share: activeValue})
+        })
       });
     }
   }

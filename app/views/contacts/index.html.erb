@@ -9,9 +9,9 @@
 
     <div class="row contacts-box">
       <% @contacts.each do |contact| %>
-      <%= form_for(contact, url: contacts_path(id: contact.id), method: :patch, remote: true) do |f| %>
+      <%= form_for(contact, url: contact_path(id: contact.id), method: :patch) do |f| %>
       <div class="col-xs-12 contact-section">
-        <% if  contact.contact.length > 20%>
+        <% if  contact.contact.length > 20 %>
 
           <div class="long-contact-name text-center">
           <p><%= contact.contact %></p>
@@ -42,7 +42,7 @@
         </div>
 
       <% end %>
-        <div class="text-center">
+        <div class="text-right">
           <%= link_to 'delete', contacts_path(id: contact.id),
             data: {:confirm => 'Are you sure?'}, method: :delete, class:"btn btn-primary btn-xs delete-btn" %>
         </div>

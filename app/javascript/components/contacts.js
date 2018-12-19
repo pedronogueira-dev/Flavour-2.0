@@ -15,8 +15,19 @@ const addEventListenersToContacts = function() {
     for(i=0; i<submitButtons.length; i++) {
       const form = submitButtons[i].closest("form")
       submitButtons[i].addEventListener("click", (event) => {
+        const contactId = form.id.split('_')[2];
+        const shareInput = form.querySelector('#contact_share');
+        const shareValue = shareInput.checked ? 1 : 0
 
-        form.submit();
+        fetch(`/contacts/${contactId}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRF-Token": Rails.csrfToken()
+          },
+          credencials: 'same-origin',
+          body: JSON.stringify({share: shareValue})
+        })
       });
     }
   }

@@ -1,7 +1,7 @@
 class ContactsController < ApplicationController
   def index
     @contact = Contact.new
-    @contacts = current_user.contacts
+    @contacts = current_user.contacts.sort
   end
 
   def create
@@ -27,15 +27,17 @@ class ContactsController < ApplicationController
 
   def update
     @contact = Contact.find_by(user: current_user, id: params[:id])
-    if @contact.update(update_contact_params)
-      respond_to do |format|
-        format.html { redirect_to contacts_path }
-        format.js { head :ok }
-      end
-    else
-      respond_to do |format|
-        format.html { render :index }
-        format.js { head :ok }
+    if @contact
+      if @contact.update(update_contact_params)
+        respond_to do |format|
+          format.html { redirect_to contacts_path }
+          format.js { head :ok }
+        end
+      else
+        respond_to do |format|
+          format.html { render :index }
+          format.js { head :ok }
+        end
       end
     end
   end
