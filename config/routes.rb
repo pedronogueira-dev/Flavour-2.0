@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   patch 'meals/:id/confirm', to: 'meals#confirm', as: 'confirm'
   patch 'meals/:id/reject', to: 'meals#reject', as: 'reject'
 
+  get 'meals/:id/attendees', to: 'meals#attendee_list', as: 'attendee_list'
+
   # routes for contacts
 
   get 'contacts/index', to: 'contacts#index', as: 'contacts'

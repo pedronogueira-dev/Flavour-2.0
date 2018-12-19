@@ -1,0 +1,7 @@
+<div class="container attendee-container">
+  <ul>
+    <% @attendees.each do |attendee| %>
+      <%= render partial: "attendee", locals: {attendee: attendee} %>
+    <% end %>
+  </ul>
+</div>
