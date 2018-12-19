@@ -1,0 +1,11 @@
+function refreshForm(innerHTML) {
+  const newContactForm = document.getElementById('new_review');
+  newReviewForm.innerHTML = innerHTML;
+}
+
+<% if @contact.errors.any? %>
+  refreshForm('<%= j render "contacts/contacts_form", contact: @contact %>');
+<% else %>
+  addContact('<%= j render "reviews/show", review: @review %>');
+  refreshForm('<%= j render "contacts/contacts_form", contact: @contact %>');
+<% end %>

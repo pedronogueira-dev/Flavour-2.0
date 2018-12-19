@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'contacts/index'
   get 'meals/upcoming_meals', to: 'meals#upcoming_meals', as: 'upcoming_meals'
   get 'meals/past_meals', to: 'meals#past_meals', as: 'past_meals'
   get 'meals/:id', to: 'meals#show', as: 'meal'
@@ -16,6 +17,14 @@ Rails.application.routes.draw do
 
   patch 'meals/:id/confirm', to: 'meals#confirm', as: 'confirm'
   patch 'meals/:id/reject', to: 'meals#reject', as: 'reject'
+
+  # routes for contacts
+
+  get 'contacts/index', to: 'contacts#index', as: 'contacts'
+  post 'contacts/index', to: 'contacts#create'
+  delete 'contacts/index', to: 'contacts#destroy'
+  resources :contacts, only: [:update]
+
 
   devise_for :users
   root to: 'pages#home'
