@@ -24,20 +24,23 @@
 <div class="scroll-prompt-button-top"><p>scroll for details</p></div>
 <% end %>
 
-<% if @meals.length == 0 %>
-<div class="container upcoming-unconfirmed-meals-container">
-  <div class="row scroll">
-    <%= render partial: "no_meal"%>
-  </div>
+
 </div>
-</div>
-<% end %>
+
 <div class="upcoming-header text-center confirmed-stripe">
   <h3>upcoming meals</h3>
   <h5>you have <%= current_user.upcoming_confirmed_meals.length %> upcoming meals</h5>
 </div>
 <div class="container upcoming_confirmed_and_cancelled_meals">
   <div class="row scroll">
+    <% if @meals.length == 0 %>
+<div class="container upcoming-unconfirmed-meals-container">
+  <div class="row scroll">
+    <%= render partial: "no_meal"%>
+  </div>
+</div>
+<% end %>
+
     <% @meals.each do |meal| %>
     <%= link_to meal_path(meal) do %>
     <% if meal.status == "Confirmed" %>
