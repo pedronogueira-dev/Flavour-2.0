@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   get 'edit_profile', to: 'users#edit_profile', as: 'edit_profile'
   patch 'dashboard', to: 'users#update', as: :update_profile
-  patch 'interests/edit', to: 'user_interests#update'
+  # patch 'interests/edit', to: 'user_interests#update'
   #patch 'meals/:id/confirm', to: 'user'
 
   patch 'meals/:id/confirm', to: 'meals#confirm', as: 'confirm'

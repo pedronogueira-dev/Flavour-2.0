@@ -82,16 +82,21 @@ class User < ApplicationRecord
   def upcoming_confirmed_and_cancelled_meals
     query = "Select attendees.status as status, \
             meals.* \
-            from meals join attendees \
+            from meals
+            join attendees \
             on attendees.meal_id = meals.id \
-            where reservation_date >= \'#{Date.today}\' \
+            where meals.reservation_date >= \'#{Date.today}\' \
             and \
-            status = any(array['Confirmed', 'Cancelled']) \
+            attendees.status = any(array['Confirmed', 'Cancelled']) \
             and \
-            user_id = #{id} \
-            group by status, meals.id \
+            attendees.user_id = #{id} \
             order by meals.reservation_date ASC"
     Meal.find_by_sql(query)
+    # ActiveRecord::Base.connection.execute(query)
+  end
+
+  def status
+    attendees.where(user: current_user).status
   end
 
   def users_searching_by_loaction

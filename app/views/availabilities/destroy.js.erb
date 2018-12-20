@@ -1,10 +1,11 @@
 let element = document.querySelector("[data-availability-id='<%= @availability.id %>']");
 // document.querySelector("[data-availability-id='<%= @availability.id %>']")
 
- // element.parentElement.classList.remove("applied-day");
-if(appliableDay(new Date(element.dataset.date))){
-  element.parentElement.classList.add("selectable-day");
-}
+ element.parentElement.parentElement.classList.remove("has-events");
+
+// if(appliableDay(new Date(element.parentElement.dataset.date))){
+//   element.parentElement.parentElement.classList.add("selectable-day");
+// }
 element.remove();
 
 
