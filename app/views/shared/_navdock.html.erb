@@ -10,12 +10,12 @@
   <%= link_to upcoming_meals_path, class: "tab #{'active' if icon_active?('upcoming')}" do %>
     <div class="book-circle">
       <i class="fas fa-rocket"></i>
-      <p class="dock-text">upcoming meals</p>
+      <p class="dock-text">upcoming</p>
     </div>
   <% end %>
    <%= link_to past_meals_path, class: "tab #{'active' if icon_active?('past')}" do %>
     <i class="fas fa-users"></i>
-    <p class="dock-text">past <br>meals</p>
+    <p class="dock-text">past</p>
   <% end %>
   <%= link_to interests_edit_path, class: "tab #{'active' if icon_active?('interests')}" do %>
     <i class="fas fa-heart"></i>
