@@ -18,7 +18,6 @@ const addEventListenersToInterests = function() {
         const interestId = form.id.split('_')[3];
         const activeInput = form.querySelector('#user_interest_active');
         const activeValue = activeInput.checked ? 1 : 0
-        console.log("boo", form.id, interestId )
         fetch(`/user_interests/${interestId}`, {
           method: "PATCH",
           headers: {

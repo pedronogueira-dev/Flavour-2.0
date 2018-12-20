@@ -18,7 +18,6 @@ const addEventListenersToContacts = function() {
         const contactId = form.id.split('_')[2];
         const shareInput = form.querySelector('#contact_share');
         const shareValue = shareInput.checked ? 1 : 0
-        console.log("contacts")
         fetch(`/contacts/${contactId}`, {
           method: "PATCH",
           headers: {
