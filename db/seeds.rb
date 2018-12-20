@@ -185,7 +185,7 @@ Availability.create([{
 ##
 
 Contact.create!([{
-  contact: "910012309",
+  contact: "+351 910012309",
   user: user
 }])
 
@@ -223,10 +223,10 @@ Availability.create([{
 }])
 
 Contact.create!([{
-  contact: "455019112",
+  contact: "455 019112",
   user: user
 },{
-  contact: "455089322",
+  contact: "455 089322",
   user: user,
   share: false
 }])
@@ -234,7 +234,7 @@ Contact.create!([{
 ##
 
 new_user = {
-  first_name: "Filipe",
+  first_name: "Philip",
   email: "filipe@flavour.com",
   password: "123456",
   age: 26,
@@ -264,7 +264,7 @@ Availability.create([{
 }])
 
 Contact.create!([{
-  contact: "4450119019",
+  contact: "445 0119019",
   user: user
 }])
 
@@ -295,7 +295,7 @@ Availability.create([{
 }])
 
 Contact.create!([{
-  contact: "4450119019",
+  contact: "445 0119019",
   user: user
 }])
 
@@ -327,7 +327,7 @@ Availability.create([{
 }])
 
 Contact.create!([{
-  contact: "4450119019",
+  contact: "445 0119019",
   user: user
 }])
 
@@ -358,7 +358,7 @@ Availability.create([{
 }])
 
 Contact.create!([{
-  contact: "4450119019",
+  contact: "445 0119019",
   user: user
 }])
 
@@ -393,7 +393,7 @@ Availability.create([{
 }])
 
 Contact.create!([{
-  contact: "4450119019",
+  contact: "445 0119019",
   user: user
 }])
 
@@ -437,7 +437,7 @@ Availability.create([{
 }])
 
 Contact.create!([{
-  contact: "4450119019",
+  contact: "445 0119019",
   user: user
 }])
 
@@ -475,7 +475,7 @@ Availability.create([{
 }])
 
 Contact.create!([{
-  contact: "4450119019",
+  contact: "445 0119019",
   user: user
 }])
 
@@ -510,7 +510,7 @@ Availability.create([{
 }])
 
 Contact.create!([{
-  contact: "4450119019",
+  contact: "445 0119019",
   user: user
 }])
 
@@ -555,10 +555,10 @@ Availability.create!([{
 }])
 
 Contact.create!([{
-  contact: "910012309",
+  contact: "+351 910012309",
   user: user
 },{
-  contact: "960012309",
+  contact: "+351 960012309",
   user: user,
   share: false
 }])
@@ -603,10 +603,10 @@ Availability.create!([{
 }])
 
 Contact.create!([{
-  contact: "910012309",
+  contact: "+351 910012309",
   user: user
 },{
-  contact: "960012309",
+  contact: "+351 960012309",
   user: user,
   share: false
 }])
@@ -652,10 +652,10 @@ Availability.create!([{
 }])
 
 Contact.create!([{
-  contact: "910012309",
+  contact: "+351 910012309",
   user: user
 },{
-  contact: "960012309",
+  contact: "+351 960012309",
   user: user,
   share: false
 }])
@@ -700,10 +700,10 @@ Availability.create!([{
 }])
 
 Contact.create!([{
-  contact: "910012309",
+  contact: "+351 910012309",
   user: user
 },{
-  contact: "960012309",
+  contact: "+351 960012309",
   user: user,
   share: false
 }])
@@ -748,10 +748,10 @@ Availability.create!([{
 }])
 
 Contact.create!([{
-  contact: "910012309",
+  contact: "+351 910012309",
   user: user
 },{
-  contact: "960012309",
+  contact: "+351 960012309",
   user: user,
   share: false
 }])
@@ -796,10 +796,10 @@ Availability.create!([{
 }])
 
 Contact.create!([{
-  contact: "910012309",
+  contact: "+351 910012309",
   user: user
 },{
-  contact: "960012309",
+  contact: "+351 960012309",
   user: user,
   share: false
 }])
@@ -827,10 +827,10 @@ def past_meals(date, lim)
   meal.update(capacity: meal.capacity - meal.attendees.count)
 end
 
-def future_meals(date, participants, status = "Confirmed")
+def future_meals(date, participants, status = "Confirmed", city = "New York City")
     meal = Meal.create!({
     reservation_date: date,
-    restaurant: Restaurant.where(location: "New York City").sample,
+    restaurant: Restaurant.where(location: city).sample,
     interest: Interest.all.sample
   })
 
@@ -850,9 +850,9 @@ future_meals('2018-12-20', [TOM, User.find_by(first_name: "Sharron"),User.find_b
 future_meals('2018-12-20', [User.find_by(first_name: "Sharron"),User.find_by(first_name: "Lenna"), User.find_by(first_name: "Filipe"),User.find_by(first_name: "Amber"), User.find_by(first_name: "Dylan")],"Invited")
 attendees_21 = [TOM, JAMI, User.find_by(first_name: "Amber"), User.find_by(first_name: "Dylan")]
 attendees_26 = [TOM, JAMI, User.find_by(first_name: "Larry"), User.find_by(first_name: "Amber"), User.find_by(first_name: "Jake"), User.find_by(first_name: "Dylan")]
-attendees_27 = [TOM, JAMI, User.find_by(first_name: "Filipe"), User.find_by(first_name: "Lenna"), User.find_by(first_name: "Amber"), User.find_by(first_name: "Jake")]
+attendees_27 = [TOM, JAMI, User.find_by(first_name: "Philip"), User.find_by(first_name: "Lenna"), User.find_by(first_name: "Amber"), User.find_by(first_name: "Jake")]
 attendees_28 = [TOM, JAMI, User.find_by(first_name: "Roberto"), User.find_by(first_name: "Amber")]
-attendees_30 = [User.find_by(first_name: "Amber"), User.find_by(first_name: "Sharron"), User.find_by(first_name: "Larry")]
+attendees_30 = [User.find_by(first_name: "Roberto"),User.find_by(first_name: "Amber"), User.find_by(first_name: "Sharron"), User.find_by(first_name: "Larry"),User.find_by(first_name: "Philip")]
 
 #
 
@@ -860,4 +860,10 @@ future_meals('2018-12-26', attendees_26, "Invited") # TO BE REJECTED
 future_meals('2018-12-27', attendees_27, "Invited")
 future_meals('2018-12-28', attendees_28, "Confirmed")
 
-future_meals('2018-12-29', attendees_30, "Invited") # 4 people, change interests so that only 1 or 2 match
+#uture_meals('2018-12-29', attendees_30, "Invited") # 4 people, change interests so that only 1 or 2 match
+
+future_meals('2018-12-20', [User.find_by(first_name: "Carlotta"),User.find_by(first_name: "Carolina"), User.find_by(first_name: "Antoine"),User.find_by(first_name: "Allenah"), User.find_by(first_name: "Pedro")],"Invited", "Greater Lisbon")
+future_meals('2018-12-21', [User.find_by(first_name: "Carlotta"),User.find_by(first_name: "Carolina"), User.find_by(first_name: "Antoine"),User.find_by(first_name: "Allenah"), User.find_by(first_name: "Pedro")],"Invited", "Greater Lisbon")
+
+
+
