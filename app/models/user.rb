@@ -90,7 +90,7 @@ class User < ApplicationRecord
             attendees.status = any(array['Confirmed', 'Cancelled']) \
             and \
             attendees.user_id = #{id} \
-            order by meals.reservation_date ASC"
+            order by meals.reservation_date ASC, attendees.status DESC"
     Meal.find_by_sql(query)
     # ActiveRecord::Base.connection.execute(query)
   end
