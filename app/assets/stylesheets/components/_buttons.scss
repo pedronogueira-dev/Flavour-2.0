@@ -19,7 +19,6 @@
   background-color: $pink;
   color: white;
   border: solid 2px $pink;
-  z-index: 1;
   width: 50vw;
   height: 80px;
   -webkit-box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
@@ -34,7 +33,7 @@
 .book-today-button h3{
   text-decoration: none;
   color: white;
-  padding: 0;
+  padding: 20px;
   margin: auto;
 }
 
