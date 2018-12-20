@@ -14,6 +14,30 @@
   align-items: center;
 }
 
+.book-today-button {
+  border-radius: 12px;
+  background-color: $pink;
+  color: white;
+  border: solid 2px $pink;
+  z-index: 1;
+  width: 50vw;
+  height: 80px;
+  -webkit-box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
+  -moz-box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
+  box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.book-today-button h3{
+  text-decoration: none;
+  color: white;
+  padding: 0;
+  margin: auto;
+}
+
 .avail-button {
   border-radius: 12px;
   background-color: $turquoise;
