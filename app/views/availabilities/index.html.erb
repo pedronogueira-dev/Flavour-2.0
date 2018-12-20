@@ -1,3 +1,5 @@
+<% content_for :title, "Flavour - Availability Calendar" %>
+
 <div class="wrapper availabilities-container">
   <%= month_calendar events: @availabilities, attribute: :date do |date, availabilities| %>
     <%= date %>
