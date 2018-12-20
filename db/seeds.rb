@@ -185,7 +185,7 @@ Availability.create([{
 ##
 
 Contact.create!([{
-  contact: "910012309",
+  contact: "+351 910012309",
   user: user
 }])
 
@@ -223,10 +223,10 @@ Availability.create([{
 }])
 
 Contact.create!([{
-  contact: "455019112",
+  contact: "455 019112",
   user: user
 },{
-  contact: "455089322",
+  contact: "455 089322",
   user: user,
   share: false
 }])
@@ -264,7 +264,7 @@ Availability.create([{
 }])
 
 Contact.create!([{
-  contact: "4450119019",
+  contact: "445 0119019",
   user: user
 }])
 
@@ -295,7 +295,7 @@ Availability.create([{
 }])
 
 Contact.create!([{
-  contact: "4450119019",
+  contact: "445 0119019",
   user: user
 }])
 
@@ -327,7 +327,7 @@ Availability.create([{
 }])
 
 Contact.create!([{
-  contact: "4450119019",
+  contact: "445 0119019",
   user: user
 }])
 
@@ -358,7 +358,7 @@ Availability.create([{
 }])
 
 Contact.create!([{
-  contact: "4450119019",
+  contact: "445 0119019",
   user: user
 }])
 
@@ -393,7 +393,7 @@ Availability.create([{
 }])
 
 Contact.create!([{
-  contact: "4450119019",
+  contact: "445 0119019",
   user: user
 }])
 
@@ -437,7 +437,7 @@ Availability.create([{
 }])
 
 Contact.create!([{
-  contact: "4450119019",
+  contact: "445 0119019",
   user: user
 }])
 
@@ -475,7 +475,7 @@ Availability.create([{
 }])
 
 Contact.create!([{
-  contact: "4450119019",
+  contact: "445 0119019",
   user: user
 }])
 
@@ -510,7 +510,7 @@ Availability.create([{
 }])
 
 Contact.create!([{
-  contact: "4450119019",
+  contact: "445 0119019",
   user: user
 }])
 
@@ -555,10 +555,10 @@ Availability.create!([{
 }])
 
 Contact.create!([{
-  contact: "910012309",
+  contact: "+351 910012309",
   user: user
 },{
-  contact: "960012309",
+  contact: "+351 960012309",
   user: user,
   share: false
 }])
@@ -603,10 +603,10 @@ Availability.create!([{
 }])
 
 Contact.create!([{
-  contact: "910012309",
+  contact: "+351 910012309",
   user: user
 },{
-  contact: "960012309",
+  contact: "+351 960012309",
   user: user,
   share: false
 }])
@@ -652,10 +652,10 @@ Availability.create!([{
 }])
 
 Contact.create!([{
-  contact: "910012309",
+  contact: "+351 910012309",
   user: user
 },{
-  contact: "960012309",
+  contact: "+351 960012309",
   user: user,
   share: false
 }])
@@ -700,10 +700,10 @@ Availability.create!([{
 }])
 
 Contact.create!([{
-  contact: "910012309",
+  contact: "+351 910012309",
   user: user
 },{
-  contact: "960012309",
+  contact: "+351 960012309",
   user: user,
   share: false
 }])
@@ -748,10 +748,10 @@ Availability.create!([{
 }])
 
 Contact.create!([{
-  contact: "910012309",
+  contact: "+351 910012309",
   user: user
 },{
-  contact: "960012309",
+  contact: "+351 960012309",
   user: user,
   share: false
 }])
@@ -796,10 +796,10 @@ Availability.create!([{
 }])
 
 Contact.create!([{
-  contact: "910012309",
+  contact: "+351 910012309",
   user: user
 },{
-  contact: "960012309",
+  contact: "+351 960012309",
   user: user,
   share: false
 }])
