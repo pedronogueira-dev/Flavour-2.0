@@ -88,7 +88,7 @@
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
 
-.active-meals-date-confirmed h4, .active-meals-date-not-confirmed h4 {
+.active-meals-date-confirmed h4,  {
   margin: auto;
   padding: 0px 0px;
   font-weight: bold;
@@ -96,6 +96,15 @@
   font-size: 32px;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
+.active-meals-date-not-confirmed h4 {
+  margin: auto;
+  padding: 0px 0px;
+  font-weight: bold;
+  color: $pink;
+  font-size: 32px;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+
 .active-meals-date-confirmed h6, .active-meals-date-not-confirmed h6 {
   margin: auto;
   padding: 0px 0px;
