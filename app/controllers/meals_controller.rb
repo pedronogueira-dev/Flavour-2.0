@@ -63,6 +63,15 @@ class MealsController < ApplicationController
     redirect_to attendee_list_path(meal.id)
   end
 
+  def book_today
+    @meal = assign_meal_today(current_user.id)
+    if meal.nil?
+      redirect_to no_meal_path(@meal)
+    else
+      redirect_to meal_path(@meal)
+    end
+  end
+
   private
 
   def update_attendee_status(meal, status)
