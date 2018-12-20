@@ -11,7 +11,7 @@ class ContactsController < ApplicationController
       # respond_to do |format|
       #   format.html {redirect_to contacts_path}
       #   format.js
-      redirect_to :contacts
+      redirect_to :contacts_index
 
 
     else
@@ -19,7 +19,7 @@ class ContactsController < ApplicationController
       #   format.html {render :index}
       #   format.js
       @contacts = current_user.contacts
-      render :index
+      render :contacts_index
 
 
     end
