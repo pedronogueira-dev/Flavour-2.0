@@ -37,11 +37,35 @@
       </div>
     </div>
   </div>
-  <% else %>
- <div class="box">
+  <% elsif @meal.restaurant.name == "Balthazar" %>
+  <div class="box">
     <div class="row">
       <div class="col-xs-12 ">
-        <div class="meal-show-resturant-sushi">
+        <div class="meal-show-resturant-balz">
+          <% if @meal.reservation_date < Date.today %>
+          <%= link_to "attendees", attendee_list_path, class: 'btn btn-primary attendee-btn' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% elsif @meal.restaurant.name == "Veselka" %>
+  <div class="box">
+    <div class="row">
+      <div class="col-xs-12 ">
+        <div class="meal-show-resturant-ves">
+          <% if @meal.reservation_date < Date.today %>
+          <%= link_to "attendees", attendee_list_path, class: 'btn btn-primary attendee-btn' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% else %>
+  <div class="box">
+    <div class="row">
+      <div class="col-xs-12 ">
+        <div class="meal-show-resturant-default">
           <% if @meal.reservation_date < Date.today %>
           <%= link_to "attendees", attendee_list_path, class: 'btn btn-primary attendee-btn' %>
           <% end %>
