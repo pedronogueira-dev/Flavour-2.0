@@ -71,14 +71,9 @@
   padding-bottom: 4px;
   font-weight: bold;
 }
-
 .meal-show-map {
-  height: 185px;
-  width: 100vw;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  clip-path:         polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  padding-top: 8px;
 }
-
 .meals-show-button {
   display: flex;
   flex-direction: row;
