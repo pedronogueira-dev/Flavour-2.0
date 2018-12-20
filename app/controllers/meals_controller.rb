@@ -46,9 +46,9 @@ class MealsController < ApplicationController
   def register_today
     @user = current_user
     @meal = MealSchedulerService.new.register_to_event_today(@user)
-
     if @meal.nil?
       # redirect to dashboard and show flash of no meal found
+      redirect_to dashboard_path
     else
       redirect_to meal_path(@meal)
     end
@@ -64,9 +64,9 @@ class MealsController < ApplicationController
   end
 
   def book_today
-    @meal = assign_meal_today(current_user.id)
-    if meal.nil?
-      redirect_to no_meal_path(@meal)
+    @meal = TodayAssignmentService.assign_meal_today(current_user.id)
+    if @meal.nil?
+      redirect_to dashboard_path
     else
       redirect_to meal_path(@meal)
     end

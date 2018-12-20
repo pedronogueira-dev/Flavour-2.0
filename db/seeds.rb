@@ -581,18 +581,18 @@ past_meals('2018-12-16', 3)
 past_meals('2018-12-18', 6)
 puts "Future"
 
-future_meals('2018-12-20', [User.find_by(first_name: "Sharron"),User.find_by(first_name: "Lenna"), User.find_by(first_name: "Filipe"),User.find_by(first_name: "Amber"), User.find_by(first_name: "Dylan")],"Confirmed")
-
+future_meals('2018-12-20', [TOM, User.find_by(first_name: "Sharron"),User.find_by(first_name: "Lenna"), User.find_by(first_name: "Filipe"),User.find_by(first_name: "Amber"), User.find_by(first_name: "Dylan")],"Invited")
+future_meals('2018-12-20', [User.find_by(first_name: "Sharron"),User.find_by(first_name: "Lenna"), User.find_by(first_name: "Filipe"),User.find_by(first_name: "Amber"), User.find_by(first_name: "Dylan")],"Invited")
 attendees_21 = [TOM, JAMI, User.find_by(first_name: "Amber"), User.find_by(first_name: "Dylan")]
 attendees_26 = [TOM, JAMI, User.find_by(first_name: "Larry"), User.find_by(first_name: "Amber"), User.find_by(first_name: "Jake"), User.find_by(first_name: "Dylan")]
 attendees_27 = [TOM, JAMI, User.find_by(first_name: "Filipe"), User.find_by(first_name: "Lenna"), User.find_by(first_name: "Amber"), User.find_by(first_name: "Jake")]
 attendees_28 = [TOM, JAMI, User.find_by(first_name: "Roberto"), User.find_by(first_name: "Amber")]
 attendees_30 = [User.find_by(first_name: "Amber"), User.find_by(first_name: "Sharron"), User.find_by(first_name: "Larry")]
 
-future_meals('2018-12-21', attendees_21, "Cancelled")
+#
 
 future_meals('2018-12-26', attendees_26, "Invited") # TO BE REJECTED
 future_meals('2018-12-27', attendees_27, "Invited")
 future_meals('2018-12-28', attendees_28, "Confirmed")
 
-#future_meals('2018-12-29', attendees_30, "Invited") # 4 people, change interests so that only 1 or 2 match
+future_meals('2018-12-29', attendees_30, "Invited") # 4 people, change interests so that only 1 or 2 match

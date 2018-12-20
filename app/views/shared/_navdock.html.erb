@@ -1,24 +1,24 @@
 <div class="tabs">
   <%= link_to dashboard_path, class: "tab #{'active' if icon_active?('dashboard')}" do %>
     <i class="fas fa-home"></i>
-    <p class="dock-text">Home</p>
+    <p class="dock-text">home</p>
   <% end %>
   <%= link_to availabilities_path, class: "tab #{'active' if icon_active?('availability')}" do %>
     <i class="fas fa-calendar-alt"></i>
-    <p class="dock-text">Availability</p>
+    <p class="dock-text">availability</p>
   <% end %>
   <%= link_to upcoming_meals_path, class: "tab #{'active' if icon_active?('upcoming')}" do %>
     <div class="book-circle">
       <i class="fas fa-rocket"></i>
-      <p class="dock-text">Book Today</p>
+      <p class="dock-text">upcoming</p>
     </div>
   <% end %>
    <%= link_to past_meals_path, class: "tab #{'active' if icon_active?('past')}" do %>
     <i class="fas fa-users"></i>
-    <p class="dock-text">Past Meals</p>
+    <p class="dock-text">past</p>
   <% end %>
   <%= link_to interests_edit_path, class: "tab #{'active' if icon_active?('interests')}" do %>
     <i class="fas fa-heart"></i>
-    <p class="dock-text">Interests</p>
+    <p class="dock-text">interests</p>
   <% end %>
 </div>

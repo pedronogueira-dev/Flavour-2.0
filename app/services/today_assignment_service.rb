@@ -14,8 +14,10 @@ class TodayAssignmentService
 
     meals = Meal.find_by_sql("#{MEALS_ON_SAME_LOCATION_QUERY}\'#{user.location}\'")
     meals.each do |meal|
+      byebug
+      user_attended = meal.attendees.find_by(user: user, status: "Rejected")
       attendees = meal.attendees.where(status: "Confirmed").or(meal.attendees.where(status: "Invited"))
-      if attendees.count < 8 || attendees.count > 0
+      if attendees.count > 0 && attendees.count < 8 && user_attended.nil?
         Attendee.create(meal: meal, user: user, status: "Invited")
         meal.capacity -= 1
         meal.save
