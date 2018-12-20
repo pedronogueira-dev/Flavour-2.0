@@ -10,6 +10,7 @@
   <div class="tiny-wrapper">
 
     <div class="row contacts-box">
+      <h4 class="text-center contact-prompt">choose sharable contacts</h4>
       <% @contacts.each do |contact| %>
       <%= form_for(contact, url: contact_path(id: contact.id), method: :patch) do |f| %>
       <div class="col-xs-12 contact-section">
