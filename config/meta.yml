@@ -1,0 +1,5 @@
+meta_product_name: "Flavour"
+meta_title: "Flavour - Add some Flavour to your community"
+meta_description: "Experince your community and your city through meals"
+meta_image: "cover.jpg" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards

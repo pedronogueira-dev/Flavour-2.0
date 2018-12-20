@@ -14,8 +14,9 @@ class TodayAssignmentService
         Attendee.create(meal: meal, user: user, status: "Invited")
         meal.capacity -= 1
         meal.save
-        return
+        return meal
       end
     end
+    return nil
   end
 end
