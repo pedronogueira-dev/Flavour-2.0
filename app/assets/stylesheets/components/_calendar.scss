@@ -33,6 +33,7 @@ thead, tr, body, td {
 
 td {
   height: 75px !important;
+  cursor: pointer;
 }
 
 .fa-angellist {
@@ -43,6 +44,7 @@ td {
 
 .fa-check {
     color: white;
+
 }
 
 .calendar-heading a{
@@ -61,6 +63,7 @@ td {
   color: blue;
   font-size: 20pt;
   text-align: center;
+    cursor: pointer;
 }
 
 .selectable-day{
