@@ -55,10 +55,10 @@ class MealsController < ApplicationController
   end
 
   def contact_attendees
-    sender = current_user
-    recipient = Attendee.find(params[:id])
-    meal = Meal.find(params[:meal_id])
 
+    sender = current_user
+    recipient = User.find(params[:id])
+    meal = Meal.find(params[:meal_id])
     UserMailer.send_contacts(recipient, sender, meal).deliver_now
     redirect_to attendee_list_path(meal.id)
   end
