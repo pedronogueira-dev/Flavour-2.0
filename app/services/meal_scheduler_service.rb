@@ -27,10 +27,10 @@ class MealSchedulerService
       location = day.location
       reservation_date = day.date
       interest = Interest.find(day.interest)
-
       invites = gather_possible_invites(day.user_ids.shuffle, reservation_date)
 
       if invites.count >= MINIMUM_PEOPLE
+
         new_event = Meal.new(reservation_date: reservation_date, restaurant: Restaurant.where(location: location).sample, interest: interest)
         if new_event.save
           created_meals << new_event
