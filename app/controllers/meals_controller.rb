@@ -34,13 +34,13 @@ class MealsController < ApplicationController
     @meal = Meal.find(params[:id])
     update_attendee_status(@meal, "Rejected")
     @meal.update(capacity: @meal.capacity + 1)
-    redirect_to :upcoming_meals
+    redirect_to upcoming_meals_path
   end
 
   def confirm
     @meal = Meal.find(params[:id])
     update_attendee_status(@meal, "Confirmed")
-    redirect_to :upcoming_meals
+    redirect_to upcoming_meals_path
   end
 
   def register_today
