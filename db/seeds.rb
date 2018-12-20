@@ -581,7 +581,7 @@ past_meals('2018-12-16', 3)
 past_meals('2018-12-18', 6)
 puts "Future"
 
-future_meals('2018-12-19', [User.find_by(first_name: "Amber"), User.find_by(first_name: "Dylan")],"Confirmed")
+future_meals('2018-12-20', [User.find_by(first_name: "Sharron"),User.find_by(first_name: "Lenna"), User.find_by(first_name: "Filipe"),User.find_by(first_name: "Amber"), User.find_by(first_name: "Dylan")],"Confirmed")
 
 attendees_21 = [TOM, JAMI, User.find_by(first_name: "Amber"), User.find_by(first_name: "Dylan")]
 attendees_26 = [TOM, JAMI, User.find_by(first_name: "Larry"), User.find_by(first_name: "Amber"), User.find_by(first_name: "Jake"), User.find_by(first_name: "Dylan")]
