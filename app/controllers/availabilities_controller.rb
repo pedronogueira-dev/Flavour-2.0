@@ -18,6 +18,7 @@ class AvailabilitiesController < ApplicationController
 
   def destroy
     # @availability = Availability.find(params[:id])
+
     @availability = current_user.availabilities.find_by(date: params[:date])
     @availability.destroy
 

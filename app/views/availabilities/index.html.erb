@@ -7,6 +7,7 @@
           <% if date >= Date.today  && date <= Date.today + 13%>
           <%= link_to availability_delete_path(date: availability.date.to_s), method: :delete, remote: true do %>
           <div class="day-applied">
+            ah
           </div>
           <% end %>
           <% else %>
