@@ -113,8 +113,33 @@ new_york_restaurants = [{
   longitude: -9.1368068755,
   latitude: 38.7148174085,
   website: "https://www.zomato.com/new-york-city/katzs-delicatessen-lower-east-side?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1"
+},{
+  zomato_restaurant_id: 16760100,
+  name: "Balthazar",
+  address: "80 Spring Street 10012",
+  rating: 4.6,
+  avg_price: 140,
+  currency: "$",
+  location: "New York City",
+  longitude: -73.9980500000,
+  latitude: 40.7225900000,
+  website: "https://www.zomato.com/new-york-city/balthazar-soho?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1"
+  # photo: "https://www.zomato.com/new-york-city/balthazar-soho/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop"
+}, {
+  zomato_restaurant_id: 16780467,
+  name: "Veselka",
+  address: "144 2nd Avenue 10003",
+  rating: 4.6,
+  avg_price: 40,
+  currency: "$",
+  location: "New York City",
+  longitude: -73.9870800000,
+  latitude: 40.7287300000,
+  website: "https://www.zomato.com/new-york-city/veselka-east-village?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1"
+  # photo: "https://www.zomato.com/new-york-city/veselka-east-village/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop"
+}
+]
 
-}]
 new_york_restaurants.each do |restaurant|
   Restaurant.create!(restaurant)
 end
@@ -538,6 +563,246 @@ Contact.create!([{
   share: false
 }])
 
+##
+
+new_user = {
+  first_name: "Allenah",
+  email: "Allenah@gmail.com",
+  password: "123456",
+  age: 27,
+  photo: "https://res.cloudinary.com/dmmvkoibj/image/upload/v1545322078/lisbon_user_1.jpg",
+  gender: "Female",
+  location: location,
+  admin: true
+}
+user = User.new(new_user)
+user.remote_photo_url = new_user[:photo]  if new_user.key?(:photo)
+user.save!
+
+Availability.create!([{
+  user: user,
+  date: '2''018-12-16'
+},{
+  user: user,
+  date: '2018-12-18'
+},{
+  user: user,
+  date: '2018-12-21'
+},{
+  user: user,
+  date: '2018-12-26'
+},{
+  user: user,
+  date: '2018-12-27'
+},{
+  user: user,
+  date: '2018-12-28'
+},{
+  user: user,
+  date: '2018-12-29'
+}])
+
+Contact.create!([{
+  contact: "910012309",
+  user: user
+},{
+  contact: "960012309",
+  user: user,
+  share: false
+}])
+
+##
+
+
+new_user = {
+  first_name: "Antoine",
+  email: "Antoine@gmail.com",
+  password: "123456",
+  age: 27,
+  photo: "https://res.cloudinary.com/dmmvkoibj/image/upload/v1545322076/lisbon_user_2.jpg",
+  gender: "Male",
+  location: location,
+  admin: true
+}
+user = User.new(new_user)
+user.remote_photo_url = new_user[:photo]  if new_user.key?(:photo)
+user.save!
+
+Availability.create!([{
+  user: user,
+  date: '2''018-12-16'
+},{
+  user: user,
+  date: '2018-12-18'
+},{
+  user: user,
+  date: '2018-12-21'
+},{
+  user: user,
+  date: '2018-12-26'
+},{
+  user: user,
+  date: '2018-12-27'
+},{
+  user: user,
+  date: '2018-12-28'
+},{
+  user: user,
+  date: '2018-12-29'
+}])
+
+Contact.create!([{
+  contact: "910012309",
+  user: user
+},{
+  contact: "960012309",
+  user: user,
+  share: false
+}])
+
+##
+
+new_user = {
+  first_name: "Carolina",
+  email: "Carolina@gmail.com",
+  password: "123456",
+  age: 27,
+  photo: "https://res.cloudinary.com/dmmvkoibj/image/upload/v1545322075/lisbon_user_4.jpg",
+  gender: "Female",
+  location: location,
+  admin: true
+}
+user = User.new(new_user)
+user.remote_photo_url = new_user[:photo]  if new_user.key?(:photo)
+user.save!
+
+Availability.create!([{
+  user: user,
+  date: '2''018-12-16'
+},{
+  user: user,
+  date: '2018-12-18'
+},{
+  user: user,
+  date: '2018-12-21'
+},{
+  user: user,
+  date: '2018-12-26'
+},{
+  user: user,
+  date: '2018-12-27'
+},{
+  user: user,
+  date: '2018-12-28'
+},{
+  user: user,
+  date: '2018-12-29'
+}])
+
+Contact.create!([{
+  contact: "910012309",
+  user: user
+},{
+  contact: "960012309",
+  user: user,
+  share: false
+}])
+
+##
+
+new_user = {
+  first_name: "Carlotta",
+  email: "Carlotta@gmail.com",
+  password: "123456",
+  age: 27,
+  photo: "https://res.cloudinary.com/dmmvkoibj/image/upload/v1545322075/lisbon_user_3.jpg",
+  gender: "Female",
+  location: location,
+  admin: true
+}
+user = User.new(new_user)
+user.remote_photo_url = new_user[:photo]  if new_user.key?(:photo)
+user.save!
+
+Availability.create!([{
+  user: user,
+  date: '2''018-12-16'
+},{
+  user: user,
+  date: '2018-12-18'
+},{
+  user: user,
+  date: '2018-12-21'
+},{
+  user: user,
+  date: '2018-12-26'
+},{
+  user: user,
+  date: '2018-12-27'
+},{
+  user: user,
+  date: '2018-12-28'
+},{
+  user: user,
+  date: '2018-12-29'
+}])
+
+Contact.create!([{
+  contact: "910012309",
+  user: user
+},{
+  contact: "960012309",
+  user: user,
+  share: false
+}])
+
+##
+
+new_user = {
+  first_name: "Filipe",
+  email: "Filipe@gmail.com",
+  password: "123456",
+  age: 27,
+  photo: "https://res.cloudinary.com/dmmvkoibj/image/upload/v1545322076/lisbon_user-5.jpg",
+  gender: "Female",
+  location: location,
+  admin: true
+}
+user = User.new(new_user)
+user.remote_photo_url = new_user[:photo]  if new_user.key?(:photo)
+user.save!
+
+Availability.create!([{
+  user: user,
+  date: '2''018-12-16'
+},{
+  user: user,
+  date: '2018-12-18'
+},{
+  user: user,
+  date: '2018-12-21'
+},{
+  user: user,
+  date: '2018-12-26'
+},{
+  user: user,
+  date: '2018-12-27'
+},{
+  user: user,
+  date: '2018-12-28'
+},{
+  user: user,
+  date: '2018-12-29'
+}])
+
+Contact.create!([{
+  contact: "910012309",
+  user: user
+},{
+  contact: "960012309",
+  user: user,
+  share: false
+}])
 
 puts "Created #{User.all.count} Users"
 puts "Created #{UserInterest.all.count} User_Interests"

@@ -6,10 +6,10 @@ class UserMailer < ApplicationMailer
   #   en.user_mailer.send_contacts.subject
   #
   def send_contacts(recipient, sender, meal)
-    @greeting = "Hi, #{recipient.user.first_name}"
+    @greeting = "Hi, #{recipient.first_name}"
     @sign_off = "From the Falvour Team"
 
-    @recipient_email = recipient.user.email
+    @recipient_email = recipient.email
 
     @meal_location = meal.restaurant.name
     @meal_date = meal.reservation_date
@@ -17,6 +17,6 @@ class UserMailer < ApplicationMailer
     @sender_first_name = sender.first_name
     @sender_contacts = sender.contacts.where(share: true)
 
-    mail(to: "#{recipient.user.email}", subject: "Contact info from #{sender.first_name}")
+    mail(to: "#{recipient.email}", subject: "Contact info from #{sender.first_name}")
   end
 end
