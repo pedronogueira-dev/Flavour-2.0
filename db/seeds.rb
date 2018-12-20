@@ -169,7 +169,7 @@ new_user = {
   email: "chad@flavour.com",
   password: "123456",
   age: 26,
-  photo: "https://res.cloudinary.com/pnogueira/image/upload/ar_1:1,c_fill,g_auto,e_art:hokusai/v1545136189/qhtqm9hckle9vgpczorn.jpg",
+  photo: "https://res.cloudinary.com/dmmvkoibj/image/upload/v1545245418/qeifixmmjypwzx41hp1a.jpg",
   gender: "Male",
   location: location
 }
@@ -282,7 +282,7 @@ new_user = {
   email: "rob@flavour.com",
   password: "123456",
   age: 26,
-  photo: "https://res.cloudinary.com/pnogueira/image/upload/ar_16:9,c_fill,g_auto,e_sharpen/v1545136198/e2ngmj4dynf5vdq7ggb0.jpg",
+  photo: "https://res.cloudinary.com/dmmvkoibj/image/upload/v1544797120/mh9nytfkvpojp9i20anc.jpg",
   gender: "Male",
   location: location
 }
@@ -344,7 +344,7 @@ new_user = {
   email: "larry@flavour.com",
   password: "789123",
   age: 30,
-  photo: "https://res.cloudinary.com/pnogueira/image/upload/ar_1:1,c_fill,g_auto,e_art:hokusai/v1545136192/jjp1rvpefsbtncpa2g0v.jpg",
+  photo: "https://res.cloudinary.com/dmmvkoibj/image/upload/v1544797117/onahb4yyyy6kgzdakibd.jpg",
   gender: "Male",
   location: location
 }
