@@ -538,6 +538,246 @@ Contact.create!([{
   share: false
 }])
 
+##
+
+new_user = {
+  first_name: "Allenah",
+  email: "Allenah@gmail.com",
+  password: "123456",
+  age: 27,
+  photo: "https://res.cloudinary.com/dmmvkoibj/image/upload/v1545322078/lisbon_user_1.jpg",
+  gender: "Female",
+  location: location,
+  admin: true
+}
+user = User.new(new_user)
+user.remote_photo_url = new_user[:photo]  if new_user.key?(:photo)
+user.save!
+
+Availability.create!([{
+  user: user,
+  date: '2''018-12-16'
+},{
+  user: user,
+  date: '2018-12-18'
+},{
+  user: user,
+  date: '2018-12-21'
+},{
+  user: user,
+  date: '2018-12-26'
+},{
+  user: user,
+  date: '2018-12-27'
+},{
+  user: user,
+  date: '2018-12-28'
+},{
+  user: user,
+  date: '2018-12-29'
+}])
+
+Contact.create!([{
+  contact: "910012309",
+  user: user
+},{
+  contact: "960012309",
+  user: user,
+  share: false
+}])
+
+##
+
+
+new_user = {
+  first_name: "Antoine",
+  email: "Antoine@gmail.com",
+  password: "123456",
+  age: 27,
+  photo: "https://res.cloudinary.com/dmmvkoibj/image/upload/v1545322076/lisbon_user_2.jpg",
+  gender: "Male",
+  location: location,
+  admin: true
+}
+user = User.new(new_user)
+user.remote_photo_url = new_user[:photo]  if new_user.key?(:photo)
+user.save!
+
+Availability.create!([{
+  user: user,
+  date: '2''018-12-16'
+},{
+  user: user,
+  date: '2018-12-18'
+},{
+  user: user,
+  date: '2018-12-21'
+},{
+  user: user,
+  date: '2018-12-26'
+},{
+  user: user,
+  date: '2018-12-27'
+},{
+  user: user,
+  date: '2018-12-28'
+},{
+  user: user,
+  date: '2018-12-29'
+}])
+
+Contact.create!([{
+  contact: "910012309",
+  user: user
+},{
+  contact: "960012309",
+  user: user,
+  share: false
+}])
+
+##
+
+new_user = {
+  first_name: "Carolina",
+  email: "Carolina@gmail.com",
+  password: "123456",
+  age: 27,
+  photo: "https://res.cloudinary.com/dmmvkoibj/image/upload/v1545322075/lisbon_user_4.jpg",
+  gender: "Female",
+  location: location,
+  admin: true
+}
+user = User.new(new_user)
+user.remote_photo_url = new_user[:photo]  if new_user.key?(:photo)
+user.save!
+
+Availability.create!([{
+  user: user,
+  date: '2''018-12-16'
+},{
+  user: user,
+  date: '2018-12-18'
+},{
+  user: user,
+  date: '2018-12-21'
+},{
+  user: user,
+  date: '2018-12-26'
+},{
+  user: user,
+  date: '2018-12-27'
+},{
+  user: user,
+  date: '2018-12-28'
+},{
+  user: user,
+  date: '2018-12-29'
+}])
+
+Contact.create!([{
+  contact: "910012309",
+  user: user
+},{
+  contact: "960012309",
+  user: user,
+  share: false
+}])
+
+##
+
+new_user = {
+  first_name: "Carlotta",
+  email: "Carlotta@gmail.com",
+  password: "123456",
+  age: 27,
+  photo: "https://res.cloudinary.com/dmmvkoibj/image/upload/v1545322075/lisbon_user_3.jpg",
+  gender: "Female",
+  location: location,
+  admin: true
+}
+user = User.new(new_user)
+user.remote_photo_url = new_user[:photo]  if new_user.key?(:photo)
+user.save!
+
+Availability.create!([{
+  user: user,
+  date: '2''018-12-16'
+},{
+  user: user,
+  date: '2018-12-18'
+},{
+  user: user,
+  date: '2018-12-21'
+},{
+  user: user,
+  date: '2018-12-26'
+},{
+  user: user,
+  date: '2018-12-27'
+},{
+  user: user,
+  date: '2018-12-28'
+},{
+  user: user,
+  date: '2018-12-29'
+}])
+
+Contact.create!([{
+  contact: "910012309",
+  user: user
+},{
+  contact: "960012309",
+  user: user,
+  share: false
+}])
+
+##
+
+new_user = {
+  first_name: "Filipe",
+  email: "Filipe@gmail.com",
+  password: "123456",
+  age: 27,
+  photo: "https://res.cloudinary.com/dmmvkoibj/image/upload/v1545322076/lisbon_user-5.jpg",
+  gender: "Female",
+  location: location,
+  admin: true
+}
+user = User.new(new_user)
+user.remote_photo_url = new_user[:photo]  if new_user.key?(:photo)
+user.save!
+
+Availability.create!([{
+  user: user,
+  date: '2''018-12-16'
+},{
+  user: user,
+  date: '2018-12-18'
+},{
+  user: user,
+  date: '2018-12-21'
+},{
+  user: user,
+  date: '2018-12-26'
+},{
+  user: user,
+  date: '2018-12-27'
+},{
+  user: user,
+  date: '2018-12-28'
+},{
+  user: user,
+  date: '2018-12-29'
+}])
+
+Contact.create!([{
+  contact: "910012309",
+  user: user
+},{
+  contact: "960012309",
+  user: user,
+  share: false
+}])
 
 puts "Created #{User.all.count} Users"
 puts "Created #{UserInterest.all.count} User_Interests"
