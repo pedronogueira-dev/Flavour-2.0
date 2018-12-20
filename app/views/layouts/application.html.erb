@@ -26,7 +26,6 @@
     <%= render 'shared/navbar' %>
   <% end %>
 
-      <%= render 'shared/flashes' %>
       <%= yield %>
 
     <% unless action_name == "home" || current_page?(controller: 'devise/sessions', action: 'new') || current_page?(controller: 'devise/registrations', action: 'new')%>
