@@ -570,7 +570,7 @@ def future_meals(date, participants, status = "Confirmed")
   })
 
   participants.each do |attendee|
-    Attendee.create!(user: attendee, status:"Confirmed", meal: meal)
+    Attendee.create!(user: attendee, status: status, meal: meal)
   end
   meal.update(capacity: meal.capacity - meal.attendees.count)
 end
