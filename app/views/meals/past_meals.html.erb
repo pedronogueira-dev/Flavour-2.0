@@ -1,10 +1,12 @@
-<div class="upcoming-header text-center past-stripe">
-  <h3>Checkout your past meals</h3>
-</div>
-<div class="past-meals">
-  <% @meals.each do |meal|%>
+<div class="container dashboard-container">
+  <div class="upcoming-header text-center past-stripe">
+    <h3>Checkout your past meals</h3>
+  </div>
+  <div class="past-meals">
+    <% @meals.each do |meal|%>
     <%= link_to meal_path(meal) do %>
-      <%= render partial: "past_meal", locals: {meal: meal, status: "past"} %>
+    <%= render partial: "past_meal", locals: {meal: meal, status: "past"} %>
     <% end %>
-  <% end %>
+    <% end %>
+  </div>
 </div>

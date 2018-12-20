@@ -275,7 +275,7 @@
 }
 
 .dashboard-bottom-block {
-  height: 45px;
+  height: 120px;
   width: 100vw;
   margin-left: auto;
   margin-right: auto;
@@ -283,6 +283,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 74px;
 }
 
 .dashboard-bottom-block p {
@@ -296,4 +297,11 @@
 
 .user-action-button {
   position: absolute;
+}
+
+.dashboard-container {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 2px;
+  padding-bottom: 74px;
 }

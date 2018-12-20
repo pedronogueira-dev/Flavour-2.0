@@ -5,13 +5,13 @@
   border: solid 2px $turquoise;
   z-index: 1;
   width: 50vw;
-  height: 50px;
--webkit-box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
--moz-box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
-box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
-
+  height: 80px;
+  -webkit-box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
+  -moz-box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
+  box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .avail-button {
@@ -39,17 +39,18 @@ box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
   color: white;
   border: none;
   z-index: 1;
-  position:fixed;
-  bottom: 37vh;
-  left: 25vw;
   width: 50vw;
-  height: 12vh;
+  height: 80px;
   -webkit-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
   -moz-box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
   box-shadow: 4px 4px 20px 0px rgba(227,223,227,1);
   display: flex;
   justify-content: center;
+  align-items: center;
+}
 
+.searching-button h2 {
+  margin:0;
 }
 
 .meals-button:hover {
@@ -71,7 +72,7 @@ box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
   margin-right: auto;
   border-radius: 0 0 12px 12px;
   display: flex;
-    overflow: hidden;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
 }
@@ -91,7 +92,7 @@ box-shadow: 4px 4px 10px 0px rgba(117,117,117,1);
   background-color: #74E8E8;
   color: white;
   border: none;
- height: 8vh;
+  height: 8vh;
   width: 40vw;
   display: flex;
   justify-content: center;
