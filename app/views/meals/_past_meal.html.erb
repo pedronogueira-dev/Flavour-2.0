@@ -2,7 +2,7 @@
   <div class="active-meals-status confirmed">
     <p> <%= status %></p>
   </div> -->
-<% if current_user.location == "New York City" %>
+<% if meal.restaurant.location == "New York City" %>
 
   <div class="past-meals-card confirmed">
     <div class="active-meals-city-photo-newyork">

@@ -1,107 +1,108 @@
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 no-mp">
-      <div class="meal-show-resturant">
-        <% if @meal.reservation_date < Date.today %>
+<div class="container dashboard-container">
+  <div class="box">
+    <div class="row">
+      <div class="col-xs-12 ">
+        <div class="meal-show-resturant">
+          <% if @meal.reservation_date < Date.today %>
           <%= link_to "attendees", attendee_list_path, class: 'btn btn-primary attendee-btn' %>
-        <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 no-mp">
-      <div class="meal-show-photos">
-        <% @meal.confirmed_users.each do |user| %>
+  <div class="box">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="meal-show-photos">
+          <% @meal.confirmed_users.each do |user| %>
 
-        <% if @meal.reservation_date >= Date.today %>
+          <% if @meal.reservation_date >= Date.today %>
 
           <%= cl_image_tag( user.photo, :transformation=>[
-          {:width=>400, :height=>400, :gravity=>"face", :radius=>"max", :crop=>"crop"},
-          {:width=>50, :crop=>"scale"}, :effect => "blur:500"
-          ], class: "photo-avatar") %>
+            {:width=>400, :height=>400, :gravity=>"face", :radius=>"max", :crop=>"crop"},
+            {:width=>50, :crop=>"scale"}, :effect => "blur:500"
+            ], class: "photo-avatar") %>
 
-        <% else  %>
-          <%= cl_image_tag( user.photo, :transformation=>[
-          {:width=>400, :height=>400, :gravity=>"face", :radius=>"max", :crop=>"crop"},
-          {:width=>50, :crop=>"scale"}
-          ], class: "photo-avatar") %>
+            <% else  %>
+            <%= cl_image_tag( user.photo, :transformation=>[
+              {:width=>400, :height=>400, :gravity=>"face", :radius=>"max", :crop=>"crop"},
+              {:width=>50, :crop=>"scale"}
+              ], class: "photo-avatar") %>
 
-        <% end %>
+              <% end %>
 
-        <% end %>
+              <% end %>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 no-mp">
-      <div class="meal-show-container text-center">
-        <div class="meals-show-resturant">
-          <h3> <%= @meal.restaurant.name %> </h3>
-        </div>
-        <div class="meals-show-rating">
-          <ul class="list-inline stars">
-            <% @meal.restaurant.rating.round.times do %>
-            <li><i class="fa fa-star stars" aria-hidden="true"></i></li>
-            <% end %>
-            <li class="review-rating">(<%= @meal.restaurant.rating %> out of 5 stars)</li>
-          </ul>
+      <div class="box">
+        <div class="row">
+          <div class="col-xs-12 ">
+            <div class="meal-show-container text-center">
+              <div class="meals-show-resturant">
+                <h3> <%= @meal.restaurant.name %> </h3>
+              </div>
+              <div class="meals-show-rating">
+                <ul class="list-inline stars">
+                  <% @meal.restaurant.rating.round.times do %>
+                  <li><i class="fa fa-star stars" aria-hidden="true"></i></li>
+                  <% end %>
+                  <li class="review-rating">(<%= @meal.restaurant.rating %> out of 5 stars)</li>
+                </ul>
 
-        </div>
-        <div class="meals-show-date">
-          <ul class="list-inline no-mp meal-date">
-            <li class="filler-word"><p>this</p></li>
-            <li class="main-word"><p><%= @meal.reservation_date.strftime("%A") %></p></li>
-            <li class="filler-word"><p>the</p></li>
-            <li class="main-word"><p><%= @meal.reservation_date.day.ordinalize %></p></li>
-            <li class="filler-word"><p>at</p></li>
-            <li class="main-word"><p>8:30 PM</p></li>
-          </ul>
-        </div>
-        <% if @status == 'Invited' %>
-          <div class="meals-show-button">
+              </div>
+              <div class="meals-show-date">
+                <ul class="list-inline  meal-date">
+                  <li class="filler-word"><p>this</p></li>
+                  <li class="main-word"><p><%= @meal.reservation_date.strftime("%A") %></p></li>
+                  <li class="filler-word"><p>the</p></li>
+                  <li class="main-word"><p><%= @meal.reservation_date.day.ordinalize %></p></li>
+                  <li class="filler-word"><p>at</p></li>
+                  <li class="main-word"><p>8:30 PM</p></li>
+                </ul>
+              </div>
+              <% if @status == 'Invited' %>
+              <div class="meals-show-button">
   <!--           <div class="btn btn-primary confirm-button">
-              <h2 class="no-mp text-align">confirm</h2>
+              <h2 class=" text-align">confirm</h2>
             </div> -->
-            <%= link_to confirm_path(@meal), class:"btn btn-primary confirm-button no-mp text-align", method: :patch do%>
-            <h2 class="no-mp text-align">Confirm</h2>
+            <%= link_to confirm_path(@meal), class:"btn btn-primary confirm-button  text-align", method: :patch do%>
+            <h2 class=" text-align">Confirm</h2>
             <% end %>
             <!--  <div class="btn btn-primary reject-button">
-              <h2 class="no-mp text-align">reject</h2>
+              <h2 class=" text-align">reject</h2>
             </div>-->
-            <%= link_to reject_path(@meal), class:"btn btn-primary reject-button no-mp text-align", method: :patch do%>
-              <h2 class="no-mp text-align">Reject</h2>
+            <%= link_to reject_path(@meal), class:"btn btn-primary reject-button  text-align", method: :patch do%>
+            <h2 class=" text-align">Reject</h2>
             <% end %>
-         </div>
-         <% else %>
-         <div class="meals-show-interest">
+          </div>
+          <% else %>
+          <div class="meals-show-interest">
             <p>Everyone attending has </p>
             <h3 class="interest-category"><%= @meal.interest.name %></h3>
             <p>As a common interest</p>
-         </div>
-        <% end %>
+          </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 no-mp">
-      <div class="meal-show-map">
+  <div class="box">
+    <div class="row">
+      <div class="col-xs-12 ">
+        <div class="meal-show-map">
           <div
           id="map"
-          style="width:100;height:25vh"
+          style="height:200px"
           data-marker="<%= @marker.to_json %>"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
           ></div>
+        </div>
       </div>
     </div>
   </div>

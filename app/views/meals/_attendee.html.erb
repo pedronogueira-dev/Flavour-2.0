@@ -1,12 +1,12 @@
 <div class="attendee">
-    <h4 class="attendee-name text-center"> <%= attendee.user.first_name %></h4> <br>
+    <h4 class="attendee-name text-left"> <%= attendee.user.first_name %></h4>
     <div class="attendee-pic-btn">
       <div class="attendee-pic">
         <%= cl_image_tag attendee.user.photo, :transformation=>[
-        {:width=>400, :height=>400, :gravity=>"face", :radius=>"max", :crop=>"crop"},
-        {:width=>100, :crop=>"scale"}
+        {:width=>400, :height=>400, :gravity=>"face", :radius=>"max", :crop=>"crop", :background=>"#74E8E8"},
+        {:width=>100, :crop=>"fill",:effect=>"trim"}
         ] %>
-        <%= link_to "send contacts",  share_contact_path(attendee.meal, attendee.user), class: "btn btn-primary sign-up-btn"  %>
+        <%= link_to "send contacts",  share_contact_path(attendee.meal, attendee.user), class: "btn btn-primary log-in-btn"  %>
       </div>
     </div>
 </div>
