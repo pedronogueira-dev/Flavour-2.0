@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   get 'meals/:id/attendees', to: 'meals#attendee_list', as: 'attendee_list'
 
   # routes for contacts
-
+  get 'meals/request_today', to: 'meals#book_today', as: 'schedule_today'
   get 'contacts/index', to: 'contacts#index', as: 'contacts'
   post 'contacts/index', to: 'contacts#create'
   delete 'contacts/index', to: 'contacts#destroy'
