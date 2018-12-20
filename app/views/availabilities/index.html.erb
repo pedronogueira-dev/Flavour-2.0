@@ -8,9 +8,11 @@
           <%= link_to availability_delete_path(date: availability.date.to_s), method: :delete, remote: true do %>
           <div class="day-applied">
           </div>
-          <% end %>
+
           <i class="fab fa-angellist"></i>
+          <% end %>
           <% else %>
+
           <i class="fa fa-check" aria-hidden="true"></i>
           <% end %>
         </div>
