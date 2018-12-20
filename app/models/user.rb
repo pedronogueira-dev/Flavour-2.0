@@ -90,7 +90,7 @@ class User < ApplicationRecord
             attendees.status = any(array['Confirmed', 'Cancelled']) \
             and \
             attendees.user_id = #{id} \
-            order by meals.reservation_date ASC"
+            order by meals.reservation_date ASC, attendees.status DESC"
     Meal.find_by_sql(query)
     # ActiveRecord::Base.connection.execute(query)
   end
@@ -110,9 +110,8 @@ class User < ApplicationRecord
   end
 
   def has_meal_today?
-    user = User.find(user_id)
-    user.meals.where(reservation_date: Date.today).each do |meal|
-      attending = Attendee.find_by(user: user, meal: meal)
+    meals.where(reservation_date: Date.today).each do |meal|
+      attending = Attendee.find_by(user_id: id, meal: meal)
       return true if %w(Confirmed Invited).include? attending.status
     end
     return false
