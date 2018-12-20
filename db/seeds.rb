@@ -589,7 +589,7 @@ attendees_27 = [TOM, JAMI, User.find_by(first_name: "Filipe"), User.find_by(firs
 attendees_28 = [TOM, JAMI, User.find_by(first_name: "Roberto"), User.find_by(first_name: "Amber")]
 attendees_30 = [User.find_by(first_name: "Amber"), User.find_by(first_name: "Sharron"), User.find_by(first_name: "Larry")]
 
-future_meals('2018-12-21', attendees_21, "Cancelled")
+future_meals('2018-12-20', attendees_21, "Cancelled")
 
 future_meals('2018-12-26', attendees_26, "Invited") # TO BE REJECTED
 future_meals('2018-12-27', attendees_27, "Invited")
