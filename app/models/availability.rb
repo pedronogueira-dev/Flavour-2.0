@@ -7,6 +7,6 @@ class Availability < ApplicationRecord
 
   private
   def callScheduler
-    MealSchedulerJob.perform_now
+    #  MealSchedulerJob.perform_now
   end
 end
