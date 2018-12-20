@@ -10,7 +10,7 @@
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> -->
   <%= stylesheet_pack_tag "map" %>
   <%= stylesheet_link_tag 'application', media: 'all' %>
-
+  <%= favicon_link_tag %>
 </head>
 <body>
   <% unless action_name == "home" || current_page?(controller: 'devise/sessions', action: 'new') || current_page?(controller: 'devise/registrations', action: 'new')%>
