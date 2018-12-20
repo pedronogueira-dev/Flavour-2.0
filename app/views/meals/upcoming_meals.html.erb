@@ -42,14 +42,14 @@
         <% end %>
 
         <% @meals.each do |meal| %>
-        <%= link_to meal_path(meal) do %>
-        <% if meal.status == "Confirmed" %>
-        <%= render partial: "confirmed_meal", locals: {meal: meal, status: meal.status} %>
-        <% elsif meal.status == "Cancelled" %>
-        <!-- RENDER CANCELLED -->
-        <%= render partial: "canceled_meal", locals: {meal: meal, status: meal.status} %>
-        <% end %>
-        <% end %>
+          <%= link_to meal_path(meal) do %>
+            <% if meal.status == "Confirmed" %>
+              <%= render partial: "confirmed_meal", locals: {meal: meal, status: meal.status} %>
+            <% elsif meal.status == "Cancelled" %>
+            <!-- RENDER CANCELLED -->
+              <%= render partial: "canceled_meal", locals: {meal: meal, status: meal.status} %>
+            <% end %>
+          <% end %>
         <% end %>
       </div>
     </div>

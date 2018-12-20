@@ -1,15 +1,15 @@
 <% if meal.restaurant.location == "New York City" %>
 
 <div class="col-xs-12 no-mp meal-card">
-  <div class="active-meals-status confirmed">
+  <div class="active-meals-status cancelled">
     <p> <%= status %></p>
   </div>
 
-  <div class="active-meals-card confirmed">
+  <div class="active-meals-card cancelled">
     <div class="active-meals-city-photo-newyork">
       <p> <%= meal.restaurant.location %> </p>
     </div>
-    <div class="active-meals-date-confirmed">
+    <div class="cancelled-meals-date-confirmed">
       <h5>  <%= meal.reservation_date.strftime("%A") %></h5>
       <h4> <%= meal.reservation_date.day.ordinalize %> </h4>
       <!-- <h6> <%= meal.reservation_date.strftime("%B") %></h6> -->
@@ -20,7 +20,7 @@
     </div>
   </div>
 
-  <div class="active-meals-button confirmed">
+  <div class="active-meals-button cancelled">
     <h4> click for details </h4>
   </div>
 
@@ -28,14 +28,14 @@
 
   <% else %>
   <div class="col-xs-12 no-mp meal-card">
-  <div class="active-meals-status confirmed">
+  <div class="active-meals-status cancelled">
     <p> <%= status %></p>
   </div>
-  <div class="active-meals-card confirmed">
+  <div class="active-meals-card cancelled">
     <div class="active-meals-city-photo-lisbon">
       <p> <%= meal.restaurant.location %> </p>
     </div>
-    <div class="active-meals-date-confirmed">
+    <div class="cancelled-meals-date-confirmed">
       <h5>  <%= meal.reservation_date.strftime("%A") %></h5>
       <h4> <%= meal.reservation_date.day.ordinalize %> </h4>
       <h6> <%= meal.reservation_date.strftime("%B") %></h6>
@@ -44,7 +44,7 @@
       <p> <%= meal.restaurant.name  %></p>
     </div>
   </div>
-  <div class="active-meals-button confirmed">
+  <div class="active-meals-button cancelled">
     <h4> click for details </h4>
   </div>
 </div>
