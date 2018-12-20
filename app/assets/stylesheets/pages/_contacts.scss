@@ -62,6 +62,15 @@
   width: 80vw;
   margin: auto;
   background-color: white;
-  padding: 10px;
+  padding: 0px 10px 0px 10px;
   border-radius: 12px;
+}
+
+.contact-prompt {
+  color: $turquoise;
+  text-shadow: 1px 1px black;
+  background-color: $pink;
+  border-radius: 12px;
+  padding: 10px;
+
 }
