@@ -1,5 +1,5 @@
 meta_product_name: "Flavour"
 meta_title: "Flavour - Add some Flavour to your community"
 meta_description: "Experince your community and your city through meals"
-meta_image: "https://imgix.bustle.com/2016/9/3/Fotolia_113208220_Subscription_Monthly_M-28efd5b4-f612-4867-95e3-6048b5324bdd.jpg?w=960&h=540&fit=crop&crop=faces&auto=format&q=70&dpr=2" # should exist in `app/assets/images/`
+meta_image: "cover.jpg" # should exist in `app/assets/images/`
 # twitter_account: "@product_twitter_account"   # required for Twitter Cards
