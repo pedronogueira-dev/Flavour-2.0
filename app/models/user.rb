@@ -109,6 +109,15 @@ class User < ApplicationRecord
     array.length
   end
 
+  def has_meal_today?
+    user = User.find(user_id)
+    user.meals.where(reservation_date: Date.today).each do |meal|
+      attending = Attendee.find_by(user: user, meal: meal)
+      return true if %w(Confirmed Invited).include? attending.status
+    end
+    return false
+  end
+
   private
   def create_user_interests
     Interest.all.each do |interest|

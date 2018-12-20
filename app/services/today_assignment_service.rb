@@ -7,6 +7,11 @@ class TodayAssignmentService
 
   def self.assign_meal_today(user_id)
     user = User.find(user_id)
+    user.meals.where(reservation_date: Date.today).each do |meal|
+      attending = Attendee.find_by(user: user, meal: meal)
+      return nil if %w(Confirmed Invited).include? attending.status
+    end
+
     meals = Meal.find_by_sql("#{MEALS_ON_SAME_LOCATION_QUERY}\'#{user.location}\'")
     meals.each do |meal|
       attendees = meal.attendees.where(status: "Confirmed").or(meal.attendees.where(status: "Invited"))
