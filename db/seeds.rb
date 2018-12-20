@@ -191,7 +191,7 @@ Contact.create!([{
 
 new_user = {
   first_name: "Chad",
-  email: "chad@flavour.com",
+  email: "jamirene88@icloud.com",
   password: "123456",
   age: 26,
   photo: "https://res.cloudinary.com/dmmvkoibj/image/upload/v1545245418/qeifixmmjypwzx41hp1a.jpg",
