@@ -180,6 +180,12 @@ Availability.create([{
 },{
   user: user,
   date: '2018-12-28'
+},{
+  user: user,
+  date: '2018-12-29'
+},{
+  user: user,
+  date: '2018-12-31'
 }])
 
 ##
@@ -191,7 +197,7 @@ Contact.create!([{
 
 new_user = {
   first_name: "Chad",
-  email: "jamirene88@icloud.com",
+  email: "chad@flavour.com",
   password: "123456",
   age: 26,
   photo: "https://res.cloudinary.com/dmmvkoibj/image/upload/v1545245418/qeifixmmjypwzx41hp1a.jpg",
@@ -219,7 +225,10 @@ Availability.create([{
   date: '2018-12-27'
 },{
   user: user,
-  date: '2018-12-28'
+  date: '2018-12-29'
+},{
+  user: user,
+  date: '2018-12-31'
 }])
 
 Contact.create!([{
@@ -859,7 +868,7 @@ attendees_30 = [User.find_by(first_name: "Roberto"),User.find_by(first_name: "Am
 future_meals('2018-12-26', attendees_26, "Invited") # TO BE REJECTED
 future_meals('2018-12-27', attendees_27, "Invited")
 future_meals('2018-12-28', attendees_28, "Confirmed")
-
+future_meals('2018-12-31', attendees_28, "Confirmed")
 #uture_meals('2018-12-29', attendees_30, "Invited") # 4 people, change interests so that only 1 or 2 match
 
 future_meals('2018-12-20', [User.find_by(first_name: "Carlotta"),User.find_by(first_name: "Carolina"), User.find_by(first_name: "Antoine"),User.find_by(first_name: "Allenah"), User.find_by(first_name: "Pedro")],"Invited", "Greater Lisbon")
