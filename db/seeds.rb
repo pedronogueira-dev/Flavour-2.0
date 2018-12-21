@@ -871,7 +871,7 @@ future_meals('2018-12-27', attendees_27, "Invited")
 future_meals('2018-12-28', attendees_28, "Confirmed")
 future_meals('2018-12-31', attendees_28, "Confirmed")
 #uture_meals('2018-12-29', attendees_30, "Invited") # 4 people, change interests so that only 1 or 2 match
-
+future_meals('2018-12-28', attendees_28, "Cancelled")
 future_meals('2018-12-20', [User.find_by(first_name: "Carlotta"),User.find_by(first_name: "Carolina"), User.find_by(first_name: "Antoine"),User.find_by(first_name: "Allenah"), User.find_by(first_name: "Pedro")],"Invited", "Greater Lisbon")
 future_meals('2018-12-21', [User.find_by(first_name: "Carlotta"),User.find_by(first_name: "Carolina"), User.find_by(first_name: "Antoine"),User.find_by(first_name: "Allenah"), User.find_by(first_name: "Pedro")],"Invited", "Greater Lisbon")
 
